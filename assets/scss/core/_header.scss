@@ -1,0 +1,469 @@
+// ==========================================================================
+// ヘッダー
+// ==========================================================================
+// 左：ロゴ / 中央：ナビ / 右：メニューボタンの3分割フローティングレイアウト
+
+// --- ローカル変数 ----------------------------------------------------------
+$header-cyan: #54c3f1;
+$header-border: #3b353c;
+$header-nav-text: #3b353c;
+$header-pill-radius: 9999px;
+
+// --- ページ枠（装飾用ボーダー） --------------------------------------------
+.full-border {
+  border: 25px solid var(--g-color-white);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+
+  @include pc {
+    border: 25rem solid var(--g-color-white);
+  }
+
+  @include sp {
+    border: 15rem solid var(--g-color-white);
+  }
+}
+
+.full-border-outside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  pointer-events: none;
+  border: 25px solid var(--g-color-white);
+  border-radius: 66px;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+
+  @include pc {
+    border: 25rem solid var(--g-color-white);
+    border-radius: 66rem;
+  }
+
+  @include sp {
+    border: 15rem solid var(--g-color-white);
+    border-radius: 43rem;
+  }
+}
+
+// --- ヘッダー本体 ----------------------------------------------------------
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.loaded {
+    transform: translateY(0);
+  }
+
+  // ロゴ・メニューの幅に左右されず、ナビを常に中央に配置する
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 48px;
+    margin: auto;
+
+    @include pc {
+      padding: 32rem 48rem;
+    }
+
+    @include sp {
+      grid-template-columns: 1fr auto;
+      padding: 22rem 24rem;
+    }
+  }
+
+  // --- ロゴ（左・カプセル型） ----------------------------------------------
+  &-logo {
+    justify-self: start;
+
+    &__heading {
+      margin: 0;
+      line-height: 1;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $header-pill-radius;
+      transition: opacity 0.25s ease;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: auto;
+      height: 50px;
+      max-width: none;
+
+      @include pc {
+        height: 50rem;
+      }
+
+      @include sp {
+        height: 38rem;
+      }
+    }
+
+    // logo.webp 未配置時のテキストフォールバック
+    &__text {
+      display: none;
+      font-family: $font-barlow;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--g-color-white);
+      letter-spacing: 0.08em;
+      line-height: 1;
+
+      @include pc {
+        font-size: 20rem;
+      }
+
+      @include sp {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    justify-content: right;
+    gap: 20rem;
+
+    // --- グローバルナビ（中央・カプセル型） ----------------------------------
+    &-nav {
+      display: flex;
+      justify-self: center;
+      background-color: var(--g-color-white);
+      border: 1px solid $header-border;
+      border-radius: $header-pill-radius;
+      position: relative;
+
+      @include sp {
+        display: none;
+      }
+
+      &__list {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 0 40px;
+        margin: 0;
+
+        @include pc {
+          gap: 28rem;
+          padding: 14rem 40rem;
+        }
+      }
+
+      &__item {
+        line-height: 1;
+
+        &--has-child {
+
+          .sub_link_group {
+            position: absolute;
+            top: 100%; // ヘッダーナビのすぐ下（元は bottom: -50rem で隙間ができていた）
+            left: 0rem;
+            padding-top: 12rem; // ナビとメニューを繋ぐ透明な「橋」（hoverが切れるのを防ぐ）
+            display: flex; // 横並び（元のレイアウト）
+            gap: 10rem;
+
+            // 見た目だけ隠す（displayはtransitionが効かないため）
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(6rem);
+            transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+            transition-delay: .15s; // 離れてから消えるまでの猶予
+
+            a {
+              background-color: #54c3f1;
+              padding-block: 5rem;
+              color: #fff;
+              font-size: 12rem;
+              font-weight: 700; // ナビ（事業紹介など）に近い太さに
+              padding: 15rem 30rem;
+              border-radius: 30rem;
+              white-space: nowrap; // 文字が縦に折り返さないように
+            }
+          }
+
+          &:hover .sub_link_group {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition-delay: 0s; // 開くときは即座に
+          }
+        }
+      }
+
+      &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: $font-kaku;
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 4em;
+        color: $header-nav-text;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        transition: color 0.25s ease;
+
+        @include pc {
+          gap: 6rem;
+          font-size: 15rem;
+          line-height: 2em;
+        }
+
+        &:hover {
+          color: $header-cyan;
+        }
+      }
+
+      // 「事業紹介」のドロップダウン矢印
+      &__arrow {
+        flex-shrink: 0;
+        width: 16px;
+        height: 8px;
+        color: $header-cyan;
+
+        @include pc {
+          width: 10rem;
+          height: 6rem;
+        }
+      }
+    }
+
+    // --- ハンバーガーメニュー（右・円形） ------------------------------------
+    &-menu {
+      justify-self: end;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 56px;
+      height: 56px;
+      padding: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: $header-cyan;
+      border: 1px solid $header-border;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+      transition: all ease-in-out .2s;
+      position: relative;
+      z-index: 999;
+
+      @include pc {
+        gap: 5rem;
+        width: 56rem;
+        height: 56rem;
+      }
+
+      @include sp {
+        width: 39rem;
+        height: 39rem;
+        gap: 3rem;
+      }
+
+      &:hover {
+        background-color: #fff;
+        transition: all ease-in-out .2s;
+
+        .header_links-menu__bar {
+          background-color: #54c3f1;
+        }
+      }
+
+      &__bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--g-color-white);
+        border-radius: 1px;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+
+        @include pc {
+          width: 22rem;
+          height: 2rem;
+        }
+
+        @include sp {
+          width: 15rem;
+          height: 1.5rem;
+        }
+      }
+
+      // 開いた状態 — バーを「×」形にアニメーション（ドロワーメニュー用）
+      &.is-open {
+        .header_links-menu__bar {
+          &:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+
+            @include pc {
+              transform: translateY(7rem) rotate(45deg);
+            }
+
+            @include sp {
+              transform: translateY(4rem) rotate(45deg);
+            }
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+
+            @include pc {
+              transform: translateY(-7rem) rotate(-45deg);
+            }
+
+            @include sp {
+              transform: translateY(-5rem) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// --- メニューオーバーレイ背景 ----------------------------------------------
+.full-bg {
+  position: fixed;
+  background: #8edff8;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 720;
+  transition:
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  visibility: hidden;
+  opacity: 0;
+
+  &.open-menu {
+    visibility: visible;
+    opacity: 0.5;
+  }
+}
+
+/* スマホメニュー */
+.sp-menu {
+  position: fixed;
+  // right: -100%; 32rem 48rem
+  top: 32rem;
+  right: 48rem;
+  transform: translate(50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: right .4s ease;
+  z-index: 990;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  // display: none;
+  transition: all ease-in-out .3s;
+
+  /* メニュー表示 */
+  &.is-open {
+    // right: 0;
+    transition: all ease-in-out .3s;
+    max-width: 1900rem;
+    width: 1400rem;
+    height: 1400rem;
+    transform: translate(40%, -40%);
+    opacity: 1;
+    display: block;
+
+    @include sp {
+      width: 700rem;
+      height: 700rem;
+    }
+  }
+
+  &-logo {
+    width: 300rem;
+    position: absolute;
+    top: 41%;
+    left: 20%;
+
+    @include sp {
+      width: 170rem;
+      top: 40%;
+      left: 26%;
+    }
+  }
+
+  /* メニュー一覧 */
+  &__list {
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+
+    @include sp {
+      top: 45%;
+      left: 18%;
+    }
+
+    .footer__nav {
+      gap: 0;
+
+      @include sp {
+        scale: .8;
+      }
+
+      .footer__sns a {
+        color: #fff;
+
+        &::before {
+          display: none;
+        }
+
+        &:hover {
+          color: #1ec3f2;
+        }
+      }
+    }
+
+  }
+
+  &-img {
+    position: absolute;
+    width: 400rem;
+    bottom: 5%;
+    left: 30%;
+
+    @include sp {
+      width: 200rem;
+    }
+  }
+}

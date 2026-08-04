@@ -1,0 +1,303 @@
+.footer {
+  width: 100vw;
+  padding: 100rem 0 40rem;
+  background: #fff;
+
+  &__inner {
+    width: min(1920rem, 90%);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50rem;
+
+    @include sp {
+      width: unset;
+      flex-direction: column-reverse;
+      width: 100%;
+      padding-inline: 40rem;
+    }
+  }
+
+  &__company {
+    width: 415rem;
+    // margin-right: 250rem;
+
+    @include sp {
+      width: 290rem;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 40rem;
+
+    @include sp {
+      margin-bottom: 10rem;
+    }
+
+    img {
+      width: 400rem;
+      height: auto;
+
+      @include sp {
+        width: 290rem;
+      }
+    }
+  }
+
+  &__name {
+    color: #1ec3f2;
+    font-size: 24rem;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 18rem;
+    }
+  }
+
+  &__address {
+    font-size: 20rem;
+    font-weight: bold;
+    color: #1ec3f2;
+    line-height: 1;
+    margin-bottom: 30rem;
+
+    @include sp {
+      font-size: 12rem;
+      margin-bottom: 15rem;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background: #1ec3f2;
+    border: 2px solid #1ec3f2;
+    border-radius: 18rem;
+    padding: 20rem 28rem;
+    margin-bottom: 30rem;
+    transition: all ease-in-out .2s;
+
+    &:hover {
+      background-color: #fff;
+      color: #1ec3f2;
+
+      .white {
+        display: none;
+      }
+
+      .blue {
+        display: block;
+      }
+
+    }
+
+    @include sp {
+      padding: 10rem 34rem;
+      align-items: flex-start;
+      margin-bottom: 20rem;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    &-icon {
+      width: 35rem;
+
+      @include sp {
+        width: 25rem;
+      }
+
+      .white {
+        display: block;
+      }
+
+      .blue {
+        display: none;
+      }
+    }
+
+    strong {
+      display: block;
+      font-family: system-ui;
+      font-size: 36rem;
+      line-height: 1;
+      letter-spacing: 0.1em;
+
+      @include sp {
+        font-size: 22rem;
+      }
+    }
+
+    small {
+      display: block;
+      font-size: 13rem;
+
+      @include sp {
+        font-size: 8rem;
+      }
+    }
+  }
+
+  &__sns {
+    display: flex;
+    gap: 16rem;
+
+    a {
+      width: 68rem;
+      height: 68rem;
+      border: 2px solid #1ec3f2;
+      border-radius: 50%;
+      background-color: #1ec3f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20rem;
+      font-weight: bold;
+      color: #fff;
+      transition: all ease-in-out .2s;
+
+      @include sp {
+        width: 35rem;
+        height: 35rem;
+        font-size: 10rem;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #1ec3f2;
+
+        .white {
+          display: none;
+        }
+
+        .blue {
+          display: block;
+        }
+      }
+
+      img {
+        width: 60%;
+
+        &.white {
+          display: block;
+        }
+
+        &.blue {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__nav__group {
+    display: flex;
+    column-gap: 50rem;
+    align-items: start;
+
+    @include sp {
+      display: grid;
+      grid-template-columns: 45% 1fr;
+      column-gap: 14rem;
+      align-items: start;
+    }
+
+  }
+
+  &__nav {
+    flex: 0 0 auto; // 均等幅をやめ、各navを内容に合わせた幅に（長い項目が折り返さないように）
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 28rem;
+
+      @include sp {
+        gap: 15rem;
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 16rem;
+      color: #222;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+      font-size: 18rem;
+      white-space: nowrap; // 折り返さない（PC）
+
+      @include sp {
+        font-size: 12rem;
+        gap: 10rem;
+        white-space: normal; // SPは従来どおり折り返し可
+      }
+
+      &::before {
+        content: ">>";
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        font-size: 12rem;
+        line-height: 1; // >> を丸の中央に正しく揃える（既定の大きい line-height だと上寄りになる）
+        color: #fff;
+        background-color: #1ec3f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @include sp {
+          width: 18rem;
+          height: 18rem;
+          font-size: 10rem;
+        }
+      }
+
+      &:hover {
+        color: #53b7e9;
+        transform: translateX(6rem);
+      }
+    }
+
+    // 事業紹介の子項目（環境インフラ維持事業〜粗大ごみ回収）だけ、丸なし・水色の >> テキストに
+    &--biz li:not(:first-child) a::before {
+      color: #1ec3f2;
+      background-color: transparent;
+    }
+
+    // 「事業紹介」（先頭）は ::before なし
+    &--biz li:first-child a::before {
+      content: none;
+    }
+  }
+
+  &__copyright {
+    width: min(1920rem, 90%);
+    margin: 30rem auto 0;
+    text-align: right;
+    color: #53b7e9;
+    font-size: 14rem;
+
+    @include sp {
+      font-size: 12rem;
+      font-weight: 500;
+      margin-top: 50rem;
+    }
+  }
+}

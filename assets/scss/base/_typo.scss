@@ -1,0 +1,18 @@
+// フォントは <head> の Google Fonts <link> で読み込み（Montserrat / Noto Sans JP / Zen Kaku Gothic Antique）
+// 基本フォントは Zen Kaku Gothic Antique に統一
+
+html {
+  // 英字は Montserrat、日本語は Zen Kaku Gothic Antique（Montserratは和文グリフ非搭載のため自動フォールバック）
+  font-family: 'Montserrat', 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+._bold {
+  font-weight: 700;
+}
+
+//文字縦書き
+@mixin vertical {
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  transform: rotate(90deg);
+}

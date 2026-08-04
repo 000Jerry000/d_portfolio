@@ -1,0 +1,598 @@
+
+//breakpoint setting
+$breakpoint: (
+  "xs": "screen and (max-width: 768px)",
+  "sm": "screen and (max-width: 1024px)",
+  "md": "screen and (max-width: 1280px)",
+  "lg": "screen and (max-width: 1440px)",
+  "xl": "screen and (max-width: 1920px)"
+) !default;
+
+@mixin responsive($width){
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin pc{
+  @media screen and (max-width: 1500px) {
+    @content;
+  }
+}
+@mixin tb{
+  @media screen and (max-width: 1025px) {
+    @content;
+  }
+}
+@mixin sp{
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+:root{
+  --grad-progress: 0;
+  --intro-progress: 0;
+  --g-padding-s: 40px;
+  --g-padding-m: 120px;
+  --g-padding-l: 152px;
+  --g-color-base: #ECECEC;
+  --g-color-bg: #F4F5F7;
+  --g-color-red: #EF626B;
+  --g-color-orange: #E27A1E;
+  --g-color-black: #3B353C;
+  --g-color-blue: #00A0E9;
+  --g-color-white: #fff;
+  --g-color-border: #707070;
+  @include pc {
+    --g-padding-s: 40rem;
+    --g-padding-m: 120rem;
+    --g-padding-l: 152rem;
+  }
+  @include sp {
+    --g-padding-s: 0;
+    --g-padding-m: 0;
+    --g-padding-l: 0;
+  }
+}
+
+//font family
+// 英字は Montserrat、日本語は各和文フォント（Montserratは和文グリフを持たないため自動で切替）
+$font-noto: "Montserrat", "Noto Sans JP", sans-serif;
+$font-barlow: "Montserrat", sans-serif;
+$font-kaku: "Montserrat", "Zen Kaku Gothic Antique", sans-serif;
+
+
+@mixin f-16 {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-family: $font-noto;
+  color: var(--g-color-black);
+  line-height: 2;
+  @include pc {
+    font-size: 16rem;
+  }
+  @include sp {
+    font-size: 12rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+._b {
+ font-weight: bold;
+}
+._m {
+ font-weight: 500;
+}
+._n {
+ font-weight: normal;
+}
+@mixin c-font-xs {
+ font-size: 12rem;
+ letter-spacing: 0.05em;
+}
+
+@mixin c-font-s {
+ font-size: 16rem;
+ font-weight: 500;
+ line-height: 1.4;
+}
+
+@mixin c-font-m {
+ font-size: 25rem;
+ line-height: 2;
+ letter-spacing: 0.05em;
+}
+
+@mixin c-font-l {
+ font-size: 45rem;
+ font-weight: 500;
+ line-height: 90rem;
+ letter-spacing: 0.05em;
+}
+
+@mixin c-font-xl {
+ font-size: 120rem;
+ font-weight: normal;
+ line-height: 1.2;
+}
+
+.c-font-xs {
+ @include c-font-xs;
+}
+
+.c-font-s {
+ @include c-font-s;
+}
+
+.c-font-m {
+ @include c-font-m;
+}
+
+.c-font-l {
+ @include c-font-l;
+}
+.c-font-xl {
+ @include c-font-xl;
+}
+//pcのみ表示
+@media (max-width: 768px) {
+  ._pc {
+    display: none !important;
+  }
+}
+
+//tabletのみ表示
+@media (min-width: 1025px) {
+  ._tablet {
+    display: none !important;
+  }
+}
+
+//mobileのみ表示
+@media (min-width: 768px) {
+  ._sp {
+    display: none !important;
+  }
+}
+
+//header height
+$headerHeight-pc: 90px;
+$headerHeight-mobile: 80px;
+
+@mixin headerHeight {
+  height: $headerHeight-pc;
+}
+
+@mixin flex-hc-vc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-he-vc {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-hb-vc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-hc {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-vc {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-col {
+  flex-direction: column;
+}
+
+@mixin flex-col-reverse {
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-hb-vc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-hb {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-he {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-hb-ve {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin flex-hc-ve {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin flex-vs {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-ve {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin pos-hv-init {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pos-hv-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin pos-h-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin pos-v-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin first {
+  &:first-child {
+      @content;
+  }
+}
+
+@mixin last {
+  &:last-of-type {
+      @content;
+  }
+}
+
+@mixin not-first {
+  &:not(:first-child) {
+      @content;
+  }
+}
+
+@mixin not-last {
+  &:not(:last-child) {
+      @content;
+  }
+}
+
+@mixin even {
+  &:nth-child(even) {
+      @content;
+  }
+}
+
+@mixin odd {
+  &:nth-child(odd) {
+      @content;
+  }
+}
+
+@mixin hidden-visible {
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
+@mixin LeftTopFit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin centerImage {
+  @include pos-hv-center;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+@mixin overLayImage {
+  &::after {
+      content: '';
+      @include LeftTopFit;
+      background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+@mixin menuHover {
+  &::after {
+      position: absolute;
+      content: "";
+      top: calc(100% + 4px);
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #333;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      opacity: 0.8;
+  }
+}
+
+@mixin menuBar($bgColor, $fontColor) {
+  &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $bgColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      opacity: 0.8;
+  }
+  &,
+  & span {
+      transition: color 0.2s;
+  }
+  &:hover {
+      color: $fontColor;
+      span {
+          color: $fontColor;
+      }
+  }
+}
+
+@mixin btnHover {
+  &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+}
+
+@mixin btnHover_black {
+  &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s;
+      z-index: -1;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+}
+
+@mixin menuHoverL {
+  &::after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #595959;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.8s;
+  }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      opacity: 0.8;
+  }
+}
+
+@mixin hover {
+ transition: all 0.25s cubic-bezier(.104,.204,.492,1);
+ &:hover {
+  opacity: 0.8!important;
+ }
+}
+
+@mixin circle($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background: $color;
+}
+
+$pc_width: 1920;
+$sp_width:768;
+$pc_ratio: calc(100 / $pc_width);
+$sp_ratio: calc(100 / $sp_width);
+@function rem($value) {
+  $result: $pc_ratio * $value * 1vw;
+  @return $result;
+}
+
+@function rem_sp($value) {
+  $result: $sp_ratio * $value * 1vw;
+  @return $result;
+}
+
+@function px($value) {
+  $result: $value * 1px;
+  @return $result;
+}
+
+@mixin font($size, $height) {
+  font-size: px($size);
+  line-height: px($height);
+}
+
+@mixin rfont($size) {
+  font-size: px($size);
+  line-height: 1.6;
+}
+
+@mixin size($width, $height) {
+  width: px($width);
+  height: px($height);
+}
+
+.smooth-scroll {
+  height: 100vh;
+  width: 100%;
+}
+
+.scrollbar-track {
+  display: none!important;
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+[data-scroll-container] {
+  overflow: hidden!important;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11rem;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7rem;
+  border-radius: 10rem;
+  margin: 2rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+@mixin bg-init {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin cover-image{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+@mixin fit-svg{
+  width: 100%;
+  height: auto;
+}
+
+.cover-footer {
+  z-index: 1;
+}
+
+body.is-loading{
+  .js-cursor{
+      display: none;
+  }
+}
