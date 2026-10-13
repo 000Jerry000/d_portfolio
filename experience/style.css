@@ -59,6 +59,12 @@
   line-height: 1.5;
 }
 
+/* the full address is longer than the other values */
+.career-summary .career-summary-address {
+  font-size: clamp(14px, 1.4vw, 16px);
+  word-break: keep-all;
+}
+
 .career-summary strong {
   font-family: var(--f-latin);
   font-weight: 500;
