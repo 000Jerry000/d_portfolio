@@ -24,6 +24,20 @@ const TAGS = {
     'google-map': { ja: 'Google マップ', en: 'Google Maps' },
 };
 
+// client industries, stored per project as "industry": ["medical", …] in projects.json
+const INDUSTRIES = [
+    { id: 'medical', ja: '医療・ヘルスケア', en: 'Healthcare & Medical', icon: 'fa-clinic-medical' },
+    { id: 'beauty', ja: '美容・フィットネス', en: 'Beauty & Fitness', icon: 'fa-spa' },
+    { id: 'realestate', ja: '不動産・住宅', en: 'Real Estate', icon: 'fa-home' },
+    { id: 'retail', ja: 'EC・小売', en: 'E-commerce & Retail', icon: 'fa-shopping-bag' },
+    { id: 'travel', ja: '観光・宿泊・イベント', en: 'Travel, Hotels & Events', icon: 'fa-hotel' },
+    { id: 'media', ja: 'メディア・エンタメ', en: 'Media & Entertainment', icon: 'fa-newspaper' },
+    { id: 'matching', ja: 'マッチング・コミュニティ', en: 'Matching & Community', icon: 'fa-user-friends' },
+    { id: 'marketing', ja: 'マーケティング・集客', en: 'Marketing', icon: 'fa-chart-line' },
+    { id: 'business', ja: '業務効率化・社内ツール', en: 'Business Tools', icon: 'fa-briefcase' },
+    { id: 'other', ja: '個人・その他', en: 'Personal & Other', icon: 'fa-ellipsis-h' },
+];
+
 // quick searches clients commonly start from
 const SUGGESTIONS = {
     ja: ['WordPress', 'ChatGPT', 'ECサイト', 'マッチング', '自動化', 'スクレイピング', 'セキュリティ'],
@@ -92,9 +106,14 @@ const suggestList = document.getElementById('suggest-list');
 const resultCount = document.getElementById('result-count');
 const resetBtn = document.getElementById('filter-reset');
 const emptyState = document.getElementById('finder-empty');
+const industryPanel = document.querySelector('.industry-panel');
+const industryList = document.getElementById('industry-list');
+const industryToggle = document.getElementById('industry-toggle');
+const industryToggleCount = document.getElementById('industry-toggle-count');
+const industryClear = document.getElementById('industry-clear');
 
 let projects = null;
-const state = { category: 'all', query: '' };
+const state = { category: 'all', query: '', industries: [] };
 
 // full-width → half-width, lower case, katakana → hiragana, so 「ワードプレス」「ＷＯＲＤＰＲＥＳＳ」 etc. match
 function normalize(text) {
@@ -138,13 +157,15 @@ function wordMatcher(word) {
 function prepareProject(project, index) {
     const tags = String(project.category || '').split(/\s+/).filter(Boolean);
     const categories = CATEGORIES.filter(c => c.tags.some(tag => tags.includes(tag))).map(c => c.id);
+    const industries = (project.industry || []).filter(id => INDUSTRIES.some(i => i.id === id));
     const haystack = normalize([
         project.name, project.name_en, project.desc, project.desc_en,
         ...tags, ...tags.flatMap(tag => TAGS[tag] ? [TAGS[tag].ja, TAGS[tag].en] : []),
         ...CATEGORIES.filter(c => categories.includes(c.id)).flatMap(c => [c.ja, c.en]),
+        ...INDUSTRIES.filter(i => industries.includes(i.id)).flatMap(i => [i.ja, i.en]),
         project.links && project.links.view,
     ].join(' '));
-    return { ...project, index, tags, categories, haystack };
+    return { ...project, index, tags, categories, industries, haystack };
 }
 
 const matchesQuery = (project, terms) =>
@@ -152,6 +173,10 @@ const matchesQuery = (project, terms) =>
 
 const matchesCategory = (project, category) =>
     category === 'all' || project.categories.includes(category);
+
+// several selected industries widen the results (OR)
+const matchesIndustry = (project, industries) =>
+    industries.length === 0 || industries.some(id => project.industries.includes(id));
 
 // wrap matched words in <mark> (on the visible text only)
 function highlight(text, terms) {
@@ -172,7 +197,7 @@ function highlight(text, terms) {
 }
 
 function renderCategories(terms) {
-    const pool = projects.filter(p => matchesQuery(p, terms));
+    const pool = projects.filter(p => matchesQuery(p, terms) && matchesIndustry(p, state.industries));
     const items = [{ id: 'all', ja: I18N.ja.all, en: I18N.en.all }, ...CATEGORIES];
     categoryList.innerHTML = items.map(cat => {
         const count = pool.filter(p => matchesCategory(p, cat.id)).length;
@@ -183,6 +208,28 @@ function renderCategories(terms) {
             <span>${escapeHTML(label(cat))}</span><em>${count}</em>
         </button>`;
     }).join('');
+}
+
+// industry counts respect the keyword and category, so empty choices are visible at a glance
+function renderIndustries(terms) {
+    const pool = projects.filter(p => matchesQuery(p, terms) && matchesCategory(p, state.category));
+    industryList.innerHTML = INDUSTRIES.map(ind => {
+        const count = pool.filter(p => p.industries.includes(ind.id)).length;
+        const checked = state.industries.includes(ind.id);
+        return `
+        <li>
+            <label class="industry-option${checked ? ' is-checked' : ''}${count === 0 && !checked ? ' is-empty' : ''}">
+                <input type="checkbox" value="${ind.id}"${checked ? ' checked' : ''}${count === 0 && !checked ? ' disabled' : ''}>
+                <i class="fas ${ind.icon}" aria-hidden="true"></i>
+                <span class="industry-name">${escapeHTML(label(ind))}</span>
+                <em>${count}</em>
+            </label>
+        </li>`;
+    }).join('');
+
+    const selected = state.industries.length;
+    industryToggleCount.textContent = selected ? selected : '';
+    industryClear.hidden = selected === 0;
 }
 
 function renderSuggestions() {
@@ -196,6 +243,7 @@ function cardHTML(project, i, terms) {
     const name = (en && project.name_en) || project.name;
     const desc = (en && project.desc_en) || project.desc;
     const category = CATEGORIES.find(c => project.categories.includes(c.id));
+    const industries = INDUSTRIES.filter(i => project.industries.includes(i.id)).map(label);
     const view = project.links && project.links.view;
     const code = project.links && project.links.code;
     const tags = project.tags.filter(tag => TAGS[tag]).map(tag => {
@@ -211,6 +259,7 @@ function cardHTML(project, i, terms) {
             <span class="work-num">${String(i + 1).padStart(2, '0')}</span>
             ${category ? `<span class="work-cat">${escapeHTML(label(category))}</span>` : ''}
         </div>
+        ${industries.length ? `<p class="work-industry">${industries.map(escapeHTML).join('<span>／</span>')}</p>` : ''}
         <h3>${highlight(name, terms)}</h3>
         <p>${highlight(desc, terms)}</p>
         <ul class="work-tags">${tags}</ul>
@@ -225,21 +274,24 @@ function syncURL() {
     const params = new URLSearchParams(location.search);
     state.category === 'all' ? params.delete('cat') : params.set('cat', state.category);
     state.query ? params.set('q', state.query) : params.delete('q');
+    state.industries.length ? params.set('ind', state.industries.join(',')) : params.delete('ind');
     const search = params.toString();
     history.replaceState(null, '', `${location.pathname}${search ? `?${search}` : ''}${location.hash}`);
 }
 
 function render() {
     const terms = parseQuery(state.query);
-    const shown = projects.filter(p => matchesCategory(p, state.category) && matchesQuery(p, terms));
+    const shown = projects.filter(p =>
+        matchesCategory(p, state.category) && matchesIndustry(p, state.industries) && matchesQuery(p, terms));
 
     renderCategories(terms);
+    renderIndustries(terms);
     grid.innerHTML = shown.map((p, i) => cardHTML(p, i, terms)).join('');
     grid.hidden = shown.length === 0;
     emptyState.hidden = shown.length > 0;
     resultCount.innerHTML = t('count')(shown.length, projects.length);
 
-    const filtered = state.category !== 'all' || state.query.trim() !== '';
+    const filtered = state.category !== 'all' || state.query.trim() !== '' || state.industries.length > 0;
     resetBtn.hidden = !filtered;
     searchClear.hidden = state.query === '';
     suggestList.querySelectorAll('.suggest-chip').forEach(chip =>
@@ -287,7 +339,24 @@ grid.addEventListener('click', e => {
     if (tag) update({ query: tag.dataset.query }, { scroll: true });
 });
 
-const resetAll = () => update({ category: 'all', query: '' });
+industryList.addEventListener('change', e => {
+    const box = e.target.closest('input[type="checkbox"]');
+    if (!box) return;
+    const selected = new Set(state.industries);
+    box.checked ? selected.add(box.value) : selected.delete(box.value);
+    // keep the sidebar's order in the URL
+    update({ industries: INDUSTRIES.map(i => i.id).filter(id => selected.has(id)) });
+});
+
+industryClear.addEventListener('click', () => update({ industries: [] }));
+
+// phones: the sidebar collapses into a toggle above the results
+industryToggle.addEventListener('click', () => {
+    const open = industryPanel.classList.toggle('is-open');
+    industryToggle.setAttribute('aria-expanded', String(open));
+});
+
+const resetAll = () => update({ category: 'all', query: '', industries: [] });
 resetBtn.addEventListener('click', resetAll);
 document.getElementById('empty-reset').addEventListener('click', resetAll);
 
@@ -296,6 +365,7 @@ const params = new URLSearchParams(location.search);
 
 if (CATEGORIES.some(c => c.id === params.get('cat'))) state.category = params.get('cat');
 state.query = params.get('q') || '';
+state.industries = (params.get('ind') || '').split(',').filter(id => INDUSTRIES.some(i => i.id === id));
 searchInput.value = state.query;
 
 fetch('/projects/projects.json')

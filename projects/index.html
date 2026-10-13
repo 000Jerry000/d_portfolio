@@ -116,25 +116,51 @@
         <div class="finder-cats" id="category-list" aria-label="カテゴリー" data-en-aria-label="Categories"></div>
       </div>
 
-      <div class="finder-status">
-        <p id="result-count" aria-live="polite"></p>
-        <button type="button" class="finder-reset" id="filter-reset" hidden>
-          <i class="fas fa-undo-alt" aria-hidden="true"></i><span data-en="Reset filters">条件をリセット</span>
-        </button>
-      </div>
+      <div class="works-layout">
 
-      <div class="work-grid" id="work-grid"></div>
+        <!-- industry sidebar -->
+        <aside class="industry-panel" aria-labelledby="industry-heading">
+          <button type="button" class="industry-toggle" id="industry-toggle" aria-expanded="false"
+            aria-controls="industry-body">
+            <span data-en="Filter by industry">業種で絞り込む</span>
+            <em id="industry-toggle-count"></em>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="industry-body" id="industry-body">
+            <h2 class="industry-heading" id="industry-heading">
+              <span data-en="Industry">業種で探す</span>
+              <small data-en="業種で探す">Industry</small>
+            </h2>
+            <p class="industry-note" data-en="Select one or more">複数選択できます</p>
+            <ul class="industry-list" id="industry-list"></ul>
+            <button type="button" class="industry-clear" id="industry-clear" hidden>
+              <i class="fas fa-times" aria-hidden="true"></i><span data-en="Clear industries">業種の選択を解除</span>
+            </button>
+          </div>
+        </aside>
 
-      <div class="finder-empty" id="finder-empty" hidden>
-        <span class="finder-empty-mark" aria-hidden="true">無</span>
-        <h2 data-en="No matching projects">該当する実績が見つかりませんでした</h2>
-        <p
-          data-en="Try a different keyword or category.<br>Even if there's no similar example here, please feel free to ask — many projects aren't public.">
-          キーワードやカテゴリーを変えてお試しください。<br>近い事例が見つからない場合も、非公開の実績がございますのでお気軽にご相談ください。</p>
-        <div class="finder-empty-actions">
-          <button type="button" class="btn btn-ghost" id="empty-reset"><span data-en="Show all projects">すべての実績を見る</span></button>
-          <a href="/#contact" class="btn btn-primary"><span data-en="Get in touch">相談する</span><i
-              class="fas fa-arrow-right"></i></a>
+        <div class="works-main">
+          <div class="finder-status">
+            <p id="result-count" aria-live="polite"></p>
+            <button type="button" class="finder-reset" id="filter-reset" hidden>
+              <i class="fas fa-undo-alt" aria-hidden="true"></i><span data-en="Reset filters">条件をリセット</span>
+            </button>
+          </div>
+
+          <div class="work-grid" id="work-grid"></div>
+
+          <div class="finder-empty" id="finder-empty" hidden>
+            <span class="finder-empty-mark" aria-hidden="true">無</span>
+            <h2 data-en="No matching projects">該当する実績が見つかりませんでした</h2>
+            <p
+              data-en="Try a different keyword, category or industry.<br>Even if there's no similar example here, please feel free to ask — many projects aren't public.">
+              キーワード・カテゴリー・業種を変えてお試しください。<br>近い事例が見つからない場合も、非公開の実績がございますのでお気軽にご相談ください。</p>
+            <div class="finder-empty-actions">
+              <button type="button" class="btn btn-ghost" id="empty-reset"><span data-en="Show all projects">すべての実績を見る</span></button>
+              <a href="/#contact" class="btn btn-primary"><span data-en="Get in touch">相談する</span><i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

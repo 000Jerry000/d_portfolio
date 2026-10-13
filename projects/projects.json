@@ -5,6 +5,10 @@
     "desc_en": "Handled everything end to end: creating the design, pixel-perfect coding, converting it to WordPress and uploading it to the server. Built with PHP, HTML, CSS and JavaScript.",
     "image": "en-Taku.webp",
     "category": "design wordpress",
+    "industry": [
+      "media",
+      "marketing"
+    ],
     "links": {
       "view": "https://008.fu-dev.com/",
       "code": "https://github.com/000Jerry000/en_Taku"
@@ -16,6 +20,9 @@
     "desc_en": "Implemented the coding and animations and converted them for WordPress. Built with PHP, HTML, CSS and JavaScript.",
     "image": "Aster-house.webp",
     "category": "wordpress",
+    "industry": [
+      "realestate"
+    ],
     "links": {
       "view": "https://house.aster-estate.com/",
       "code": "https://github.com/000Jerry000/ASTER-HOUSE2025"
@@ -27,6 +34,9 @@
     "desc_en": "Implemented the coding and animations and converted them for WordPress. Built with PHP, HTML, CSS and JavaScript.",
     "image": "unico.webp",
     "category": "wordpress",
+    "industry": [
+      "beauty"
+    ],
     "links": {
       "view": "https://unicobodymake.com/",
       "code": "https://github.com/000Jerry000/unico"
@@ -38,6 +48,9 @@
     "desc_en": "Design and coding, followed by migration to WordPress. Built with PHP, HTML, CSS and JS.",
     "image": "showa_dental.webp",
     "category": "design wordpress",
+    "industry": [
+      "medical"
+    ],
     "links": {
       "view": "https://f-dental.jp/",
       "code": "https://github.com/000Jerry000/showa_dental"
@@ -49,6 +62,9 @@
     "desc_en": "Combined design and no-code implementation to help improve the client's business. Built with Squarespace.",
     "image": "squarespace.webp",
     "category": "design no-code",
+    "industry": [
+      "travel"
+    ],
     "links": {
       "view": "https://www.organizer.digiq.jp/",
       "code": "https://github.com/000Jerry000/portfolio/blob/main/assets/images/projects/squarespace.mp4"
@@ -60,6 +76,9 @@
     "desc_en": "Built a design that helps improve the business using no-code and low-code implementation. Developed with Shopify.",
     "image": "shopify.webp",
     "category": "design no-code",
+    "industry": [
+      "retail"
+    ],
     "links": {
       "view": "https://citaxford.jp/lacita/",
       "code": "#"
@@ -71,6 +90,9 @@
     "desc_en": "Covered everything from design and site building to animation. Created with Sass and JavaScript.",
     "image": "nihonriko.webp",
     "category": "design sass",
+    "industry": [
+      "medical"
+    ],
     "links": {
       "view": "https://nr-brand.jp/",
       "code": "https://github.com/000Jerry000/nihonriko"
@@ -82,6 +104,9 @@
     "desc_en": "Scraped a large number of websites using Python's Selenium and ChatGPT. Built with Python and the ChatGPT API.",
     "image": "scraping.webp",
     "category": "python chatgpt",
+    "industry": [
+      "medical"
+    ],
     "links": {
       "view": "https://translate.google.com/?sl=ja&tl=en&text=%E6%9C%AC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%A7%E3%81%AF%E3%80%81ChatGPT%20API%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%80%81%E6%97%A5%E6%9C%AC%E5%85%A8%E5%9B%BD%E3%81%AE%E7%97%85%E9%99%A2%E3%82%92%E6%A4%9C%E7%B4%A2%E3%81%97%E3%81%9F%E3%81%86%E3%81%88%E3%81%A7%E3%80%81%E6%A4%9C%E7%B4%A2%E7%B5%90%E6%9E%9C%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%84%E3%81%A6%E5%90%84%E7%97%85%E9%99%A2%E3%81%AB%E5%8B%A4%E5%8B%99%E3%81%99%E3%82%8B%E5%8C%BB%E5%B8%AB%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E3%83%AA%E3%82%B9%E3%83%88%E5%8C%96%E3%81%99%E3%82%8B%E8%87%AA%E5%8B%95%E3%83%84%E3%83%BC%E3%83%AB%E3%82%92%E9%96%8B%E7%99%BA%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0AChatGPT%E5%8D%98%E4%BD%93%E3%81%A7%E3%81%AF%E3%80%81%E5%90%84%E7%97%85%E9%99%A2%E3%81%AB%E5%8B%A4%E5%8B%99%E3%81%99%E3%82%8B%E5%8C%BB%E5%B8%AB5%E5%90%8D%E4%BB%A5%E4%B8%8A%E3%81%AE%E8%A9%B3%E7%B4%B0%E3%81%AA%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%9B%B0%E9%9B%A3%E3%81%A7%E3%81%99%E3%81%8C%E3%80%81%E7%97%85%E9%99%A2%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E3%81%AF%E5%BE%93%E6%A5%AD%E5%93%A1%E6%95%B0%E3%81%8C500%E5%90%8D%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E5%A0%B4%E5%90%88%E3%82%82%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%0A%E3%81%93%E3%81%AE%E8%AA%B2%E9%A1%8C%E3%81%AF%E3%80%81Python%E3%81%AESelenium%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A------------------------%0A%E3%81%AA%E3%81%8A%E3%80%81%E6%9C%AC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AF%E7%A7%98%E5%AF%86%E4%BF%9D%E6%8C%81%E5%A5%91%E7%B4%84%EF%BC%88NDA%EF%BC%89%E3%82%92%E7%B7%A0%E7%B5%90%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%9F%E3%82%81%E3%80%81%E8%A9%B3%E7%B4%B0%E3%81%AA%E5%86%85%E5%AE%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AF%E5%80%8B%E5%88%A5%E3%81%AB%E3%81%94%E7%9B%B8%E8%AB%87%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E5%B9%B8%E3%81%84%E3%81%A7%E3%81%99%E3%80%82&op=translate",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -94,6 +119,9 @@
     "desc_en": "・Matches Japanese and Korean women \n ・Profile registration, identity verification, multilingual support, translation\n ・Map-based search, chat, likes\n ・Ticket purchases",
     "image": "マッチングアプリ.webp",
     "category": "android google-map",
+    "industry": [
+      "matching"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -104,6 +132,9 @@
     "desc": "Ruby on Railsで開発した在庫管理システム。仕入・在庫・販売の一元管理が可能。仕入・支払伝票作成、在庫更新、税計算、ユーザー権限管理を搭載。直感的なUIで業務効率を向上。開発費150万円。",
     "image": "ZAIKO.webp",
     "category": "system",
+    "industry": [
+      "business"
+    ],
     "links": {
       "view": "https://fujigankyo.chu.jp/system_fujigankyo/sale-management/estimation-new-create",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -114,6 +145,10 @@
     "desc": "アフィリエイトマーケター向けの分析サイトを、Vue.jsとPHP Laravelを用いて開発しました。",
     "image": "アフィリエイト分析サイト.webp",
     "category": "system",
+    "industry": [
+      "marketing",
+      "business"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -124,6 +159,9 @@
     "desc": "Uber Eatsや出前館（Demaecan）と連携し、顧客がこれらのプラットフォームを通じて自動販売機での商品を注文する機能を開発しました。このプロジェクトにより、より多くの顧客にフレッシュな食品を提供し、利便性を高めることを目指しました。",
     "image": "自動販売機.webp",
     "category": "system",
+    "industry": [
+      "retail"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -134,6 +172,9 @@
     "desc": "「TipTap」は、PythonとDjangoを用いて開発された投げ銭サイトになります。",
     "image": "投げ銭サイト.webp",
     "category": "python",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "https://tiptap.tokyo/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -144,6 +185,9 @@
     "desc": "アプリをダウンロードしてカメラロールにある写真を分析を行います。分析結果をchatgptへ投げてユーザーの性格、特徴、将来のことを占っています。",
     "image": "AIの占い師アプリ.webp",
     "category": "python chatgpt",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -154,6 +198,9 @@
     "desc": "えのすぱLOVERS -巡って、食べて、癒されて。私たちのスキを集めに行こう。",
     "image": "LOVERS.webp",
     "category": "wordpress",
+    "industry": [
+      "travel"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -164,6 +211,9 @@
     "desc": "シンデレラスリープ | Contents",
     "image": "シンデレラスリープ.webp",
     "category": "wordpress",
+    "industry": [
+      "beauty"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -174,6 +224,9 @@
     "desc": "フェイスリフトサロンCLARITY様 ホームページ制作",
     "image": "フェイスリフトサロン.webp",
     "category": "design wordpress",
+    "industry": [
+      "beauty"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -184,6 +237,9 @@
     "desc": "宿泊人数別料金・空室状況・公開月数を正確に取得する高精度スクレイピングプラットフォーム",
     "image": "ホテル宿泊.webp",
     "category": "gas chatgpt",
+    "industry": [
+      "travel"
+    ],
     "links": {
       "view": "https://www.jalan.net/uw/uwp3200/uww3201init.do?callbackHistFlg=1&stayCount=1&roomCount=1&dateUndecided=1&adultNum=4&rootCd=7701&distCd=01&yadNo=384944&smlCd=010202&roomCrack=400000&stayYear=&stayMonth=&stayDay=&screenId=UWW3101&planCd=03618774&roomTypeCd=0517558&planListNumPlan=3_0_0&groupBookingFlg=&ccnt=planlist_cp_y_500_sale_n_0_pp_n_0",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -194,6 +250,10 @@
     "desc": "GASを使用してGoogle Search Console（GSC）から検索パフォーマンスデータを自動的に検索し、スプレッドシートに出力するGoogle Apps Script（GAS）を構築しました。",
     "image": "GSCデータを自動.webp",
     "category": "gas",
+    "industry": [
+      "marketing",
+      "business"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -204,6 +264,9 @@
     "desc": "理想の異性と出会えるマッチングアプリを開発しました。",
     "image": "Flutterflowマッチングアプリ.webp",
     "category": "android",
+    "industry": [
+      "matching"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -214,6 +277,9 @@
     "desc": "お祭りで山車が今どこにいるかリアルタイムで分かるWebサービス！",
     "image": "まつりNOW.webp",
     "category": "android",
+    "industry": [
+      "travel"
+    ],
     "links": {
       "view": "https://apocc.co.jp/matsurinow_lp",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -224,6 +290,10 @@
     "desc": "外国人インフルエンサーと店舗のマッチングサービス「UZU」の開発を担当。",
     "image": "uzu_.webp",
     "category": "android",
+    "industry": [
+      "matching",
+      "marketing"
+    ],
     "links": {
       "view": "https://apocc.co.jp/uzu_lp",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -234,6 +304,9 @@
     "desc": "ダイソー公式のまとめ買いオンラインショップ。収納用品・日用品・雑貨などをセット販売し、業務用・大量購入ニーズに対応するネットストアです。",
     "image": "ダイソー公式.webp",
     "category": "design wordpress",
+    "industry": [
+      "retail"
+    ],
     "links": {
       "view": "https://jpbulk.daisonet.com/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -244,6 +317,9 @@
     "desc": "子育て・生活情報を発信する日本最大級ママ向けメディア。ニュース・コラム・コミュニティ・保活情報など、ママの日常を支援するコンテンツと交流基盤を提供します。([プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES][1])",
     "image": "ママスタ.webp",
     "category": "design wordpress",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "https://mamastar.jp/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -254,6 +330,9 @@
     "desc": "日経BP公式サイト。ビジネス・テクノロジー・ライフスタイルなど幅広い分野の専門情報、ニュース、専門誌連動コンテンツを提供する総合情報ポータルです。",
     "image": "日経BP.webp",
     "category": "design wordpress",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "https://www.nikkeibp.co.jp/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -264,6 +343,9 @@
     "desc": "国内最大級の歌詞検索サービス「Uta-Net」。曲名・アーティスト・歌詞の一部から無料で歌詞を検索・閲覧でき、音楽情報やランキング等のコンテンツも提供するサイトです。",
     "image": "Uta-Net.webp",
     "category": "design wordpress",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "https://www.uta-net.com/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -274,6 +356,9 @@
     "desc": "音楽・エンタメ情報・ランキングを提供する総合メディア。最新ニュースや音楽チャート、顧客満足度ランキングなどを発信し、トレンド情報のプラットフォームとして日本の大衆文化に貢献しています。",
     "image": "オリコン公式サイト.webp",
     "category": "design wordpress",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "https://www.oricon.co.jp/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -284,6 +369,9 @@
     "desc": "安全で複雑なパスワードを簡単に生成できるWebアプリです。本アプリは Peegee として公開しており、MCP（Model Context Protocol）サーバーにも対応。",
     "image": "パスワード生成Webアプリ.webp",
     "category": "system security",
+    "industry": [
+      "business"
+    ],
     "links": {
       "view": "https://peegee.masoo.dev/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -294,6 +382,9 @@
     "desc": "メールで添付ファイルを送付した後、２つ目のメールでパスワードを送信する事を防ぎたいために作成しました。",
     "image": "passend.webp",
     "category": "security",
+    "industry": [
+      "business"
+    ],
     "links": {
       "view": "",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -304,6 +395,9 @@
     "desc": "電子書籍 epub3 作成・発表プラットフォームです。",
     "image": "cocuu.webp",
     "category": "security",
+    "industry": [
+      "media"
+    ],
     "links": {
       "view": "http://cocuu.net/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
@@ -314,6 +408,9 @@
     "desc": "jekyllというコンテンツ管理システムを用いて作成しました。プロバイダのホームページでも設置可能なツールとなっております。",
     "image": "profile_ipad.webp",
     "category": "design wordpress system",
+    "industry": [
+      "other"
+    ],
     "links": {
       "view": "http://homepage2.nifty.com/107steps/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
