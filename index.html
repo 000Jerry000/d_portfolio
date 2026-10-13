@@ -1,11 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="keywords"
+    content="土井健広, Takehiro Doi, ポートフォリオ, フルスタックエンジニア, AIエンジニア, フリーランス, Web制作, Webアプリ開発, portfolio, full stack engineer, AI engineer, freelance" />
+  <meta name="description"
+    content="フルスタック・AIエンジニア 土井健広のポートフォリオ。Webサイト制作、Webアプリケーション開発、AI活用、Androidアプリ開発をワンストップで承ります。"
+    data-en="Portfolio of Takehiro Doi, full-stack and AI engineer. Websites, web applications, AI solutions and Android apps — handled end to end." />
+  <link rel="alternate" hreflang="ja" href="https://masao-portfolio.vercel.app/?lang=ja" />
+  <link rel="alternate" hreflang="en" href="https://masao-portfolio.vercel.app/?lang=en" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.webp" type="image/x-png">
+  <title>Portfolio | 土井　健広 | Doi Takehiro</title>
 </head>
-<body>
-  
+
+<body oncontextmenu="return false">
+
+  <!-- shared SVG: brush-stroke ensō -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="brush">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" />
+        <feDisplacementMap in="SourceGraphic" scale="9" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- header starts -->
+  <header class="header" id="header">
+    <a href="#home" class="logo" aria-label="ホーム" data-en-aria-label="Home">
+      <span class="hanko">土井</span>
+      <span class="logo-text">
+        <span class="logo-jp" data-en="Takehiro Doi">土井 健広</span>
+        <span class="logo-en" data-en="土井 健広">Doi Takehiro</span>
+      </span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a class="active" href="#home"><span data-en="Home">ホーム</span><small data-en="ホーム">Home</small></a></li>
+        <li><a href="#about"><span data-en="About">自己紹介</span><small data-en="自己紹介">About</small></a></li>
+        <li><a href="#services"><span data-en="Services">対応業務</span><small data-en="対応業務">Services</small></a></li>
+        <li><a href="#skills"><span data-en="Skills">技術一覧</span><small data-en="技術一覧">Skills</small></a></li>
+        <li><a href="#work"><span data-en="Works">制作実績</span><small data-en="制作実績">Works</small></a></li>
+        <li><a href="#experience"><span data-en="Career">経歴</span><small data-en="経歴">Career</small></a></li>
+        <li><a href="#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="言語 / Language">
+        <button type="button" data-lang="ja" aria-pressed="true" lang="ja">日本語</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menu" aria-label="メニュー" data-en-aria-label="Menu" aria-expanded="false"
+        aria-controls="navbar">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <!-- header ends -->
+
+  <main>
+
+    <!-- hero section starts -->
+    <section class="home" id="home">
+      <div class="home-inner">
+
+        <div class="home-copy">
+          <p class="home-greeting reveal" data-en="Hello, nice to meet you">初めまして</p>
+          <h1 class="home-name reveal">
+            <span class="home-name-jp"><span data-en="Takehiro Doi">土井 健広</span><span class="home-name-suffix"
+                data-en="Full-Stack &amp; AI Engineer">と申します</span></span>
+            <span class="home-name-en" data-en="土井 健広">Doi Takehiro</span>
+          </h1>
+          <p class="home-role reveal">
+            <span data-en="I'm">私は</span><span class="role-rotator" aria-live="polite">フロントエンドエンジニア</span><span
+              data-en="">です</span>
+          </p>
+          <p class="home-lead reveal"
+            data-en="With over 10 years of hands-on experience, I help with everything from websites and web applications to AI-powered systems — from design all the way through maintenance.">
+            10年以上の実務経験をもとに、Webサイト・Webアプリケーション・AIを活用したシステムまで、
+            設計から保守運用まで一貫してお手伝いいたします。
+          </p>
+          <div class="home-actions reveal">
+            <a href="#work" class="btn btn-primary"><span data-en="View my work">制作実績を見る</span><i
+                class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost"><span data-en="Let's talk">ご相談はこちら</span></a>
+          </div>
+        </div>
+
+        <div class="home-visual" aria-hidden="true">
+          <svg class="enso" viewBox="0 0 400 400">
+            <path filter="url(#brush)"
+              d="M 236 62 C 318 78 360 150 348 228 C 336 306 262 356 186 346 C 104 336 50 268 58 188 C 66 112 128 62 196 58" />
+          </svg>
+          <p class="home-catch">
+            <span data-en="Shaping your ideas">技術で、</span>
+            <span data-en="with technology.">想いをかたちに。</span>
+          </p>
+          <span class="home-seal">健</span>
+        </div>
+
+      </div>
+
+      <ul class="home-socials" aria-label="SNS">
+        <li><a class="github" aria-label="GitHub" href="https://github.com/000Jerry000" target="_blank" rel="noopener"><i
+              class="fab fa-github"></i></a></li>
+        <li><a class="telegram" aria-label="Telegram" href="https://t.me/NicholasMitchell_HZ" target="_blank"
+            rel="noopener"><i class="fab fa-telegram-plane"></i></a></li>
+        <li><a class="dev" aria-label="Dev" href="https://dev.to/000Jerry000" target="_blank" rel="noopener"><i
+              class="fab fa-dev"></i></a></li>
+        <li><a class="discord" aria-label="Discord" href="https://discord.gg/qsEA4FFF" target="_blank" rel="noopener"><i
+              class="fab fa-discord"></i></a></li>
+        <li><a class="slack" aria-label="Slack" href="https://jerry-2qp9506.slack.com/archives/C08QNMUKU6S"
+            target="_blank" rel="noopener"><i class="fab fa-slack"></i></a></li>
+        <li><a class="chatwork" aria-label="Chatwork" href="https://www.chatwork.com/ichika01" target="_blank"
+            rel="noopener"><img src="./assets/images/chatwork.webp" alt="" /></a></li>
+      </ul>
+
+      <a href="#about" class="home-scroll" aria-label="下へスクロール" data-en-aria-label="Scroll down"><span>Scroll</span></a>
+      <div class="wave-band" aria-hidden="true"></div>
+    </section>
+    <!-- hero section ends -->
+
+
+    <!-- about section starts -->
+    <section class="section about" id="about">
+      <div class="sec-head reveal">
+        <span class="sec-num">壱</span>
+        <h2 class="sec-title" data-en="About">自己紹介</h2>
+        <span class="sec-en" data-en="自己紹介">About</span>
+      </div>
+
+      <div class="about-row">
+        <figure class="about-photo reveal">
+          <img draggable="false" src="./assets/images/profile2.webp" alt="土井 健広のプロフィール写真"
+            data-en-alt="Profile photo of Takehiro Doi">
+        </figure>
+
+        <div class="about-body">
+          <h3 class="about-name reveal" data-en="Takehiro Doi <small>土井 健広</small>">土井 健広 <small>Doi Takehiro</small></h3>
+          <span class="tag reveal" data-en="Full-Stack &amp; AI Engineer">フルスタック・AIエンジニア</span>
+
+          <p class="about-text reveal"
+            data-en="I'm Takehiro Doi, a full-stack and AI engineer. With over 10 years of professional experience, I currently work as a freelancer designing and developing web applications and websites. I cover everything from front end to back end, and my particular strength is development that puts cutting-edge technology such as AI to work.">
+            フルスタック・AIエンジニアの土井と申します。
+            エンジニアとして10年以上の実務経験を有し、現在はフリーランスとしてWebアプリケーションおよびWebサイトの設計・開発に従事しております。
+            フロントエンドからバックエンドまで一貫して対応可能で、AIをはじめとする先端技術を活用した開発を強みとしております。
+          </p>
+          <p class="about-text reveal"
+            data-en="Beyond web development, I bring deep expertise and a proven track record in system development and AI adoption. I keep sharpening my skills through hands-on projects that create real value — always putting my clients' goals first and committed to delivering high-quality, reliable work.">
+            Web開発にとどまらず、システム開発やAI活用においても高い専門性と実績を有しております。
+            日々技術の研鑽に努め、実践的なプロジェクトを通じて価値創出に直結するスキルを磨いております。
+            常にクライアント様の目的達成を最優先に、高品質で信頼性の高いサービス提供に尽力しております。
+          </p>
+
+          <dl class="profile-table reveal">
+            <div><dt data-en="Name">氏名</dt><dd data-en="Takehiro Doi">土井 健広</dd></div>
+            <div><dt data-en="Role">職種</dt><dd data-en="Full-Stack &amp; AI Engineer (Freelance)">フルスタック・AIエンジニア（フリーランス）</dd></div>
+            <div><dt data-en="Experience">実務経験</dt><dd data-en="10+ years">10年以上</dd></div>
+            <div><dt data-en="Location">拠点</dt><dd data-en="Koriyama, Japan">郡山, 日本</dd></div>
+            <div><dt data-en="Email">メール</dt><dd><a href="mailto:e.yatsuda.big@gmail.com">e.yatsuda.big@gmail.com</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <!-- about section ends -->
+
+
+    <!-- services section starts -->
+    <section class="section services" id="services">
+      <div class="sec-head reveal">
+        <span class="sec-num">弐</span>
+        <h2 class="sec-title" data-en="Services">対応業務</h2>
+        <span class="sec-en" data-en="対応業務">Services</span>
+      </div>
+
+      <div class="services-grid">
+        <article class="service reveal">
+          <span class="service-glyph" aria-hidden="true">創</span>
+          <span class="service-num">01</span>
+          <h3 data-en="Website Development">Webサイト制作</h3>
+          <p data-en="From design to pixel-perfect coding, WordPress integration and server deployment — all handled end to end.">デザインからピクセルパーフェクトなコーディング、WordPress化、サーバー公開まで一貫して対応いたします。</p>
+          <ul class="service-tags">
+            <li>WordPress</li><li>Shopify</li><li>Squarespace</li><li>Sass</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-glyph" aria-hidden="true">築</span>
+          <span class="service-num">02</span>
+          <h3 data-en="Web Application Development">Webアプリケーション開発</h3>
+          <p data-en="A one-stop service covering requirements, front end, back end, API integration and ongoing maintenance.">要件定義からフロントエンド・バックエンド、API連携、保守運用までワンストップで承ります。</p>
+          <ul class="service-tags">
+            <li>Next.js</li><li>TypeScript</li><li>React</li><li>Laravel</li><li>Django</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-glyph" aria-hidden="true">智</span>
+          <span class="service-num">03</span>
+          <h3 data-en="AI &amp; Automation">AI活用・業務自動化</h3>
+          <p data-en="AI tools, chatbots and automated data collection and analysis, built with ChatGPT and Python.">ChatGPTとPythonを活用したAIツール、チャットボット、データ収集・分析の自動化を開発いたします。</p>
+          <ul class="service-tags">
+            <li>ChatGPT</li><li>Python</li><li>Scraping</li><li>Bot</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-glyph" aria-hidden="true">携</span>
+          <span class="service-num">04</span>
+          <h3 data-en="Android App Development">Androidアプリ開発</h3>
+          <p data-en="From UI/UX design and implementation to publishing and running apps on Google Play, backed by my own app releases.">UI/UX設計から実装、Google Playでの公開・運用まで、個人開発の経験を活かして対応いたします。</p>
+          <ul class="service-tags">
+            <li>Kotlin</li><li>Java</li><li>Firebase</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <!-- services section ends -->
+
+
+    <!-- skills section starts -->
+    <section class="section skills" id="skills">
+      <div class="sec-head reveal">
+        <span class="sec-num">参</span>
+        <h2 class="sec-title" data-en="Skills">技術一覧</h2>
+        <span class="sec-en" data-en="技術一覧">Skills</span>
+      </div>
+
+      <div class="skills-grid" id="skillsContainer"></div>
+    </section>
+    <!-- skills section ends -->
+
+
+    <!-- work project section starts -->
+    <section class="section work" id="work">
+      <div class="sec-head reveal">
+        <span class="sec-num">肆</span>
+        <h2 class="sec-title" data-en="Works">制作実績</h2>
+        <span class="sec-en" data-en="制作実績">Works</span>
+      </div>
+
+      <div class="work-grid"></div>
+
+      <div class="sec-more">
+        <a href="/projects" class="btn btn-primary"><span data-en="View all projects">すべての実績を見る</span><i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+    <!-- work project section ends -->
+
+
+    <!-- experience section starts -->
+    <section class="section experience" id="experience">
+      <div class="sec-head reveal">
+        <span class="sec-num">伍</span>
+        <h2 class="sec-title" data-en="Career">経歴</h2>
+        <span class="sec-en" data-en="経歴">Career</span>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <p class="tl-date" data-en="Jul 2025 – Present">2025年7月 〜 現在</p>
+          <div class="tl-body">
+            <h3 data-en="AI Development">AI開発経験</h3>
+            <p data-en="Developing AI tools with ChatGPT and Python, building chatbots, and creating bots for social platforms.">ChatGPTとPythonを活用したAIツールの開発、チャットボットの開発、ソーシャルサイトにおけるボットの開発を進めている。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Jul 2025 – Present">2025年7月 〜 現在</p>
+          <div class="tl-body">
+            <h3 data-en="Working as a Freelance Engineer">フリーランスエンジニアとして活動中</h3>
+            <p data-en="Contributing to multiple web app projects using Next.js, TypeScript, Tailwind CSS, Laravel and Django. Handling everything one-stop, from design to front end, back end and ongoing maintenance.">Next.js、TypeScript、Tailwind CSS、Laravel、Django
+              などを用いて複数のWebアプリ開発プロジェクトに参画。デザインからフロント・バックエンド、さらには保守運用までワンストップで対応。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Jan 2024 – Jun 2025">2024年1月 〜 2025年6月</p>
+          <div class="tl-body">
+            <h3 data-en="Android App Development (Side Projects)">Androidアプリの開発経験（副業）</h3>
+            <p data-en="Independently developed and released a lifelog app with Kotlin and Firebase, handling everything from UI/UX design and implementation to publishing and running it on Google Play.">KotlinとFirebaseを用いたライフログ系アプリを個人で開発・リリース。UI/UX設計から実装、Google Playでの公開・運用まで一人で対応。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Apr 2020 – Jun 2025">2020年4月 〜 2025年6月</p>
+          <div class="tl-body">
+            <h3 data-en="Full-Stack Development at a Startup">スタートアップ企業でフルスタック開発</h3>
+            <p data-en="Built web apps with React, Node.js and Firebase, as well as internal admin tools and API integrations. Owned projects from requirements definition through release.">React / Node.js / Firebase によるWebアプリ開発に加え、社内向けの管理ツールやAPI連携も実装。要件定義〜リリースまで一貫して担当。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Apr 2017 – Mar 2020">2017年4月 〜 2020年3月</p>
+          <div class="tl-body">
+            <h3 data-en="Front-End Engineer at a Web Production Company">Web制作会社にてフロントエンドエンジニアとして勤務</h3>
+            <p data-en="Worked on corporate and e-commerce sites using WordPress, jQuery, Sass and Vue.js, building UIs with a strong focus on responsive design and accessibility.">コーポレートサイトやECサイトの制作に携わり、WordPress、jQuery、Sass、Vue.js などを使用した実務経験を積む。レスポンシブ対応やアクセシビリティも重視したUI開発を担当。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Apr 2014 – Mar 2017">2014年4月 〜 2017年3月</p>
+          <div class="tl-body">
+            <h3 data-en="Studied Information Technology at University">大学で情報技術を専攻</h3>
+            <p data-en="Studied C, Java, algorithms, networking and databases in an IT faculty while taking part in several university development projects.">情報系学部にて、C言語、Java、アルゴリズム、ネットワーク、データベースなどを学びながら、複数の学内開発プロジェクトに参加。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <p class="tl-date" data-en="Apr 2012 – Mar 2014">2012年4月 〜 2014年3月</p>
+          <div class="tl-body">
+            <h3 data-en="Started Learning to Program">プログラミング学習のスタート</h3>
+            <p data-en="Taught myself the basics of HTML, CSS and JavaScript in high school and built simple websites and tools on my own.">高校時代より独学でHTML、CSS、JavaScriptなどの基礎を習得。簡単なWebサイトやツールを個人で制作。</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="sec-more">
+        <a href="/experience" class="btn btn-ghost"><span data-en="View full career">詳しい経歴を見る</span><i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+    <!-- experience section ends -->
+
+
+    <!-- flow section starts -->
+    <section class="section flow" id="flow">
+      <div class="sec-head reveal">
+        <span class="sec-num">陸</span>
+        <h2 class="sec-title" data-en="How We Work">ご依頼の流れ</h2>
+        <span class="sec-en" data-en="ご依頼の流れ">Flow</span>
+      </div>
+
+      <ol class="flow-list">
+        <li class="reveal">
+          <span class="flow-step">一</span>
+          <h3 data-en="Inquiry">お問い合わせ</h3>
+          <p data-en="Reach out via the form, email or chat — whichever suits you.">フォーム・メール・チャットからお気軽にご連絡ください。</p>
+        </li>
+        <li class="reveal">
+          <span class="flow-step">二</span>
+          <h3 data-en="Consultation">ヒアリング</h3>
+          <p data-en="I carefully listen to your goals, requirements, budget and schedule.">目的・ご要望・ご予算・スケジュールを丁寧に伺います。</p>
+        </li>
+        <li class="reveal">
+          <span class="flow-step">三</span>
+          <h3 data-en="Proposal &amp; Quote">ご提案・お見積り</h3>
+          <p data-en="I propose the best architecture and technology, along with a quote.">最適な構成と技術をご提案し、お見積りをお出しします。</p>
+        </li>
+        <li class="reveal">
+          <span class="flow-step">四</span>
+          <h3 data-en="Design &amp; Build">設計・開発</h3>
+          <p data-en="Design and implementation move forward with regular progress updates.">進捗をこまめに共有しながら、設計・実装を進めます。</p>
+        </li>
+        <li class="reveal">
+          <span class="flow-step">五</span>
+          <h3 data-en="Delivery &amp; Support">納品・保守運用</h3>
+          <p data-en="Ongoing support after launch, from improvements to maintenance.">公開後の改善や保守運用まで継続してサポートいたします。</p>
+        </li>
+      </ol>
+    </section>
+    <!-- flow section ends -->
+
+
+    <!-- contact section starts -->
+    <section class="section contact" id="contact">
+      <div class="sec-head reveal">
+        <span class="sec-num">漆</span>
+        <h2 class="sec-title" data-en="Contact">お問い合わせ</h2>
+        <span class="sec-en" data-en="お問い合わせ">Contact</span>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-info reveal">
+          <p class="contact-lead"
+            data-en="If there's anything I can help with<br>on your website or application,<br>please feel free to get in touch.">Webサイトやアプリケーション開発に関して、<br>お力になれることがございましたら、<br>ぜひお気軽にご相談ください。</p>
+          <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i><a href="mailto:e.yatsuda.big@gmail.com">e.yatsuda.big@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><span data-en="Koriyama, Japan">郡山, 日本</span></li>
+            <li><i class="fas fa-comments"></i><span data-en="Live chat is also available">ライブチャットでもご相談いただけます</span></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal">
+          <label class="field">
+            <span><span data-en="Name">お名前</span><em data-en="Required">必須</em></span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span><span data-en="Email">メールアドレス</span><em data-en="Required">必須</em></span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span><span data-en="Phone">電話番号</span></span>
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <label class="field">
+            <span><span data-en="Message">ご相談内容</span><em data-en="Required">必須</em></span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><span data-en="Send">送信する</span><i
+                class="fa fa-paper-plane"></i></button>
+            <p class="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- contact section ends -->
+
+  </main>
+
+
+  <!-- footer section starts -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="hanko hanko-lg">土井</span>
+        <div>
+          <h3 data-en="Welcome to Takehiro Doi's portfolio">土井のポートフォリオサイトへようこそ</h3>
+          <p data-en="Thank you for visiting. Feel free to reach out on social media.<br>I'll keep learning and growing.">ご覧いただきありがとうございます。SNSを通じてお気軽にご連絡ください。<br>これからも成長を続けてまいります。</p>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="フッターナビゲーション" data-en-aria-label="Footer navigation">
+        <h4 data-en="Quick Links">主要リンク一覧</h4>
+        <a href="#home" data-en="Home">ホーム</a>
+        <a href="#about" data-en="About">自己紹介</a>
+        <a href="#services" data-en="Services">対応業務</a>
+        <a href="#skills" data-en="Skills">技術一覧</a>
+        <a href="#work" data-en="Works">制作実績</a>
+        <a href="#experience" data-en="Career">経歴</a>
+        <a href="#contact" data-en="Contact">お問い合わせ</a>
+      </nav>
+
+      <div class="footer-contact">
+        <h4 data-en="Contact Info">連絡先</h4>
+        <p><i class="fas fa-envelope"></i>e.yatsuda.big@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i><span data-en="Koriyama, Japan">郡山, 日本</span></p>
+        <div class="share">
+          <a href="https://github.com/000Jerry000" class="fab fa-github" aria-label="GitHub" target="_blank" rel="noopener"></a>
+          <a href="https://t.me/NicholasMitchell_HZ" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank" rel="noopener"></a>
+          <a href="https://dev.to/000Jerry000" class="fab fa-dev" aria-label="Dev" target="_blank" rel="noopener"></a>
+          <a href="https://discord.gg/qsEA4FFF" class="fab fa-discord" aria-label="Discord" target="_blank" rel="noopener"></a>
+          <a href="https://jerry-2qp9506.slack.com/archives/C08QNMUKU6S" class="fab fa-slack" aria-label="Slack" target="_blank" rel="noopener"></a>
+          <a href="https://www.chatwork.com/ichika01" class="chat-a" aria-label="Chatwork" target="_blank" rel="noopener"><img
+              src="./assets/images/chatwork01.webp" alt="" /></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="credit">&copy; <span id="year">2026</span> <a href="https://www.linkedin.com/in/Takehiro-Doi">土井 健広 / Doi Takehiro</a></p>
+  </footer>
+  <!-- footer section ends -->
+
+
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ページの先頭へ" data-en-aria-label="Back to top" id="scroll-top"><i class="fas fa-angle-up"></i></a>
+
+
+  <!-- emailjs -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init({ publicKey: 'IBw5D379skuhuwkym' })
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>
