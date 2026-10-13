@@ -1,0 +1,143 @@
+/* Shared by the sub pages (/projects, /experience) — builds on /assets/css/style.css */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- page heading ---------- */
+
+.page-hero {
+  position: relative;
+  padding: calc(var(--header-h) + clamp(48px, 7vw, 96px)) var(--gutter) clamp(96px, 10vw, 140px);
+  overflow: hidden;
+}
+
+/* faint ensō-like ring behind the title, echoing the top page hero */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  right: calc(var(--gutter) - 60px);
+  top: calc(var(--header-h) + 10px);
+  width: clamp(240px, 32vw, 420px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: clamp(10px, 1.4vw, 18px) solid rgba(30, 27, 24, 0.06);
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.page-hero .sec-head {
+  margin-bottom: 28px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--usuzumi);
+}
+
+.breadcrumb a {
+  transition: color .3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--shu);
+}
+
+.breadcrumb [aria-current] {
+  color: var(--sumi);
+}
+
+.page-lead {
+  max-width: 640px;
+  font-size: 15px;
+  color: var(--sumi-soft);
+}
+
+/* ---------- contact band ---------- */
+
+.page-cta {
+  padding-top: 0;
+}
+
+.page-cta-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(20px, 3vw, 36px);
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--sumi);
+  color: var(--washi);
+}
+
+.page-cta h2 {
+  font-family: var(--f-mincho);
+  font-weight: 800;
+  font-size: clamp(20px, 2.4vw, 26px);
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+.page-cta p {
+  font-size: 14px;
+  color: rgba(245, 240, 230, 0.75);
+}
+
+.page-cta .btn-primary {
+  background: var(--shu);
+  color: var(--washi);
+  border-color: var(--shu);
+}
+
+.page-cta .btn-primary::before {
+  background: var(--washi);
+}
+
+.page-cta .btn-primary:hover {
+  color: var(--sumi);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 960px) {
+  .page-cta-inner {
+    grid-template-columns: auto 1fr;
+  }
+
+  .page-cta .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero::before {
+    display: none;
+  }
+
+  .page-cta-inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .page-cta .hanko {
+    display: none;
+  }
+}

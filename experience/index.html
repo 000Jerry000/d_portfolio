@@ -1,231 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../experience/style.css">
+  <meta name="description"
+    content="フルスタック・AIエンジニア 土井健広の経歴。Web制作会社でのフロントエンド開発、スタートアップでのフルスタック開発、Androidアプリ開発、フリーランスとしてのWebアプリ・AI開発までの歩みをご紹介します。"
+    data-en="Career of Takehiro Doi, full-stack and AI engineer — from front-end work at a web production company and full-stack development at a startup to Android apps and freelance web app and AI development." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/subpage.css">
+  <link rel="stylesheet" href="/experience/style.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.webp" type="image/x-png">
-
-  <title>Experience | Portfolio 土井 健広</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link id="favicon" rel="icon" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <title data-en="Career | Takehiro Doi | Full-Stack &amp; AI Engineer">経歴 | 土井　健広 | Doi Takehiro</title>
 </head>
 
 <body oncontextmenu="return false">
 
-  <!-- navbar starts -->
-  <header>
-    <a href="/" class="logo"><i class="fab fa-node-js"></i> Doi</a>
+  <!-- header starts -->
+  <header class="header" id="header">
+    <a href="/" class="logo" aria-label="ホーム" data-en-aria-label="Home">
+      <span class="hanko">土井</span>
+      <span class="logo-text">
+        <span class="logo-jp" data-en="Takehiro Doi">土井 健広</span>
+        <span class="logo-en" data-en="土井 健広">Doi Takehiro</span>
+      </span>
+    </a>
 
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <ul>
-        <li><a href="/#home">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#skills">Skills</a></li>
-        <li><a href="/#education">Education</a></li>
-        <li><a href="/#work">Work</a></li>
-        <li><a class="active" href="/#experience">Experience</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/#home"><span data-en="Home">ホーム</span><small data-en="ホーム">Home</small></a></li>
+        <li><a href="/#about"><span data-en="About">自己紹介</span><small data-en="自己紹介">About</small></a></li>
+        <li><a href="/#services"><span data-en="Services">対応業務</span><small data-en="対応業務">Services</small></a></li>
+        <li><a href="/#skills"><span data-en="Skills">技術一覧</span><small data-en="技術一覧">Skills</small></a></li>
+        <li><a href="/projects"><span data-en="Works">制作実績</span><small data-en="制作実績">Works</small></a></li>
+        <li><a class="active" href="/experience" aria-current="page"><span data-en="Career">経歴</span><small data-en="経歴">Career</small></a></li>
+        <li><a href="/#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li>
       </ul>
     </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="言語 / Language">
+        <button type="button" data-lang="ja" aria-pressed="true" lang="ja">日本語</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menu" aria-label="メニュー" data-en-aria-label="Menu" aria-expanded="false"
+        aria-controls="navbar">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
-  <!-- navbar ends -->
+  <!-- header ends -->
 
-  <!-- experience section starts -->
-  <section class="experience" id="experience">
+  <main>
 
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-    <div class="quote">
-      <span>every experience in your life is being orchestrated to teach you something you need to know to move
-        forward.</span>
-    </div>
+    <!-- page heading starts -->
+    <section class="page-hero" id="top">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="パンくずリスト" data-en-aria-label="Breadcrumb">
+          <a href="/" data-en="Home">ホーム</a>
+          <span aria-hidden="true">／</span>
+          <span aria-current="page" data-en="Career">経歴</span>
+        </nav>
 
-    <div class="timeline">
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Self Employed</h2>
-          </div>
-          <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
-          </div>
+        <div class="sec-head">
+          <span class="sec-num">伍</span>
+          <h1 class="sec-title" data-en="Career">経歴</h1>
+          <span class="sec-en" data-en="経歴">Career</span>
         </div>
+
+        <p class="page-lead"
+          data-en="From teaching myself to code in high school, through a web production company and a startup, to working as a freelance engineer today.<br>Here is the path that shaped how I work.">
+          高校時代の独学から、Web制作会社・スタートアップでの実務を経て、現在はフリーランスエンジニアとして活動しています。<br>これまでの歩みをご紹介します。</p>
+      </div>
+      <div class="wave-band" aria-hidden="true"></div>
+    </section>
+    <!-- page heading ends -->
+
+    <!-- profile summary starts -->
+    <section class="section career-summary-wrap">
+      <dl class="career-summary">
+        <div>
+          <dt data-en="Experience">実務経験</dt>
+          <dd data-en="<strong>10+</strong> years">
+            <strong>10</strong>年以上</dd>
+        </div>
+        <div>
+          <dt data-en="Now">現在</dt>
+          <dd data-en="Freelance engineer">フリーランスエンジニア</dd>
+        </div>
+        <div>
+          <dt data-en="Focus">専門</dt>
+          <dd data-en="Full-stack &amp; AI">フルスタック・AI</dd>
+        </div>
+        <div>
+          <dt data-en="Location">拠点</dt>
+          <dd data-en="Koriyama, Japan">郡山, 日本</dd>
+        </div>
+      </dl>
+    </section>
+    <!-- profile summary ends -->
+
+    <!-- span chart starts -->
+    <section class="section career-overview">
+      <div class="sub-head reveal">
+        <h2 data-en="At a Glance">キャリアの全体像</h2>
+        <p data-en="Periods overlap where side projects or parallel work ran alongside a main role.">本業と並行した活動は、期間が重なって表示されます。</p>
       </div>
 
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>DevIncept (Top Contributor)</h2>
-          </div>
-          <div class="desc">
-            <h3>DCP 2021 Contributor | Open Source Program</h3>
-            <p>July 2021 - October 2021</p>
-          </div>
-        </div>
+      <div class="span-chart reveal" id="span-chart" aria-hidden="true"></div>
+
+      <ul class="type-legend">
+        <li><span class="type-dot" data-type="work"></span><span data-en="Work">職歴</span></li>
+        <li><span class="type-dot" data-type="side"></span><span data-en="Side project">副業</span></li>
+        <li><span class="type-dot" data-type="school"></span><span data-en="Education">学歴</span></li>
+        <li><span class="type-dot" data-type="study"></span><span data-en="Self-study">独学</span></li>
+      </ul>
+    </section>
+    <!-- span chart ends -->
+
+    <!-- detailed timeline starts -->
+    <section class="section career-detail">
+      <div class="sub-head reveal">
+        <h2 data-en="Career History">経歴詳細</h2>
+        <p data-en="Newest first.">新しい順に掲載しています。</p>
       </div>
 
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>LetsGrowMore Summer of Code</h2>
+      <ol class="career-list" id="career-list">
+
+        <li class="career-item reveal" data-type="work" data-start="2025-07" data-end="">
+          <div class="career-when">
+            <span class="career-year">2025</span>
+            <p class="career-range" data-en="Jul 2025 – Present">2025年7月 〜 現在</p>
+            <p class="career-duration"></p>
           </div>
-          <div class="desc">
-            <h3>LGM-SOC'21 Participant | Open Source Program</h3>
-            <p>June 2021 - August 2021</p>
+          <article class="career-card">
+            <span class="career-type" data-en="Work">職歴</span>
+            <h3 data-en="AI Development">AI開発経験</h3>
+            <p data-en="Developing AI tools with ChatGPT and Python, building chatbots, and creating bots for social platforms.">ChatGPTとPythonを活用したAIツールの開発、チャットボットの開発、ソーシャルサイトにおけるボットの開発を進めている。</p>
+            <ul class="career-tech">
+              <li>ChatGPT</li><li>Python</li>
+            </ul>
+            <a class="career-link" href="/projects?cat=ai"><span data-en="Related projects">関連する実績を見る</span><i class="fas fa-arrow-right"></i></a>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="work" data-start="2025-07" data-end="">
+          <div class="career-when">
+            <span class="career-year">2025</span>
+            <p class="career-range" data-en="Jul 2025 – Present">2025年7月 〜 現在</p>
+            <p class="career-duration"></p>
           </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Work">職歴</span>
+            <h3 data-en="Working as a Freelance Engineer">フリーランスエンジニアとして活動中</h3>
+            <p data-en="Contributing to multiple web app projects using Next.js, TypeScript, Tailwind CSS, Laravel and Django. Handling everything one-stop, from design to front end, back end and ongoing maintenance.">Next.js、TypeScript、Tailwind CSS、Laravel、Django などを用いて複数のWebアプリ開発プロジェクトに参画。デザインからフロント・バックエンド、さらには保守運用までワンストップで対応。</p>
+            <ul class="career-tech">
+              <li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Laravel</li><li>Django</li>
+            </ul>
+            <a class="career-link" href="/projects?cat=webapp"><span data-en="Related projects">関連する実績を見る</span><i class="fas fa-arrow-right"></i></a>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="side" data-start="2024-01" data-end="2025-06">
+          <div class="career-when">
+            <span class="career-year">2024</span>
+            <p class="career-range" data-en="Jan 2024 – Jun 2025">2024年1月 〜 2025年6月</p>
+            <p class="career-duration"></p>
+          </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Side project">副業</span>
+            <h3 data-en="Android App Development (Side Projects)">Androidアプリの開発経験（副業）</h3>
+            <p data-en="Independently developed and released a lifelog app with Kotlin and Firebase, handling everything from UI/UX design and implementation to publishing and running it on Google Play.">KotlinとFirebaseを用いたライフログ系アプリを個人で開発・リリース。UI/UX設計から実装、Google Playでの公開・運用まで一人で対応。</p>
+            <ul class="career-tech">
+              <li>Kotlin</li><li>Firebase</li><li>Google Play</li>
+            </ul>
+            <a class="career-link" href="/projects?cat=app"><span data-en="Related projects">関連する実績を見る</span><i class="fas fa-arrow-right"></i></a>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="work" data-start="2020-04" data-end="2025-06">
+          <div class="career-when">
+            <span class="career-year">2020</span>
+            <p class="career-range" data-en="Apr 2020 – Jun 2025">2020年4月 〜 2025年6月</p>
+            <p class="career-duration"></p>
+          </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Work">職歴</span>
+            <h3 data-en="Full-Stack Development at a Startup">スタートアップ企業でフルスタック開発</h3>
+            <p data-en="Built web apps with React, Node.js and Firebase, as well as internal admin tools and API integrations. Owned projects from requirements definition through release.">React / Node.js / Firebase によるWebアプリ開発に加え、社内向けの管理ツールやAPI連携も実装。要件定義〜リリースまで一貫して担当。</p>
+            <ul class="career-tech">
+              <li>React</li><li>Node.js</li><li>Firebase</li>
+            </ul>
+            <a class="career-link" href="/projects?cat=webapp"><span data-en="Related projects">関連する実績を見る</span><i class="fas fa-arrow-right"></i></a>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="work" data-start="2017-04" data-end="2020-03">
+          <div class="career-when">
+            <span class="career-year">2017</span>
+            <p class="career-range" data-en="Apr 2017 – Mar 2020">2017年4月 〜 2020年3月</p>
+            <p class="career-duration"></p>
+          </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Work">職歴</span>
+            <h3 data-en="Front-End Engineer at a Web Production Company">Web制作会社にてフロントエンドエンジニアとして勤務</h3>
+            <p data-en="Worked on corporate and e-commerce sites using WordPress, jQuery, Sass and Vue.js, building UIs with a strong focus on responsive design and accessibility.">コーポレートサイトやECサイトの制作に携わり、WordPress、jQuery、Sass、Vue.js などを使用した実務経験を積む。レスポンシブ対応やアクセシビリティも重視したUI開発を担当。</p>
+            <ul class="career-tech">
+              <li>WordPress</li><li>jQuery</li><li>Sass</li><li>Vue.js</li>
+            </ul>
+            <a class="career-link" href="/projects?cat=website"><span data-en="Related projects">関連する実績を見る</span><i class="fas fa-arrow-right"></i></a>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="school" data-start="2014-04" data-end="2017-03">
+          <div class="career-when">
+            <span class="career-year">2014</span>
+            <p class="career-range" data-en="Apr 2014 – Mar 2017">2014年4月 〜 2017年3月</p>
+            <p class="career-duration"></p>
+          </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Education">学歴</span>
+            <h3 data-en="Studied Information Technology at University">大学で情報技術を専攻</h3>
+            <p data-en="Studied C, Java, algorithms, networking and databases in an IT faculty while taking part in several university development projects.">情報系学部にて、C言語、Java、アルゴリズム、ネットワーク、データベースなどを学びながら、複数の学内開発プロジェクトに参加。</p>
+            <ul class="career-tech">
+              <li>C</li><li>Java</li><li data-en="Algorithms">アルゴリズム</li><li data-en="Networking">ネットワーク</li><li data-en="Databases">データベース</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="career-item reveal" data-type="study" data-start="2012-04" data-end="2014-03">
+          <div class="career-when">
+            <span class="career-year">2012</span>
+            <p class="career-range" data-en="Apr 2012 – Mar 2014">2012年4月 〜 2014年3月</p>
+            <p class="career-duration"></p>
+          </div>
+          <article class="career-card">
+            <span class="career-type" data-en="Self-study">独学</span>
+            <h3 data-en="Started Learning to Program">プログラミング学習のスタート</h3>
+            <p data-en="Taught myself the basics of HTML, CSS and JavaScript in high school and built simple websites and tools on my own.">高校時代より独学でHTML、CSS、JavaScriptなどの基礎を習得。簡単なWebサイトやツールを個人で制作。</p>
+            <ul class="career-tech">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </article>
+        </li>
+
+      </ol>
+    </section>
+    <!-- detailed timeline ends -->
+
+    <!-- contact band starts -->
+    <section class="section page-cta">
+      <div class="page-cta-inner">
+        <span class="hanko hanko-lg" aria-hidden="true">相談</span>
+        <div>
+          <h2 data-en="Let's work together">お仕事のご相談はこちら</h2>
+          <p
+            data-en="From websites and web apps to AI and Android apps — I can take your project from planning through launch and maintenance.">
+            Webサイト・Webアプリから、AI活用、Androidアプリまで。企画から公開・保守運用まで一貫して対応いたします。</p>
         </div>
+        <a href="/#contact" class="btn btn-primary"><span data-en="Contact me">お問い合わせ</span><i
+            class="fas fa-arrow-right"></i></a>
       </div>
+    </section>
+    <!-- contact band ends -->
 
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Mapstreak Flyseas</h2>
-          </div>
-          <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>The Spark Foundation</h2>
-          </div>
-          <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>The Spark Foundation</h2>
-          </div>
-          <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Frshr Technologies</h2>
-          </div>
-          <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>WonderingBlog</h2>
-          </div>
-          <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Hacktoberfest 2020</h2>
-          </div>
-          <div class="desc">
-            <h3>Contributor | Open Source Program</h3>
-            <p>October 2020 - November 2020</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="morebtn">
-      <a href="/#experience" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-      </a>
-    </div>
-
-    </div>
-  </section>
-  <!-- experience section ends -->
+  </main>
 
   <!-- footer section starts -->
-  <section class="footer">
-
-    <div class="box-container">
-
-      <div class="box">
-        <h3>Doi's Portfolio</h3>
-        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br /> Keep Rising
-          🚀. Connect with me over live chat!</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="hanko hanko-lg">土井</span>
+        <div>
+          <h3 data-en="Welcome to Takehiro Doi's portfolio">土井のポートフォリオサイトへようこそ</h3>
+          <p data-en="Thank you for visiting. Feel free to reach out on social media.<br>I'll keep learning and growing.">ご覧いただきありがとうございます。SNSを通じてお気軽にご連絡ください。<br>これからも成長を続けてまいります。</p>
+        </div>
       </div>
 
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-        <a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
+      <nav class="footer-links" aria-label="フッターナビゲーション" data-en-aria-label="Footer navigation">
+        <h4 data-en="Quick Links">主要リンク一覧</h4>
+        <a href="/#home" data-en="Home">ホーム</a>
+        <a href="/#about" data-en="About">自己紹介</a>
+        <a href="/#services" data-en="Services">対応業務</a>
+        <a href="/#skills" data-en="Skills">技術一覧</a>
+        <a href="/projects" data-en="Works">制作実績</a>
+        <a href="/experience" data-en="Career">経歴</a>
+        <a href="/#contact" data-en="Contact">お問い合わせ</a>
+      </nav>
 
-      <div class="box">
-        <h3>contact info</h3>
-        <p> <i class="fas fa-envelope"></i>e.yatsuda.big@gmail.com</p>
-        <p> <i class="fas fa-map-marked-alt"></i>Asakura, Japan-412206</p>
+      <div class="footer-contact">
+        <h4 data-en="Contact Info">連絡先</h4>
+        <p><i class="fas fa-envelope"></i>e.yatsuda.big@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i><span data-en="Koriyama, Japan">郡山, 日本</span></p>
         <div class="share">
-
-          <a href="https://www.linkedin.com/in/jerrytom/" class="fab fa-linkedin" target="_blank"></a>
-          <a href="https://github.com/000Jerry000" class="fab fa-github" target="_blank"></a>
-          <a href="mailto:e.yatsuda.big@gmail.com" class="fas fa-envelope" target="_blank"></a>
-          <a href="https://twitter.com/jerrytom" class="fab fa-twitter" target="_blank"></a>
-          <a href="https://t.me/NicholasMitchell_HZ" class="fab fa-telegram-plane" target="_blank"></a>
+          <a href="https://github.com/000Jerry000" class="fab fa-github" aria-label="GitHub" target="_blank" rel="noopener"></a>
+          <a href="https://t.me/NicholasMitchell_HZ" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank" rel="noopener"></a>
+          <a href="https://dev.to/000Jerry000" class="fab fa-dev" aria-label="Dev" target="_blank" rel="noopener"></a>
+          <a href="https://discord.gg/qsEA4FFF" class="fab fa-discord" aria-label="Discord" target="_blank" rel="noopener"></a>
+          <a href="https://jerry-2qp9506.slack.com/archives/C08QNMUKU6S" class="fab fa-slack" aria-label="Slack" target="_blank" rel="noopener"></a>
+          <a href="https://www.chatwork.com/ichika01" class="chat-a" aria-label="Chatwork" target="_blank" rel="noopener"><img
+              src="/assets/images/chatwork01.webp" alt="" /></a>
         </div>
       </div>
     </div>
 
-    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-        href="https://www.linkedin.com/in/jerrytom/"> Doi Takehiro</a></h1>
-
-  </section>
+    <p class="credit">&copy; <span id="year">2026</span> <a href="https://www.linkedin.com/in/Takehiro-Doi">土井 健広 / Doi Takehiro</a></p>
+  </footer>
   <!-- footer section ends -->
 
+
+  <!-- live chat launcher (opens the Tawk.to window; its own bubble is hidden) -->
+  <button type="button" id="chat-launcher" aria-label="ライブチャットで相談する" data-en-aria-label="Chat with me" hidden>
+    <span class="chat-launcher-seal" aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+    <span class="chat-launcher-text">
+      <span class="chat-launcher-label">
+        <span data-en="Chat">ご相談</span>
+        <small data-en="ご相談">Live Chat</small>
+      </span>
+    </span>
+    <span class="chat-launcher-badge" aria-hidden="true"></span>
+  </button>
+
+
   <!-- scroll top btn -->
-  <a href="#experience" class="fas fa-angle-up" id="scroll-top"></a>
-  <!-- scroll back to top -->
+  <a href="#top" aria-label="ページの先頭へ" data-en-aria-label="Back to top" id="scroll-top"><i class="fas fa-angle-up"></i></a>
 
 
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-  <!-- jquery cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- scroll reveal anim -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-  <script src="../experience/script.js"></script>
+  <script src="/assets/js/page.js"></script>
+  <script src="/experience/script.js"></script>
+  <script src="/assets/js/tawk.js"></script>
 
 </body>
 

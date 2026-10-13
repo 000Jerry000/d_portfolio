@@ -1,32 +1,4 @@
-// ===== header / menu =====
-const header = document.getElementById('header');
-const menuBtn = document.getElementById('menu');
-const navbar = document.getElementById('navbar');
-const scrollTopBtn = document.getElementById('scroll-top');
-
-function closeMenu() {
-    menuBtn.classList.remove('open');
-    navbar.classList.remove('nav-toggle');
-    menuBtn.setAttribute('aria-expanded', 'false');
-}
-
-menuBtn.addEventListener('click', function () {
-    const open = navbar.classList.toggle('nav-toggle');
-    menuBtn.classList.toggle('open', open);
-    menuBtn.setAttribute('aria-expanded', String(open));
-});
-
-navbar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-function onScroll() {
-    const y = window.scrollY;
-    header.classList.toggle('scrolled', y > 20);
-    scrollTopBtn.classList.toggle('active', y > 60);
-}
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
-
-document.getElementById('year').textContent = new Date().getFullYear();
+// Works page: category + keyword finder. Header, menu and ja/en switch come from /assets/js/page.js.
 
 // ===== categories & tags =====
 // Client-facing categories follow the order of the top page's services; each one
@@ -84,11 +56,9 @@ const SYNONYMS = [
     [['デザイン', 'design'], ['ui', 'ux']],
 ];
 
-// ===== language (ja / en) =====
+// ===== strings =====
 const I18N = {
     ja: {
-        title: '制作実績 | 土井　健広 | Doi Takehiro',
-        awayTitle: 'Come Back To Portfolio',
         all: 'すべて',
         viewSite: 'サイトを見る',
         code: 'コード',
@@ -96,8 +66,6 @@ const I18N = {
         tagSearch: tag => `「${tag}」で絞り込む`,
     },
     en: {
-        title: 'Works | Takehiro Doi | Full-Stack & AI Engineer',
-        awayTitle: 'Come Back To Portfolio',
         all: 'All',
         viewSite: 'Visit site',
         code: 'Code',
@@ -105,74 +73,14 @@ const I18N = {
         tagSearch: tag => `Filter by “${tag}”`,
     },
 };
-const LANGS = Object.keys(I18N);
-const LANG_KEY = 'portfolio-lang';
 
-// the Japanese markup is the source; English lives in data-en / data-en-* attributes
-const i18nNodes = [...document.querySelectorAll('[data-en]')].map(el => ({
-    el,
-    ja: el.tagName === 'META' ? el.content : el.innerHTML,
-    en: el.dataset.en,
-}));
-const i18nAttrs = [];
-document.querySelectorAll('*').forEach(el => {
-    for (const { name, value } of [...el.attributes]) {
-        if (name.startsWith('data-en-')) {
-            const attr = name.slice('data-en-'.length);
-            i18nAttrs.push({ el, attr, ja: el.getAttribute(attr), en: value });
-        }
-    }
-});
+const t = key => I18N[siteLanguage()][key];
+const label = item => item[siteLanguage()] || item.ja;
 
-let currentLang = 'ja';
-const t = key => I18N[currentLang][key];
-const label = item => item[currentLang] || item.ja;
-
-function readStoredLang() {
-    try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; }
-}
-
-function setLang(lang, { save = true } = {}) {
-    if (!LANGS.includes(lang)) lang = 'ja';
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.title = t('title');
-
-    i18nNodes.forEach(({ el, ja, en }) => {
-        const value = lang === 'en' ? en : ja;
-        if (el.tagName === 'META') el.content = value;
-        else el.innerHTML = value;
-    });
-    i18nAttrs.forEach(({ el, attr, ja, en }) => el.setAttribute(attr, lang === 'en' ? en : ja));
-
-    document.querySelectorAll('.lang-switch button').forEach(btn =>
-        btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
-
-    if (projects) {
-        renderSuggestions();
-        render();
-    }
-
-    if (save) {
-        try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* storage unavailable */ }
-    }
-
-    document.dispatchEvent(new CustomEvent('site:langchange', { detail: lang }));
-}
-
-document.querySelectorAll('.lang-switch button').forEach(btn =>
-    btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-
-// ===== tab title =====
-document.addEventListener('visibilitychange', function () {
-    const favicon = document.getElementById('favicon');
-    if (document.visibilityState === 'visible') {
-        document.title = t('title');
-        favicon.setAttribute('href', '/assets/images/favicon.svg');
-    } else {
-        document.title = t('awayTitle');
-        favicon.setAttribute('href', '/assets/images/favhand.webp');
-    }
+document.addEventListener('site:langchange', () => {
+    if (!projects) return;
+    renderSuggestions();
+    render();
 });
 
 // ===== works finder =====
@@ -278,13 +186,13 @@ function renderCategories(terms) {
 }
 
 function renderSuggestions() {
-    suggestList.innerHTML = SUGGESTIONS[currentLang].map(word =>
+    suggestList.innerHTML = SUGGESTIONS[siteLanguage()].map(word =>
         `<button type="button" class="suggest-chip" data-query="${escapeHTML(word)}">${escapeHTML(word)}</button>`
     ).join('');
 }
 
 function cardHTML(project, i, terms) {
-    const en = currentLang === 'en';
+    const en = siteLanguage() === 'en';
     const name = (en && project.name_en) || project.name;
     const desc = (en && project.desc_en) || project.desc;
     const category = CATEGORIES.find(c => project.categories.includes(c.id));
@@ -385,9 +293,6 @@ document.getElementById('empty-reset').addEventListener('click', resetAll);
 
 // ===== start =====
 const params = new URLSearchParams(location.search);
-const urlLang = params.get('lang');
-if (LANGS.includes(urlLang)) setLang(urlLang);
-else if (LANGS.includes(readStoredLang())) setLang(readStoredLang(), { save: false });
 
 if (CATEGORIES.some(c => c.id === params.get('cat'))) state.category = params.get('cat');
 state.query = params.get('q') || '';
@@ -401,20 +306,7 @@ fetch('/projects/projects.json')
         render();
     })
     .catch(() => {
-        resultCount.textContent = currentLang === 'en'
+        resultCount.textContent = siteLanguage() === 'en'
             ? 'Sorry, the projects could not be loaded.'
             : '実績を読み込めませんでした。時間をおいて再度お試しください。';
     });
-
-// block dev-tools shortcuts (same as the top page)
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].some(k => e.keyCode == k.charCodeAt(0))) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-};
