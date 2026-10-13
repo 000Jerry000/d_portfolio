@@ -149,7 +149,7 @@ document.addEventListener('visibilitychange', function () {
     const favicon = document.getElementById('favicon');
     if (document.visibilityState === "visible") {
         document.title = t('title');
-        favicon.setAttribute("href", "assets/images/favicon.webp");
+        favicon.setAttribute("href", "assets/images/favicon.svg");
     } else {
         document.title = t('awayTitle');
         favicon.setAttribute("href", "assets/images/favhand.webp");
