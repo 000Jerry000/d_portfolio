@@ -7,6 +7,15 @@ const siteLang = () => (document.documentElement.lang === 'en' ? 'en' : 'ja');
 // Start of Tawk.to Live Chat
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 
+// open the chat window at the bottom left, next to the site's launcher, whatever the
+// dashboard's widget position is
+Tawk_API.customStyle = {
+    visibility: {
+        desktop: { position: 'bl', xOffset: 20, yOffset: 20 },
+        mobile: { position: 'bl', xOffset: 16, yOffset: 16 },
+    },
+};
+
 // replace Tawk's default bubble with the site's own launcher
 const chatLauncher = document.getElementById('chat-launcher');
 const chatBadge = chatLauncher.querySelector('.chat-launcher-badge');
@@ -85,9 +94,15 @@ new MutationObserver(themeTawkSoon).observe(document.body, { childList: true });
 //    rendered later comes from Tawk's Japanese bundle when the site is in Japanese;
 // 2. text already on screen is swapped using the paired en/ja bundles (plus a few
 //    strings that come from the dashboard rather than the bundles).
+// [English, Japanese] — the widget's own greeting and quick replies (set in the Tawk dashboard)
+// plus a few UI strings missing from Tawk's language files
 const TAWK_EXTRA_STRINGS = [
-    ["Welcome to my site, if you need help simply reply to this message, I'm online and ready to help.",
-        'ご覧いただきありがとうございます。ご相談やご質問がございましたら、お気軽にこのメッセージへご返信ください。'],
+    ['Hello! What would you like to talk about today?', 'こんにちは！今日はどんなお話をしますか？'],
+    ['I have a question.', '質問があります。'],
+    ['Please tell me more.', 'もっと詳しく教えてください。'],
+    ['Hi there', 'こんにちは'],
+    // the chat box placeholder uses two dots, unlike the "…enter..." string in Tawk's files
+    ['Type here and press enter..', 'ここに入力して Enter キーを押してください'],
     ['Maximum {{ count }} characters', '最大{{ count }}文字'],
     ['Close Chat', 'チャットを閉じる'],
     ['This icon closes the chat window.', 'このアイコンでチャットウィンドウを閉じます。'],
@@ -194,7 +209,7 @@ function swapTawkString(owner, slot, value, lang) {
 
 // show the site owner's nickname and photo instead of the Tawk account profile
 const TAWK_AGENT = {
-    accountName: 'Jigar',
+    accountName: 'Customer Support',   // name the Tawk account currently shows
     name: 'Akira',
     avatar: new URL('/assets/images/chat-avatar.webp', location.origin).href,
 };
@@ -307,7 +322,7 @@ chatLauncher.addEventListener('click', function () {
 (function () {
     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
     s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
+    s1.src = 'https://embed.tawk.to/6ace3872c3211634c5257af4/1k4qop00k';
     s1.charset = 'UTF-8';
     s1.setAttribute('crossorigin', '*');
     s0.parentNode.insertBefore(s1, s0);
