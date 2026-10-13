@@ -65,7 +65,7 @@ const I18N = {
         code: "コード",
         sending: "送信中です…",
         sent: "送信が完了しました。ありがとうございます。",
-        failed: "送信に失敗しました。お手数ですがメールにてご連絡ください。",
+        failed: "送信に失敗しました。お手数ですがライブチャットからご連絡ください。",
     },
     en: {
         title: "Portfolio | Takehiro Doi | Full-Stack & AI Engineer",
@@ -75,7 +75,7 @@ const I18N = {
         code: "Code",
         sending: "Sending…",
         sent: "Your message has been sent. Thank you!",
-        failed: "Sorry, something went wrong. Please contact me by email instead.",
+        failed: "Sorry, something went wrong. Please reach me via live chat instead.",
     },
 };
 const LANGS = Object.keys(I18N);

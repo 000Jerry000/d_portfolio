@@ -1,119 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/assets/css/404.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- Favicon -->
-	<link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
-	<link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
-	<link id="favicon" rel="icon" href="/assets/images/favicon.svg">
-	<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-	<title>Got Lost! Page Not Found</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/subpage.css">
+  <link rel="stylesheet" href="/assets/css/404.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link id="favicon" rel="icon" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <title data-en="Page Not Found | Takehiro Doi">ページが見つかりません | 土井　健広 | Doi Takehiro</title>
 </head>
 
 <body oncontextmenu="return false">
 
-	<!-- navbar starts -->
-	<header>
-		<a href="/" class="logo"><i class="fab fa-node-js"></i> Doi</a>
+  <!-- shared SVG: brush-stroke ensō -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="brush">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" />
+        <feDisplacementMap in="SourceGraphic" scale="9" />
+      </filter>
+    </defs>
+  </svg>
 
-		<div id="menu" class="fas fa-bars"></div>
-		<nav class="navbar">
-			<ul>
-				<li><a href="/#home">Home</a></li>
-				<li><a href="/#about">About</a></li>
-				<li><a href="/#skills">Skills</a></li>
-				<li><a href="/#education">Education</a></li>
-				<li><a href="/#work">Work</a></li>
-				<li><a href="/#experience">Experience</a></li>
-				<li><a href="/#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- navbar ends -->
+  <!-- header starts -->
+  <header class="header" id="header">
+    <a href="/" class="logo" aria-label="ホーム" data-en-aria-label="Home">
+      <span class="hanko">土井</span>
+      <span class="logo-text">
+        <span class="logo-jp" data-en="Takehiro Doi">土井 健広</span>
+        <span class="logo-en" data-en="土井 健広">Doi Takehiro</span>
+      </span>
+    </a>
 
-	<!-- 404 section start -->
-	<section class="page_404">
-		<div class="container">
-			<div class="wrapper">
-				<h1 class="text-center ">404</h1>
-			</div>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="/#home"><span data-en="Home">ホーム</span><small data-en="ホーム">Home</small></a></li>
+        <li><a href="/#about"><span data-en="About">自己紹介</span><small data-en="自己紹介">About</small></a></li>
+        <li><a href="/#services"><span data-en="Services">対応業務</span><small data-en="対応業務">Services</small></a></li>
+        <li><a href="/#skills"><span data-en="Skills">技術一覧</span><small data-en="技術一覧">Skills</small></a></li>
+        <li><a href="/projects"><span data-en="Works">制作実績</span><small data-en="制作実績">Works</small></a></li>
+        <li><a href="/experience"><span data-en="Career">経歴</span><small data-en="経歴">Career</small></a></li>
+        <li><a href="/#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li>
+      </ul>
+    </nav>
 
-			<div class="msg">
-				<h3>Looks like you're lost</h3>
-				<p>The page you are looking for is not available!</p>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="言語 / Language">
+        <button type="button" data-lang="ja" aria-pressed="true" lang="ja">日本語</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menu" aria-label="メニュー" data-en-aria-label="Menu" aria-expanded="false"
+        aria-controls="navbar">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <!-- header ends -->
 
-				<div class="backbtn">
-					<a href="/" class="btn">
-						<i class="fas fa-arrow-left"></i>
-						<span>Back to Home</span>
-					</a>
-				</div>
+  <main>
 
-			</div>
-		</div>
-	</section>
-	<!-- 404 section end -->
+    <!-- not found starts -->
+    <section class="lost" id="top">
+      <div class="lost-inner">
 
-	<!-- footer section starts -->
-	<section class="footer">
+        <div class="lost-text">
+          <p class="lost-eyebrow" data-en="Page not found">ページが見つかりません</p>
+          <h1 class="lost-title"
+            data-en="We couldn't find<br>the page you're looking for.">お探しのページは<br>見つかりませんでした。</h1>
+          <p class="lost-lead"
+            data-en="The address may be mistyped, or the page may have been moved or removed.<br>Please use the links below to find what you need.">
+            URLが間違っているか、ページが移動・削除された可能性があります。<br>お手数ですが、下記のリンクから目的のページをお探しください。</p>
+          <p class="lost-url"><span data-en="Requested URL">お探しのURL</span><code id="lost-path"></code></p>
+          <div class="lost-actions">
+            <a href="/" class="btn btn-primary"><span data-en="Back to home">ホームへ戻る</span><i
+                class="fas fa-arrow-right"></i></a>
+            <a href="/projects" class="btn btn-ghost"><span data-en="View my work">制作実績を見る</span></a>
+          </div>
+        </div>
 
-		<div class="box-container">
+        <div class="lost-visual" aria-hidden="true">
+          <svg class="enso" viewBox="0 0 400 400">
+            <path filter="url(#brush)"
+              d="M 236 62 C 318 78 360 150 348 228 C 336 306 262 356 186 346 C 104 336 50 268 58 188 C 66 112 128 62 196 58" />
+          </svg>
+          <p class="lost-code">404</p>
+          <p class="lost-catch" data-en="Lost your way">道に迷いました</p>
+          <span class="lost-seal">迷</span>
+        </div>
 
-			<div class="box">
-				<h3>Doi's Portfolio</h3>
-				<p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br />
-					Keep Rising 🚀. Connect with me over live chat!</p>
-			</div>
+      </div>
+      <div class="wave-band" aria-hidden="true"></div>
+    </section>
+    <!-- not found ends -->
 
-			<div class="box">
-				<h3>quick links</h3>
-				<a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-				<a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-				<a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-				<a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-				<a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-				<a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-			</div>
-			<div class="box">
-				<h3>contact info</h3>
-				<p> <i class="fas fa-envelope"></i>e.yatsuda.big@gmail.com</p>
-				<p> <i class="fas fa-map-marked-alt"></i>Asakura, Japan-412206</p>
-				<div class="share">
+    <!-- suggested pages starts -->
+    <section class="section lost-links-wrap">
+      <h2 class="lost-links-title" data-en="You might be looking for">こちらのページはいかがですか</h2>
+      <ul class="lost-links">
+        <li>
+          <a href="/#services">
+            <span class="lost-links-num">壱</span>
+            <span class="lost-links-name" data-en="Services">対応業務</span>
+            <span class="lost-links-desc" data-en="What I can help with">ご依頼いただける内容</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/projects">
+            <span class="lost-links-num">弐</span>
+            <span class="lost-links-name" data-en="Works">制作実績</span>
+            <span class="lost-links-desc" data-en="Search past projects">カテゴリー・キーワードで探す</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/experience">
+            <span class="lost-links-num">参</span>
+            <span class="lost-links-name" data-en="Career">経歴</span>
+            <span class="lost-links-desc" data-en="My path so far">これまでの歩み</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/#contact">
+            <span class="lost-links-num">肆</span>
+            <span class="lost-links-name" data-en="Contact">お問い合わせ</span>
+            <span class="lost-links-desc" data-en="Form or live chat">フォーム・ライブチャット</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- suggested pages ends -->
 
-					<a href="https://www.linkedin.com/in/jerrytom/" class="fab fa-linkedin" target="_blank"></a>
-					<a href="https://github.com/000Jerry000" class="fab fa-github" target="_blank"></a>
-					<a href="mailto:e.yatsuda.big@gmail.com" class="fas fa-envelope" target="_blank"></a>
-					<a href="https://twitter.com/jerrytom" class="fab fa-twitter" target="_blank"></a>
-					<a href="https://t.me/NicholasMitchell_HZ" class="fab fa-telegram-plane" target="_blank"></a>
-				</div>
-			</div>
-		</div>
+  </main>
 
-		<h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-				href="https://www.linkedin.com/in/jerrytom/"> Doi Takehiro</a></h1>
+  <!-- footer section starts -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="hanko hanko-lg">土井</span>
+        <div>
+          <h3 data-en="Welcome to Takehiro Doi's portfolio">土井のポートフォリオサイトへようこそ</h3>
+          <p data-en="Thank you for visiting. For inquiries, please use the contact form or live chat.<br>I'll keep learning and growing.">ご覧いただきありがとうございます。お問い合わせはフォームまたはライブチャットからお気軽にどうぞ。<br>これからも成長を続けてまいります。</p>
+        </div>
+      </div>
 
-	</section>
-	<!-- footer section ends -->
+      <nav class="footer-links" aria-label="フッターナビゲーション" data-en-aria-label="Footer navigation">
+        <h4 data-en="Quick Links">主要リンク一覧</h4>
+        <a href="/#home" data-en="Home">ホーム</a>
+        <a href="/#about" data-en="About">自己紹介</a>
+        <a href="/#services" data-en="Services">対応業務</a>
+        <a href="/#skills" data-en="Skills">技術一覧</a>
+        <a href="/projects" data-en="Works">制作実績</a>
+        <a href="/experience" data-en="Career">経歴</a>
+        <a href="/#contact" data-en="Contact">お問い合わせ</a>
+      </nav>
 
-	<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+      <div class="footer-contact">
+        <h4 data-en="Contact Info">連絡先</h4>
+        <p><i class="fas fa-map-marker-alt"></i><span data-en="Koriyama, Japan">郡山, 日本</span></p>
+        <div class="share">
+          <a href="https://github.com/000Jerry000" class="fab fa-github" aria-label="GitHub" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
 
-	<!-- jquery cdn -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <p class="credit">&copy; <span id="year">2026</span> 土井 健広 / Doi Takehiro</p>
+  </footer>
+  <!-- footer section ends -->
 
-	<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-	<script src="/assets/js/404.js"></script>
+  <!-- live chat launcher (opens the Tawk.to window; its own bubble is hidden) -->
+  <button type="button" id="chat-launcher" aria-label="ライブチャットで相談する" data-en-aria-label="Chat with me" hidden>
+    <span class="chat-launcher-seal" aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+    <span class="chat-launcher-text">
+      <span class="chat-launcher-label">
+        <span data-en="Chat">ご相談</span>
+        <small data-en="ご相談">Live Chat</small>
+      </span>
+    </span>
+    <span class="chat-launcher-badge" aria-hidden="true"></span>
+  </button>
 
+
+  <!-- scroll top btn -->
+  <a href="#top" aria-label="ページの先頭へ" data-en-aria-label="Back to top" id="scroll-top"><i class="fas fa-angle-up"></i></a>
+
+
+  <script src="/assets/js/page.js"></script>
+  <script>
+    // show which address was not found
+    const lostPath = location.pathname + location.search;
+    try {
+      document.getElementById('lost-path').textContent = decodeURI(lostPath);
+    } catch (e) {
+      document.getElementById('lost-path').textContent = lostPath;
+    }
+  </script>
+  <script src="/assets/js/tawk.js"></script>
 
 </body>
 
