@@ -24,18 +24,59 @@ const TAGS = {
     'google-map': { ja: 'Google マップ', en: 'Google Maps' },
 };
 
-// client industries, stored per project as "industry": ["medical", …] in projects.json
+// client industries, stored per project as "industry": ["medical", …] in projects.json.
+// The sidebar keeps this order; industries without any project yet are grouped at the
+// bottom behind a toggle.
 const INDUSTRIES = [
-    { id: 'medical', ja: '医療・ヘルスケア', en: 'Healthcare & Medical', icon: 'fa-clinic-medical' },
-    { id: 'beauty', ja: '美容・フィットネス', en: 'Beauty & Fitness', icon: 'fa-spa' },
-    { id: 'realestate', ja: '不動産・住宅', en: 'Real Estate', icon: 'fa-home' },
-    { id: 'retail', ja: 'EC・小売', en: 'E-commerce & Retail', icon: 'fa-shopping-bag' },
-    { id: 'travel', ja: '観光・宿泊・イベント', en: 'Travel, Hotels & Events', icon: 'fa-hotel' },
-    { id: 'media', ja: 'メディア・エンタメ', en: 'Media & Entertainment', icon: 'fa-newspaper' },
-    { id: 'matching', ja: 'マッチング・コミュニティ', en: 'Matching & Community', icon: 'fa-user-friends' },
-    { id: 'marketing', ja: 'マーケティング・集客', en: 'Marketing', icon: 'fa-chart-line' },
-    { id: 'business', ja: '業務効率化・社内ツール', en: 'Business Tools', icon: 'fa-briefcase' },
-    { id: 'other', ja: '個人・その他', en: 'Personal & Other', icon: 'fa-ellipsis-h' },
+    { id: 'it', ja: 'IT・通信・インターネット', en: 'IT, Telecom & Internet', icon: 'fa-wifi' },
+    { id: 'mass-media', ja: 'マスコミ・メディア', en: 'Mass Media', icon: 'fa-broadcast-tower' },
+    { id: 'publishing', ja: '新聞・雑誌・出版', en: 'Newspapers, Magazines & Publishing', icon: 'fa-newspaper' },
+    { id: 'advertising', ja: '広告・イベント・プロモーション', en: 'Advertising, Events & Promotion', icon: 'fa-bullhorn' },
+    { id: 'entertainment', ja: '芸能・エンターテイメント', en: 'Entertainment', icon: 'fa-star' },
+    { id: 'games', ja: 'ゲーム・アニメ・玩具', en: 'Games, Anime & Toys', icon: 'fa-gamepad' },
+    { id: 'dating', ja: '恋愛・出会い・占い', en: 'Dating & Fortune-telling', icon: 'fa-heart' },
+    { id: 'wedding', ja: '婚活・ブライダル', en: 'Matchmaking & Weddings', icon: 'fa-ring' },
+    { id: 'pets', ja: '動物・ペット', en: 'Animals & Pets', icon: 'fa-paw' },
+    { id: 'gardening', ja: '生花・園芸・造園', en: 'Florists, Gardening & Landscaping', icon: 'fa-seedling' },
+    { id: 'arts', ja: '美術・工芸・音楽', en: 'Art, Crafts & Music', icon: 'fa-music' },
+    { id: 'sports', ja: 'スポーツ・フィットネス', en: 'Sports & Fitness', icon: 'fa-dumbbell' },
+    { id: 'automotive', ja: '自動車・バイク', en: 'Cars & Motorcycles', icon: 'fa-car' },
+    { id: 'travel', ja: '旅行・観光・グルメ', en: 'Travel, Tourism & Gourmet', icon: 'fa-plane' },
+    { id: 'hotels', ja: 'ホテル・旅館・民泊', en: 'Hotels, Inns & Lodging', icon: 'fa-hotel' },
+    { id: 'manufacturer', ja: 'メーカー', en: 'Manufacturers', icon: 'fa-industry' },
+    { id: 'trading', ja: '商社', en: 'Trading Companies', icon: 'fa-globe-asia' },
+    { id: 'logistics', ja: '流通・運輸・交通', en: 'Distribution, Logistics & Transport', icon: 'fa-truck' },
+    { id: 'manufacturing', ja: '工業・製造', en: 'Industry & Manufacturing', icon: 'fa-cogs' },
+    { id: 'retail', ja: '卸売・小売', en: 'Wholesale & Retail', icon: 'fa-store' },
+    { id: 'fashion', ja: 'ファッション・アパレル', en: 'Fashion & Apparel', icon: 'fa-tshirt' },
+    { id: 'furniture', ja: '家具・インテリア', en: 'Furniture & Interiors', icon: 'fa-couch' },
+    { id: 'food', ja: '食品・飲料・たばこ', en: 'Food, Beverages & Tobacco', icon: 'fa-apple-alt' },
+    { id: 'medical', ja: '医療・医薬', en: 'Medical & Pharmaceutical', icon: 'fa-clinic-medical' },
+    { id: 'care', ja: '介護・福祉', en: 'Nursing Care & Welfare', icon: 'fa-hands-helping' },
+    { id: 'housekeeping', ja: '家事代行', en: 'Housekeeping Services', icon: 'fa-broom' },
+    { id: 'funeral', ja: '葬祭', en: 'Funeral Services', icon: 'fa-dove' },
+    { id: 'finance', ja: '金融・保険', en: 'Finance & Insurance', icon: 'fa-yen-sign' },
+    { id: 'realestate', ja: '住宅・不動産', en: 'Housing & Real Estate', icon: 'fa-home' },
+    { id: 'construction', ja: '建築・工務店', en: 'Architecture & Builders', icon: 'fa-hard-hat' },
+    { id: 'restaurants', ja: '店舗（飲食店・居酒屋など）', en: 'Shops (Restaurants, Bars, etc.)', icon: 'fa-utensils' },
+    { id: 'salon', ja: '美容室・サロン', en: 'Hair & Beauty Salons', icon: 'fa-cut' },
+    { id: 'lessons', ja: '資格・習い事', en: 'Qualifications & Lessons', icon: 'fa-certificate' },
+    { id: 'childcare', ja: '保育園・幼稚園', en: 'Nurseries & Kindergartens', icon: 'fa-baby' },
+    { id: 'cram-school', ja: '塾・予備校', en: 'Cram & Prep Schools', icon: 'fa-pencil-alt' },
+    { id: 'schools', ja: '大学・学校', en: 'Universities & Schools', icon: 'fa-university' },
+    { id: 'research', ja: '学術・研究', en: 'Academia & Research', icon: 'fa-flask' },
+    { id: 'survey', ja: 'リサーチ・調査', en: 'Market Research & Surveys', icon: 'fa-search' },
+    { id: 'consulting', ja: 'コンサルティング・シンクタンク', en: 'Consulting & Think Tanks', icon: 'fa-lightbulb' },
+    { id: 'professional', ja: '士業（個人事務所）', en: 'Licensed Professionals (Private Practice)', icon: 'fa-balance-scale' },
+    { id: 'staffing', ja: '人材紹介・人材派遣', en: 'Recruitment & Staffing', icon: 'fa-id-badge' },
+    { id: 'translation', ja: '翻訳・通訳', en: 'Translation & Interpreting', icon: 'fa-language' },
+    { id: 'energy', ja: 'エネルギー（電気・ガス・水道など）', en: 'Energy (Electricity, Gas, Water, etc.)', icon: 'fa-bolt' },
+    { id: 'primary', ja: '農林・水産・鉱業', en: 'Agriculture, Fisheries & Mining', icon: 'fa-tractor' },
+    { id: 'facilities', ja: '清掃・設備・警備', en: 'Cleaning, Facilities & Security', icon: 'fa-shield-alt' },
+    { id: 'nonprofit', ja: '公益・非営利団体', en: 'Public Interest & Non-profits', icon: 'fa-hand-holding-heart' },
+    { id: 'government', ja: '官公庁・自治体', en: 'Government & Municipalities', icon: 'fa-landmark' },
+    { id: 'politics', ja: '政治', en: 'Politics', icon: 'fa-vote-yea' },
+    { id: 'religion', ja: '宗教', en: 'Religion', icon: 'fa-place-of-worship' },
 ];
 
 // quick searches clients commonly start from
@@ -78,6 +119,8 @@ const I18N = {
         code: 'コード',
         count: (shown, total) => `<strong>${shown}</strong>件の実績を表示中<span>（全${total}件）</span>`,
         tagSearch: tag => `「${tag}」で絞り込む`,
+        showEmptyIndustries: n => `実績のない業種も表示<span>（${n}）</span>`,
+        hideEmptyIndustries: '実績のない業種を閉じる',
     },
     en: {
         all: 'All',
@@ -85,6 +128,8 @@ const I18N = {
         code: 'Code',
         count: (shown, total) => `Showing <strong>${shown}</strong> ${shown === 1 ? 'project' : 'projects'}<span> (of ${total})</span>`,
         tagSearch: tag => `Filter by “${tag}”`,
+        showEmptyIndustries: n => `Show industries without projects<span> (${n})</span>`,
+        hideEmptyIndustries: 'Hide industries without projects',
     },
 };
 
@@ -114,6 +159,7 @@ const industryClear = document.getElementById('industry-clear');
 
 let projects = null;
 const state = { category: 'all', query: '', industries: [] };
+let showEmptyIndustries = false;
 
 // full-width → half-width, lower case, katakana → hiragana, so 「ワードプレス」「ＷＯＲＤＰＲＥＳＳ」 etc. match
 function normalize(text) {
@@ -210,22 +256,47 @@ function renderCategories(terms) {
     }).join('');
 }
 
-// industry counts respect the keyword and category, so empty choices are visible at a glance
-function renderIndustries(terms) {
-    const pool = projects.filter(p => matchesQuery(p, terms) && matchesCategory(p, state.category));
-    industryList.innerHTML = INDUSTRIES.map(ind => {
-        const count = pool.filter(p => p.industries.includes(ind.id)).length;
-        const checked = state.industries.includes(ind.id);
-        return `
+function industryOptionHTML(ind, count, { hasProjects }) {
+    const checked = state.industries.includes(ind.id);
+    const empty = count === 0 && !checked;
+    return `
         <li>
-            <label class="industry-option${checked ? ' is-checked' : ''}${count === 0 && !checked ? ' is-empty' : ''}">
-                <input type="checkbox" value="${ind.id}"${checked ? ' checked' : ''}${count === 0 && !checked ? ' disabled' : ''}>
+            <label class="industry-option${checked ? ' is-checked' : ''}${empty ? ' is-empty' : ''}${hasProjects ? '' : ' is-unused'}">
+                <input type="checkbox" value="${ind.id}"${checked ? ' checked' : ''}${empty ? ' disabled' : ''}>
                 <i class="fas ${ind.icon}" aria-hidden="true"></i>
                 <span class="industry-name">${escapeHTML(label(ind))}</span>
                 <em>${count}</em>
             </label>
         </li>`;
-    }).join('');
+}
+
+// Industries with projects come first (in INDUSTRIES order); the rest sit behind a toggle.
+// Counts respect the keyword and category, so choices that would empty the list are dimmed.
+function renderIndustries(terms) {
+    const pool = projects.filter(p => matchesQuery(p, terms) && matchesCategory(p, state.category));
+    const used = new Set(projects.flatMap(p => p.industries));
+    const withProjects = INDUSTRIES.filter(ind => used.has(ind.id));
+    const withoutProjects = INDUSTRIES.filter(ind => !used.has(ind.id));
+    const count = ind => pool.filter(p => p.industries.includes(ind.id)).length;
+
+    // a selected industry must stay visible
+    if (withoutProjects.some(ind => state.industries.includes(ind.id))) showEmptyIndustries = true;
+
+    industryList.innerHTML =
+        withProjects.map(ind => industryOptionHTML(ind, count(ind), { hasProjects: true })).join('') +
+        (withoutProjects.length ? `
+        <li class="industry-more">
+            <button type="button" class="industry-more-btn" id="industry-more-btn"
+                aria-expanded="${showEmptyIndustries}" aria-controls="industry-unused">
+                <span>${showEmptyIndustries ? t('hideEmptyIndustries') : t('showEmptyIndustries')(withoutProjects.length)}</span>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </li>
+        <li class="industry-unused-wrap"${showEmptyIndustries ? '' : ' hidden'}>
+            <ul class="industry-unused" id="industry-unused">
+                ${withoutProjects.map(ind => industryOptionHTML(ind, 0, { hasProjects: false })).join('')}
+            </ul>
+        </li>` : '');
 
     const selected = state.industries.length;
     industryToggleCount.textContent = selected ? selected : '';
@@ -349,6 +420,13 @@ industryList.addEventListener('change', e => {
 });
 
 industryClear.addEventListener('click', () => update({ industries: [] }));
+
+industryList.addEventListener('click', e => {
+    if (!e.target.closest('#industry-more-btn')) return;
+    showEmptyIndustries = !showEmptyIndustries;
+    renderIndustries(parseQuery(state.query));
+    document.getElementById('industry-more-btn').focus();
+});
 
 // phones: the sidebar collapses into a toggle above the results
 industryToggle.addEventListener('click', () => {

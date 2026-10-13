@@ -409,8 +409,14 @@
   display: none;
 }
 
+/* the list can be longer than the screen; it scrolls inside the sticky panel */
 .industry-body {
   padding: 22px 20px 20px;
+  max-height: calc(100vh - var(--header-h) - 44px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
 }
 
 .industry-heading {
@@ -541,6 +547,60 @@
   color: var(--usuzumi);
 }
 
+/* toggle for industries that have no projects yet */
+.industry-more {
+  margin: 10px -10px 0;
+  border-top: 1px dashed var(--line-strong);
+}
+
+.industry-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 10px 4px;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--sumi-soft);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.industry-more-btn span span {
+  color: var(--usuzumi);
+}
+
+.industry-more-btn i {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--shu);
+  transition: transform .3s var(--ease);
+}
+
+.industry-more-btn[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+.industry-more-btn:hover {
+  color: var(--shu);
+}
+
+.industry-unused {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+
+.industry-option.is-unused .industry-name {
+  color: var(--usuzumi);
+}
+
 .industry-clear {
   display: inline-flex;
   align-items: center;
@@ -640,6 +700,8 @@
   .industry-body {
     display: none;
     padding-top: 4px;
+    max-height: none;
+    overflow: visible;
   }
 
   .industry-panel.is-open .industry-body {
@@ -651,10 +713,20 @@
   }
 
   /* two columns of options when there is room */
-  .industry-list {
+  .industry-list,
+  .industry-unused {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     column-gap: 20px;
+  }
+
+  .industry-more,
+  .industry-unused-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .industry-unused-wrap[hidden] {
+    display: none;
   }
 }
 

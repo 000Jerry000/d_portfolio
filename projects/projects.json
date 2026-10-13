@@ -6,8 +6,8 @@
     "image": "en-Taku.webp",
     "category": "design wordpress",
     "industry": [
-      "media",
-      "marketing"
+      "entertainment",
+      "advertising"
     ],
     "links": {
       "view": "https://008.fu-dev.com/",
@@ -21,7 +21,8 @@
     "image": "Aster-house.webp",
     "category": "wordpress",
     "industry": [
-      "realestate"
+      "realestate",
+      "construction"
     ],
     "links": {
       "view": "https://house.aster-estate.com/",
@@ -35,7 +36,7 @@
     "image": "unico.webp",
     "category": "wordpress",
     "industry": [
-      "beauty"
+      "sports"
     ],
     "links": {
       "view": "https://unicobodymake.com/",
@@ -63,7 +64,7 @@
     "image": "squarespace.webp",
     "category": "design no-code",
     "industry": [
-      "travel"
+      "advertising"
     ],
     "links": {
       "view": "https://www.organizer.digiq.jp/",
@@ -91,6 +92,7 @@
     "image": "nihonriko.webp",
     "category": "design sass",
     "industry": [
+      "manufacturer",
       "medical"
     ],
     "links": {
@@ -120,7 +122,7 @@
     "image": "マッチングアプリ.webp",
     "category": "android google-map",
     "industry": [
-      "matching"
+      "dating"
     ],
     "links": {
       "view": "",
@@ -133,7 +135,7 @@
     "image": "ZAIKO.webp",
     "category": "system",
     "industry": [
-      "business"
+      "retail"
     ],
     "links": {
       "view": "https://fujigankyo.chu.jp/system_fujigankyo/sale-management/estimation-new-create",
@@ -146,8 +148,8 @@
     "image": "アフィリエイト分析サイト.webp",
     "category": "system",
     "industry": [
-      "marketing",
-      "business"
+      "advertising",
+      "it"
     ],
     "links": {
       "view": "",
@@ -160,6 +162,7 @@
     "image": "自動販売機.webp",
     "category": "system",
     "industry": [
+      "food",
       "retail"
     ],
     "links": {
@@ -173,7 +176,8 @@
     "image": "投げ銭サイト.webp",
     "category": "python",
     "industry": [
-      "media"
+      "it",
+      "entertainment"
     ],
     "links": {
       "view": "https://tiptap.tokyo/",
@@ -186,7 +190,7 @@
     "image": "AIの占い師アプリ.webp",
     "category": "python chatgpt",
     "industry": [
-      "media"
+      "dating"
     ],
     "links": {
       "view": "",
@@ -212,7 +216,7 @@
     "image": "シンデレラスリープ.webp",
     "category": "wordpress",
     "industry": [
-      "beauty"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -225,7 +229,7 @@
     "image": "フェイスリフトサロン.webp",
     "category": "design wordpress",
     "industry": [
-      "beauty"
+      "salon"
     ],
     "links": {
       "view": "",
@@ -238,7 +242,7 @@
     "image": "ホテル宿泊.webp",
     "category": "gas chatgpt",
     "industry": [
-      "travel"
+      "hotels"
     ],
     "links": {
       "view": "https://www.jalan.net/uw/uwp3200/uww3201init.do?callbackHistFlg=1&stayCount=1&roomCount=1&dateUndecided=1&adultNum=4&rootCd=7701&distCd=01&yadNo=384944&smlCd=010202&roomCrack=400000&stayYear=&stayMonth=&stayDay=&screenId=UWW3101&planCd=03618774&roomTypeCd=0517558&planListNumPlan=3_0_0&groupBookingFlg=&ccnt=planlist_cp_y_500_sale_n_0_pp_n_0",
@@ -251,8 +255,8 @@
     "image": "GSCデータを自動.webp",
     "category": "gas",
     "industry": [
-      "marketing",
-      "business"
+      "advertising",
+      "it"
     ],
     "links": {
       "view": "",
@@ -265,7 +269,7 @@
     "image": "Flutterflowマッチングアプリ.webp",
     "category": "android",
     "industry": [
-      "matching"
+      "dating"
     ],
     "links": {
       "view": "",
@@ -291,8 +295,8 @@
     "image": "uzu_.webp",
     "category": "android",
     "industry": [
-      "matching",
-      "marketing"
+      "advertising",
+      "restaurants"
     ],
     "links": {
       "view": "https://apocc.co.jp/uzu_lp",
@@ -318,7 +322,7 @@
     "image": "ママスタ.webp",
     "category": "design wordpress",
     "industry": [
-      "media"
+      "mass-media"
     ],
     "links": {
       "view": "https://mamastar.jp/",
@@ -331,7 +335,8 @@
     "image": "日経BP.webp",
     "category": "design wordpress",
     "industry": [
-      "media"
+      "publishing",
+      "mass-media"
     ],
     "links": {
       "view": "https://www.nikkeibp.co.jp/",
@@ -344,7 +349,7 @@
     "image": "Uta-Net.webp",
     "category": "design wordpress",
     "industry": [
-      "media"
+      "arts"
     ],
     "links": {
       "view": "https://www.uta-net.com/",
@@ -357,7 +362,8 @@
     "image": "オリコン公式サイト.webp",
     "category": "design wordpress",
     "industry": [
-      "media"
+      "mass-media",
+      "entertainment"
     ],
     "links": {
       "view": "https://www.oricon.co.jp/",
@@ -370,7 +376,7 @@
     "image": "パスワード生成Webアプリ.webp",
     "category": "system security",
     "industry": [
-      "business"
+      "it"
     ],
     "links": {
       "view": "https://peegee.masoo.dev/",
@@ -383,7 +389,7 @@
     "image": "passend.webp",
     "category": "security",
     "industry": [
-      "business"
+      "it"
     ],
     "links": {
       "view": "",
@@ -396,7 +402,7 @@
     "image": "cocuu.webp",
     "category": "security",
     "industry": [
-      "media"
+      "publishing"
     ],
     "links": {
       "view": "http://cocuu.net/",
@@ -408,9 +414,7 @@
     "desc": "jekyllというコンテンツ管理システムを用いて作成しました。プロバイダのホームページでも設置可能なツールとなっております。",
     "image": "profile_ipad.webp",
     "category": "design wordpress system",
-    "industry": [
-      "other"
-    ],
+    "industry": [],
     "links": {
       "view": "http://homepage2.nifty.com/107steps/",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
