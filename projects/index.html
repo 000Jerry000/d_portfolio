@@ -1,139 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../projects/style.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      id="favicon"
-      rel="shortcut icon"
-      href="/assets/images/favicon.webp"
-      type="image/x-png"
-    />
-    <title>Projects | Portfolio 土井 健広</title>
-  </head>
-  <body oncontextmenu="return false">
-    <!-- navbar starts -->
-    <header>
-      <a href="/" class="logo"><i class="fab fa-node-js"></i> Doi</a>
+<html lang="ja">
 
-      <div id="menu" class="fas fa-bars"></div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="/#home">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#skills">Skills</a></li>
-          <li><a href="/#education">Education</a></li>
-          <li><a class="active" href="/#work">Work</a></li>
-          <li><a href="/#experience">Experience</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- navbar ends -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="フルスタック・AIエンジニア 土井健広の制作実績一覧。AI活用・業務自動化、Webアプリケーション、アプリ開発、Webサイト制作の実績をカテゴリーやキーワードで検索できます。"
+    data-en="Projects by Takehiro Doi, full-stack and AI engineer. Search AI and automation, web application, app and website work by category or keyword." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/projects/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link id="favicon" rel="icon" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <title>制作実績 | 土井　健広 | Doi Takehiro</title>
+</head>
 
-    <!-- work project section starts -->
-    <section class="work" id="work">
-      <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
-      </h2>
+<body oncontextmenu="return false">
 
-      <div id="filters" class="button-group">
-        <button class="btn is-checked" data-filter="*">All Projects</button>
-        <button class="btn" data-filter=".mern">MERN Stack</button>
-        <button class="btn" data-filter=".lamp">LAMP Stack</button>
-        <button class="btn" data-filter=".system">System</button>
-        <button class="btn" data-filter=".security">Security</button>
-        <button class="btn" data-filter=".python">Python</button>
-        <button class="btn" data-filter=".gas">GAS</button>
-        <button class="btn" data-filter=".chatgpt">chatGPT</button>
-        <button class="btn" data-filter=".design">Design</button>
-        <button class="btn" data-filter=".wordpress">Wordpress</button>
-        <button class="btn" data-filter=".no-code">No & Low code</button>
-        <button class="btn" data-filter=".sass">Sass</button>
-        <button class="btn" data-filter=".basicweb">Basic Web</button>
-        <button class="btn" data-filter=".android">Android App</button>
-        <button class="btn" data-filter=".ec">ECサイト</button>
-        <button class="btn" data-filter=".google-map">Using google map</button>
+  <!-- header starts -->
+  <header class="header" id="header">
+    <a href="/" class="logo" aria-label="ホーム" data-en-aria-label="Home">
+      <span class="hanko">土井</span>
+      <span class="logo-text">
+        <span class="logo-jp" data-en="Takehiro Doi">土井 健広</span>
+        <span class="logo-en" data-en="土井 健広">Doi Takehiro</span>
+      </span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="/#home"><span data-en="Home">ホーム</span><small data-en="ホーム">Home</small></a></li>
+        <li><a href="/#about"><span data-en="About">自己紹介</span><small data-en="自己紹介">About</small></a></li>
+        <li><a href="/#services"><span data-en="Services">対応業務</span><small data-en="対応業務">Services</small></a></li>
+        <li><a href="/#skills"><span data-en="Skills">技術一覧</span><small data-en="技術一覧">Skills</small></a></li>
+        <li><a class="active" href="/projects" aria-current="page"><span data-en="Works">制作実績</span><small data-en="制作実績">Works</small></a></li>
+        <li><a href="/#experience"><span data-en="Career">経歴</span><small data-en="経歴">Career</small></a></li>
+        <li><a href="/#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="言語 / Language">
+        <button type="button" data-lang="ja" aria-pressed="true" lang="ja">日本語</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menu" aria-label="メニュー" data-en-aria-label="Menu" aria-expanded="false"
+        aria-controls="navbar">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <!-- header ends -->
+
+  <main>
+
+    <!-- page heading starts -->
+    <section class="page-hero" id="top">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="パンくずリスト" data-en-aria-label="Breadcrumb">
+          <a href="/" data-en="Home">ホーム</a>
+          <span aria-hidden="true">／</span>
+          <span aria-current="page" data-en="Works">制作実績</span>
+        </nav>
+
+        <div class="sec-head">
+          <span class="sec-num">肆</span>
+          <h1 class="sec-title" data-en="Works">制作実績</h1>
+          <span class="sec-en" data-en="制作実績">Works</span>
+        </div>
+
+        <p class="page-lead"
+          data-en="Browse past work by category or keyword.<br>Find a project close to what you have in mind, and use it as a starting point for our conversation.">
+          これまでの制作実績を、カテゴリーやキーワードで検索いただけます。<br>ご検討中の内容に近い事例を見つけて、ご相談の参考にしてください。</p>
+      </div>
+      <div class="wave-band" aria-hidden="true"></div>
+    </section>
+    <!-- page heading ends -->
+
+    <!-- works browser starts -->
+    <section class="section works-browser" id="works">
+
+      <div class="finder" role="search" aria-label="実績を検索" data-en-aria-label="Search projects">
+        <div class="finder-row">
+          <label class="finder-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only" data-en="Keyword">キーワード</span>
+            <input type="search" id="work-search" autocomplete="off" enterkeyhint="search"
+              placeholder="キーワードで探す（例：WordPress）"
+              data-en-placeholder="Search by keyword (e.g. WordPress)">
+            <button type="button" class="finder-clear" id="search-clear" aria-label="キーワードを消去"
+              data-en-aria-label="Clear keyword" hidden><i class="fas fa-times"></i></button>
+          </label>
+        </div>
+
+        <div class="finder-suggest">
+          <span class="finder-label" data-en="Popular">よく探されるキーワード</span>
+          <div class="suggest-list" id="suggest-list"></div>
+        </div>
+
+        <div class="finder-cats" id="category-list" aria-label="カテゴリー" data-en-aria-label="Categories"></div>
       </div>
 
-      <div class="box-container">
-        <div class="box tilt">
-          <img src="/assets/images/projects/agecalc.webp" alt="" />
-          <div class="content">
-            <div class="tag">
-              <h3>Portfolio Website</h3>
-            </div>
-            <div class="desc">
-              <p>
-                Personal portfolio website. Don't need much info about it, just
-                scroll down. You're here only!
-              </p>
-              <div class="btns">
-                <a href="#" class="btn" target="_blank"
-                  ><i class="fas fa-eye"></i> View</a
-                >
-                <a href="#" class="btn" target="_blank"
-                  >Code <i class="fas fa-code"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+      <div class="finder-status">
+        <p id="result-count" aria-live="polite"></p>
+        <button type="button" class="finder-reset" id="filter-reset" hidden>
+          <i class="fas fa-undo-alt" aria-hidden="true"></i><span data-en="Reset filters">条件をリセット</span>
+        </button>
+      </div>
+
+      <div class="work-grid" id="work-grid"></div>
+
+      <div class="finder-empty" id="finder-empty" hidden>
+        <span class="finder-empty-mark" aria-hidden="true">無</span>
+        <h2 data-en="No matching projects">該当する実績が見つかりませんでした</h2>
+        <p
+          data-en="Try a different keyword or category.<br>Even if there's no similar example here, please feel free to ask — many projects aren't public.">
+          キーワードやカテゴリーを変えてお試しください。<br>近い事例が見つからない場合も、非公開の実績がございますのでお気軽にご相談ください。</p>
+        <div class="finder-empty-actions">
+          <button type="button" class="btn btn-ghost" id="empty-reset"><span data-en="Show all projects">すべての実績を見る</span></button>
+          <a href="/#contact" class="btn btn-primary"><span data-en="Get in touch">相談する</span><i
+              class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- works browser ends -->
+
+    <!-- contact band starts -->
+    <section class="section works-cta">
+      <div class="works-cta-inner">
+        <span class="hanko hanko-lg" aria-hidden="true">相談</span>
+        <div>
+          <h2 data-en="Planning something similar?">似た案件をご検討中ですか？</h2>
+          <p
+            data-en="Tell me what you have in mind — I'll suggest an approach based on these examples, from planning to launch and maintenance.">
+            ご要望をお聞かせください。掲載事例をもとに、企画から公開・保守運用までの進め方をご提案いたします。</p>
+        </div>
+        <a href="/#contact" class="btn btn-primary"><span data-en="Contact me">お問い合わせ</span><i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+    <!-- contact band ends -->
+
+  </main>
+
+  <!-- footer section starts -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="hanko hanko-lg">土井</span>
+        <div>
+          <h3 data-en="Welcome to Takehiro Doi's portfolio">土井のポートフォリオサイトへようこそ</h3>
+          <p data-en="Thank you for visiting. Feel free to reach out on social media.<br>I'll keep learning and growing.">ご覧いただきありがとうございます。SNSを通じてお気軽にご連絡ください。<br>これからも成長を続けてまいります。</p>
         </div>
       </div>
 
-      <div class="backbtn">
-        <a href="/#work" class="btn">
-          <i class="fas fa-arrow-left"></i>
-          <span>Back to Home</span>
-        </a>
+      <nav class="footer-links" aria-label="フッターナビゲーション" data-en-aria-label="Footer navigation">
+        <h4 data-en="Quick Links">主要リンク一覧</h4>
+        <a href="/#home" data-en="Home">ホーム</a>
+        <a href="/#about" data-en="About">自己紹介</a>
+        <a href="/#services" data-en="Services">対応業務</a>
+        <a href="/#skills" data-en="Skills">技術一覧</a>
+        <a href="/projects" data-en="Works">制作実績</a>
+        <a href="/#experience" data-en="Career">経歴</a>
+        <a href="/#contact" data-en="Contact">お問い合わせ</a>
+      </nav>
+
+      <div class="footer-contact">
+        <h4 data-en="Contact Info">連絡先</h4>
+        <p><i class="fas fa-envelope"></i>e.yatsuda.big@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i><span data-en="Koriyama, Japan">郡山, 日本</span></p>
+        <div class="share">
+          <a href="https://github.com/000Jerry000" class="fab fa-github" aria-label="GitHub" target="_blank" rel="noopener"></a>
+          <a href="https://t.me/NicholasMitchell_HZ" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank" rel="noopener"></a>
+          <a href="https://dev.to/000Jerry000" class="fab fa-dev" aria-label="Dev" target="_blank" rel="noopener"></a>
+          <a href="https://discord.gg/qsEA4FFF" class="fab fa-discord" aria-label="Discord" target="_blank" rel="noopener"></a>
+          <a href="https://jerry-2qp9506.slack.com/archives/C08QNMUKU6S" class="fab fa-slack" aria-label="Slack" target="_blank" rel="noopener"></a>
+          <a href="https://www.chatwork.com/ichika01" class="chat-a" aria-label="Chatwork" target="_blank" rel="noopener"><img
+              src="/assets/images/chatwork01.webp" alt="" /></a>
+        </div>
       </div>
-    </section>
-    <!-- work project section ends -->
+    </div>
 
-    <!-- scroll top btn -->
-    <a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
-    <!-- scroll back to top -->
+    <p class="credit">&copy; <span id="year">2026</span> <a href="https://www.linkedin.com/in/Takehiro-Doi">土井 健広 / Doi Takehiro</a></p>
+  </footer>
+  <!-- footer section ends -->
 
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-    <!-- jquery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
-    <!-- vanilla tilt.js links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-      integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- live chat launcher (opens the Tawk.to window; its own bubble is hidden) -->
+  <button type="button" id="chat-launcher" aria-label="ライブチャットで相談する" data-en-aria-label="Chat with me" hidden>
+    <span class="chat-launcher-seal" aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+    <span class="chat-launcher-text">
+      <span class="chat-launcher-label">
+        <span data-en="Chat">ご相談</span>
+        <small data-en="ご相談">Live Chat</small>
+      </span>
+    </span>
+    <span class="chat-launcher-badge" aria-hidden="true"></span>
+  </button>
 
-    <!-- scroll reveal anim -->
-    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- isotope filter plugin cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- scroll top btn -->
+  <a href="#top" aria-label="ページの先頭へ" data-en-aria-label="Back to top" id="scroll-top"><i class="fas fa-angle-up"></i></a>
 
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-    <script src="../projects/script.js"></script>
-  </body>
+  <script src="/projects/script.js"></script>
+  <script src="/assets/js/tawk.js"></script>
+
+</body>
+
 </html>
