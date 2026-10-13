@@ -78,6 +78,28 @@ function themeTawkFrames() {
         }
     });
     watchTawkDocuments();
+    tawkDocuments().forEach(autosizeTawkEditors);
+}
+
+// Tawk's message box stays one line tall however much is typed; grow it with the text
+const TAWK_EDITOR_MAX = 140;
+const sizedTawkEditors = new WeakSet();
+
+function sizeTawkEditor(editor) {
+    editor.style.setProperty('height', 'auto', 'important');
+    const height = Math.min(editor.scrollHeight, TAWK_EDITOR_MAX);
+    editor.style.setProperty('height', `${height}px`, 'important');
+    editor.style.setProperty('overflow-y', editor.scrollHeight > TAWK_EDITOR_MAX ? 'auto' : 'hidden', 'important');
+}
+
+function autosizeTawkEditors(doc) {
+    doc.querySelectorAll('textarea.tawk-chatinput-editor').forEach(editor => {
+        if (sizedTawkEditors.has(editor)) return;
+        sizedTawkEditors.add(editor);
+        // Tawk clears the box after sending without an input event, so also check on keyup
+        ['input', 'keyup', 'focus'].forEach(type => editor.addEventListener(type, () => sizeTawkEditor(editor)));
+        sizeTawkEditor(editor);
+    });
 }
 
 // Tawk fills its iframes asynchronously, so retry briefly after each state change
@@ -102,7 +124,7 @@ const TAWK_EXTRA_STRINGS = [
     ['Please tell me more.', 'もっと詳しく教えてください。'],
     ['Hi there', 'こんにちは'],
     // the chat box placeholder uses two dots, unlike the "…enter..." string in Tawk's files
-    ['Type here and press enter..', 'ここに入力して Enter キーを押してください'],
+    ['Type here and press enter..', 'メッセージを入力（Enterで送信）'],
     ['Maximum {{ count }} characters', '最大{{ count }}文字'],
     ['Close Chat', 'チャットを閉じる'],
     ['This icon closes the chat window.', 'このアイコンでチャットウィンドウを閉じます。'],

@@ -252,3 +252,173 @@ html body.font-lato {
 .tawk-min-chat-icon {
   fill: var(--washi) !important;
 }
+
+/* ---------- message input (footer of the chat window) ---------- */
+
+.tawk-max-container .tawk-footer,
+.tawk-max-container.tawk-direct-chat-modern-conversation .tawk-footer {
+  padding: 12px 14px 14px !important;
+  background-color: var(--washi-card) !important;
+  border-top: 1px solid var(--line) !important;
+  box-shadow: none !important;
+}
+
+#tawk-chatinput-container {
+  background: transparent !important;
+}
+
+/* one bordered field: the text on its own row, the icon buttons in a small bar below */
+.tawk-chatinput-wrap {
+  position: relative;
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--washi) !important;
+  border: 1px solid var(--line-strong);
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.tawk-chatinput-wrap:focus-within {
+  border-color: var(--shu);
+  box-shadow: inset 0 -2px 0 var(--shu);
+}
+
+/* height is set by tawk.js as the text grows (Tawk's own auto-size does not work) */
+.tawk-chatinput-editor {
+  flex: 1 1 100%;
+  width: 100% !important;
+  min-height: 44px !important;
+  max-height: 140px !important;
+  margin: 0 !important;
+  padding: 12px 14px 4px !important;
+  resize: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--sumi) !important;
+  font-family: var(--f-gothic) !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.04em;
+  box-shadow: none !important;
+}
+
+.tawk-chatinput-editor::placeholder {
+  color: var(--usuzumi) !important;
+  opacity: 1;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tawk-chatinput-action-buttons {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+  padding: 0 6px 6px;
+}
+
+.tawk-chatinput-button {
+  display: inline-grid !important;
+  place-items: center;
+  width: 30px !important;
+  height: 30px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: var(--usuzumi) !important;
+  transition: color .3s, background-color .3s;
+}
+
+.tawk-chatinput-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tawk-chatinput-button:hover,
+.tawk-chatinput-button[aria-expanded="true"] {
+  color: var(--shu) !important;
+  background-color: rgba(183, 40, 46, 0.08) !important;
+}
+
+.tawk-chatinput-button:focus-visible,
+.tawk-chatinput-rate:focus-visible {
+  outline: 2px solid var(--shu) !important;
+  outline-offset: -2px;
+}
+
+/* thumbs up / down pop-out (bordered only while open, or it shows as a stray line) */
+.tawk-chatinput-ratings {
+  background: var(--washi-card) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  bottom: -5px !important;
+}
+
+.tawk-chatinput-button.active .tawk-chatinput-ratings {
+  border: 1px solid var(--line-strong) !important;
+}
+
+/* closed it is 0px wide but 40px tall, which still paints a thin line */
+.tawk-chatinput-button:not(.active) .tawk-chatinput-ratings {
+  visibility: hidden;
+}
+
+.tawk-chatinput-ratings-thumbs-up {
+  color: var(--sumi) !important;
+}
+
+.tawk-chatinput-ratings-thumbs-down {
+  color: var(--shu) !important;
+}
+
+/* attached files waiting to be sent */
+.tawk-chatinput-fileupload {
+  padding: 0 0 10px !important;
+}
+
+.tawk-chatinput-fileupload-preview,
+.tawk-chatinput-fileupload-input {
+  background: var(--washi) !important;
+  border: 1px solid var(--line) !important;
+}
+
+/* emoji picker above the field */
+.tawk-emoji-picker {
+  background: var(--washi-card) !important;
+  border: 1px solid var(--line-strong) !important;
+  box-shadow: 0 18px 36px -24px rgba(30, 27, 24, 0.5);
+}
+
+.tawk-emoji-picker:focus,
+.tawk-emoji-picker:focus-visible,
+.tawk-emoji-picker.tawk-outline:focus {
+  outline: none !important;
+  border-color: var(--shu) !important;
+  box-shadow: 0 0 0 1px var(--shu), 0 18px 36px -24px rgba(30, 27, 24, 0.5) !important;
+}
+
+.tawk-emoji-search-input {
+  border: 1px solid var(--line-strong) !important;
+  border-radius: 0 !important;
+  background: var(--washi) !important;
+}
+
+/* ---------- keyboard focus: the site's red instead of Tawk's blue ---------- */
+
+html body .tawk-outline:focus-visible,
+html body .tawk-button:focus-visible,
+html body .tawk-input:focus-visible,
+html body .tawk-select:focus-visible,
+html body .tawk-textarea:focus-visible {
+  border-color: var(--shu) !important;
+  box-shadow: 0 0 0 1px rgba(183, 40, 46, 0.4) !important;
+  outline: none !important;
+}
+
+html body .tawk-message-tile:focus-visible,
+html body .tawk-message-item:focus-visible .tawk-message-item-content {
+  outline-color: var(--shu) !important;
+}
