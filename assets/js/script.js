@@ -264,12 +264,61 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 const chatLauncher = document.getElementById('chat-launcher');
 const chatBadge = chatLauncher.querySelector('.chat-launcher-badge');
 
+// Tawk renders into same-origin iframes, so the site theme can be injected into them
+const TAWK_THEME_HREF = new URL('assets/css/tawk-theme.css', document.baseURI).href;
+const TAWK_FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap';
+const themedTawkFrames = new WeakSet();
+
+function addStylesheet(doc, href, id) {
+    const link = doc.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    if (id) link.id = id;
+    doc.head.appendChild(link);
+}
+
+// Tawk sets a rounded border-radius inline (with !important) on its iframes
+function squareTawkFrame(frame) {
+    if (frame.style.getPropertyValue('border-radius') !== '0px') {
+        frame.style.setProperty('border-radius', '0px', 'important');
+    }
+}
+
+function themeTawkFrames() {
+    document.querySelectorAll('iframe').forEach(frame => {
+        let doc;
+        try { doc = frame.contentDocument; } catch (e) { return; }
+        if (!doc || !doc.head || !doc.querySelector('.tawk-max-container, .tawk-min-container')) return;
+
+        if (!doc.getElementById('site-tawk-theme')) {
+            addStylesheet(doc, TAWK_FONTS_HREF);
+            addStylesheet(doc, TAWK_THEME_HREF, 'site-tawk-theme');
+        }
+        if (!themedTawkFrames.has(frame)) {
+            themedTawkFrames.add(frame);
+            squareTawkFrame(frame);
+            new MutationObserver(() => squareTawkFrame(frame))
+                .observe(frame, { attributes: true, attributeFilter: ['style'] });
+        }
+    });
+}
+
+// Tawk fills its iframes asynchronously, so retry briefly after each state change
+function themeTawkSoon() {
+    themeTawkFrames();
+    [50, 250, 800, 2000].forEach(ms => setTimeout(themeTawkFrames, ms));
+}
+
+new MutationObserver(themeTawkSoon).observe(document.body, { childList: true });
+
 Tawk_API.onLoad = function () {
     Tawk_API.hideWidget();
     chatLauncher.hidden = false;
+    themeTawkSoon();
 };
 Tawk_API.onChatMaximized = function () {
     chatLauncher.classList.add('is-open');
+    themeTawkSoon();
 };
 Tawk_API.onChatMinimized = function () {
     Tawk_API.hideWidget();

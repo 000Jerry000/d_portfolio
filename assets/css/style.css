@@ -1517,6 +1517,7 @@ ol {
 
 .chat-launcher-seal {
   width: 52px;
+  height: 52px;
   display: grid;
   place-items: center;
   background: var(--shu);
@@ -1529,17 +1530,42 @@ ol {
   background: var(--shu-deep);
 }
 
+/* label is collapsed to zero width and slides out on hover / keyboard focus */
 .chat-launcher-text {
+  display: grid;
+  grid-template-columns: minmax(0, 0fr);
+  overflow: hidden;
+  transition: grid-template-columns .5s var(--ease);
+}
+
+#chat-launcher:hover .chat-launcher-text,
+#chat-launcher:focus-visible .chat-launcher-text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.chat-launcher-label {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2px;
-  padding: 9px 20px 9px 16px;
+  padding: 8px 20px 8px 16px;
+  white-space: nowrap;
   text-align: left;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .3s var(--ease), transform .5s var(--ease);
 }
 
-.chat-launcher-text > span {
+#chat-launcher:hover .chat-launcher-label,
+#chat-launcher:focus-visible .chat-launcher-label {
+  opacity: 1;
+  transform: none;
+  transition-delay: .1s;
+}
+
+.chat-launcher-label > span {
   font-family: var(--f-mincho);
   font-weight: 600;
   font-size: 15px;

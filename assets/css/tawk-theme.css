@@ -1,0 +1,249 @@
+/*
+ * Site theme for the Tawk.to chat window.
+ * Tawk renders inside same-origin iframes, so script.js injects this file into
+ * them. Selectors follow Tawk's own class names (max-widget.css / min-widget.css).
+ */
+
+:root {
+  --washi: #f5f0e6;
+  --washi-card: #faf7f0;
+  --sumi: #1e1b18;
+  --sumi-soft: #45403a;
+  --usuzumi: #847c72;
+  --shu: #b7282e;
+  --shu-deep: #8f1d22;
+  --line: rgba(30, 27, 24, 0.14);
+  --line-strong: rgba(30, 27, 24, 0.32);
+  --f-mincho: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+/* Tawk derives its accent colours from these two variables */
+* {
+  --tawk-header-background-color: #1e1b18 !important;
+  --tawk-header-text-color: #f5f0e6 !important;
+}
+
+html body,
+html body.font-lato {
+  font-family: var(--f-gothic) !important;
+  color: var(--sumi);
+  letter-spacing: 0.02em;
+}
+
+.tawk-input,
+.tawk-select,
+.tawk-textarea,
+.tawk-chatinput-editor,
+.tawk-button {
+  font-family: var(--f-gothic) !important;
+}
+
+::selection {
+  background: var(--shu);
+  color: var(--washi);
+}
+
+/* ---------- sharp corners, like the rest of the site ---------- */
+
+.tawk-max-container,
+.tawk-max-content,
+.tawk-router-view,
+.tawk-main-panel,
+.tawk-chat-panel,
+.tawk-toolbar,
+.tawk-card,
+.tawk-alert,
+.tawk-avatar,
+.tawk-input,
+.tawk-select,
+.tawk-textarea,
+.tawk-button:not(.tawk-button-circle),
+.tawk-button-rounded,
+.tawk-chat-bubble,
+.tawk-message-tile,
+.tawk-search-wrapper,
+.tawk-search-wrapper .tawk-input,
+.tawk-dropdown-menu,
+.tawk-chatinput-button,
+.tawk-chatinput-fileupload-preview,
+.tawk-chatinput-fileupload-input,
+.tawk-image,
+.tawk-max-container.tawk-direct-chat-modern .tawk-chat-view::before,
+.tawk-max-container.tawk-direct-chat-modern .tawk-message-view::before,
+.tawk-max-container.tawk-direct-chat-modern:not(.tawk-direct-chat-modern-home)>.tawk-max-content,
+.tawk-max-container.tawk-direct-chat-modern .tawk-overlay .tawk-max-content {
+  border-radius: 0 !important;
+}
+
+/* ---------- surfaces: washi paper instead of white ---------- */
+
+.tawk-card-inverse,
+.tawk-router-view,
+.tawk-bottom-navbar,
+.tawk-dropdown-menu,
+.tawk-overlay,
+.tawk-max-container.tawk-direct-chat-modern .tawk-chat-view::before,
+.tawk-max-container.tawk-direct-chat-modern .tawk-message-view::before,
+.tawk-max-container.tawk-direct-chat-modern-conversation .tawk-footer,
+.tawk-max-container.tawk-direct-chat-modern-conversation #tawk-chatinput-container,
+.tawk-max-container.tawk-direct-chat-modern-empty>.tawk-max-content {
+  background-color: var(--washi-card) !important;
+}
+
+.tawk-bottom-navbar {
+  border-top: 1px solid var(--line) !important;
+}
+
+/* header text (e.g. "Please fill out the form below…") */
+.tawk-agent-header,
+.tawk-main-panel .tawk-chat-panel>p,
+.tawk-toolbar-title,
+.tawk-header-text {
+  font-family: var(--f-mincho) !important;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- form fields ---------- */
+
+.tawk-input,
+.tawk-select,
+.tawk-textarea {
+  background: transparent !important;
+  border: 1px solid var(--line-strong) !important;
+  color: var(--sumi) !important;
+  font-size: 14px !important;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.tawk-input:focus,
+.tawk-select:focus,
+.tawk-textarea:focus,
+.tawk-input:focus-visible,
+.tawk-select:focus-visible,
+.tawk-textarea:focus-visible {
+  background: transparent !important;
+  border-color: var(--shu) !important;
+  box-shadow: inset 0 -1px 0 var(--shu) !important;
+  outline: none !important;
+}
+
+.tawk-form-label,
+.tawk-form-wrapper .tawk-input+.tawk-form-label,
+.tawk-form-wrapper .tawk-textarea+.tawk-form-label {
+  color: var(--sumi-soft) !important;
+  font-family: var(--f-mincho) !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.tawk-form-wrapper .tawk-input+.tawk-form-label.tawk-active,
+.tawk-form-wrapper .tawk-textarea+.tawk-form-label.tawk-active {
+  background-color: var(--washi-card) !important;
+}
+
+.tawk-form-label.tawk-active,
+.tawk-form-wrapper .tawk-input:focus+.tawk-form-label,
+.tawk-form-wrapper .tawk-textarea:focus+.tawk-form-label {
+  color: var(--shu) !important;
+}
+
+.tawk-form-wrapper .tawk-form-error-message {
+  color: var(--shu) !important;
+}
+
+/* ---------- buttons: sumi, red on hover (matches .btn-primary) ---------- */
+
+.tawk-button:not(.tawk-button-circle):not(.tawk-button-text):not(.tawk-button-outline) {
+  background-color: var(--sumi) !important;
+  border-color: var(--sumi) !important;
+  color: var(--washi) !important;
+  font-family: var(--f-mincho) !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  transition: background-color .4s, border-color .4s;
+}
+
+.tawk-button:not(.tawk-button-circle):not(.tawk-button-text):not(.tawk-button-outline):hover,
+.tawk-button:not(.tawk-button-circle):not(.tawk-button-text):not(.tawk-button-outline):focus-visible {
+  background-color: var(--shu) !important;
+  border-color: var(--shu) !important;
+}
+
+.tawk-button-outline {
+  background-color: transparent !important;
+  border-color: var(--sumi) !important;
+  color: var(--sumi) !important;
+}
+
+.tawk-button-outline:hover {
+  background-color: var(--sumi) !important;
+  color: var(--washi) !important;
+}
+
+.tawk-button-text,
+.tawk-link,
+.tawk-form-consent a {
+  color: var(--shu) !important;
+}
+
+/* bottom navigation: active tab in red */
+.tawk-bottom-navbar .tawk-button,
+.tawk-bottom-navbar .tawk-button .tawk-icon {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--usuzumi) !important;
+}
+
+.tawk-bottom-navbar .tawk-button.tawk-nav-active,
+.tawk-bottom-navbar .tawk-button.tawk-nav-active .tawk-icon {
+  color: var(--shu) !important;
+}
+
+/* ---------- conversation ---------- */
+
+.tawk-visitor-chat-bubble {
+  background-color: var(--sumi) !important;
+  color: var(--washi) !important;
+}
+
+.tawk-agent-chat-bubble {
+  background-color: var(--washi-deep, #ebe3d3) !important;
+  color: var(--sumi) !important;
+}
+
+.tawk-message-tile {
+  border-color: var(--line-strong) !important;
+  box-shadow: none !important;
+}
+
+.tawk-message-item-badge,
+.tawk-home-list-chat-content-badge,
+.tawk-badge {
+  background-color: var(--shu) !important;
+  color: var(--washi) !important;
+}
+
+.tawk-checkbox-container .tawk-checkbox:checked~.tawk-checkmark,
+.tawk-radio-container .tawk-radio:checked~.tawk-checkmark {
+  background-color: var(--shu) !important;
+  border-color: var(--shu) !important;
+}
+
+/* ---------- minimised button (shown as the close button while the window is open) ---------- */
+
+.tawk-min-container .tawk-button-circle {
+  border-radius: 0 !important;
+  background-color: var(--shu) !important;
+  border-color: var(--shu) !important;
+  transition: background-color .4s;
+}
+
+.tawk-min-container .tawk-button-circle:hover {
+  background-color: var(--sumi) !important;
+  border-color: var(--sumi) !important;
+}
+
+.tawk-min-chat-icon {
+  fill: var(--washi) !important;
+}
