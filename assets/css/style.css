@@ -1466,6 +1466,121 @@ ol {
   background: var(--sumi);
 }
 
+/* ---------- live chat launcher ---------- */
+
+#chat-launcher {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  border: 1px solid var(--sumi);
+  background: var(--sumi);
+  color: var(--washi);
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 10px 28px -14px rgba(30, 27, 24, 0.6);
+  animation: chat-launcher-in .8s var(--ease) both;
+  transition: opacity .3s var(--ease), transform .4s var(--ease);
+}
+
+#chat-launcher[hidden] {
+  display: none;
+}
+
+/* sumi → shu wipe, same as .btn */
+#chat-launcher::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--shu);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s var(--ease);
+}
+
+#chat-launcher:hover::before,
+#chat-launcher:focus-visible::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#chat-launcher.is-open {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.chat-launcher-seal {
+  width: 52px;
+  display: grid;
+  place-items: center;
+  background: var(--shu);
+  font-size: 19px;
+  transition: background .5s var(--ease);
+}
+
+#chat-launcher:hover .chat-launcher-seal,
+#chat-launcher:focus-visible .chat-launcher-seal {
+  background: var(--shu-deep);
+}
+
+.chat-launcher-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 9px 20px 9px 16px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.chat-launcher-text > span {
+  font-family: var(--f-mincho);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+}
+
+.chat-launcher-text small {
+  font-family: var(--f-latin);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: rgba(245, 240, 230, 0.7);
+}
+
+.chat-launcher-badge {
+  position: absolute;
+  top: 4px;
+  left: 38px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--washi);
+  color: var(--shu);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.chat-launcher-badge:empty {
+  display: none;
+}
+
+@keyframes chat-launcher-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
 /* ---------- reveal ---------- */
 
 .reveal {
@@ -1731,6 +1846,21 @@ html[lang="en"] .about-text {
   }
 
   .contact-lead br {
+    display: none;
+  }
+
+  /* icon-only on phones; same footprint as #scroll-top */
+  #chat-launcher {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .chat-launcher-seal {
+    width: 46px;
+    height: 46px;
+  }
+
+  .chat-launcher-text {
     display: none;
   }
 }

@@ -259,6 +259,30 @@ document.onkeydown = function (e) {
 
 // Start of Tawk.to Live Chat
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+// replace Tawk's default bubble with the site's own launcher
+const chatLauncher = document.getElementById('chat-launcher');
+const chatBadge = chatLauncher.querySelector('.chat-launcher-badge');
+
+Tawk_API.onLoad = function () {
+    Tawk_API.hideWidget();
+    chatLauncher.hidden = false;
+};
+Tawk_API.onChatMaximized = function () {
+    chatLauncher.classList.add('is-open');
+};
+Tawk_API.onChatMinimized = function () {
+    Tawk_API.hideWidget();
+    chatLauncher.classList.remove('is-open');
+};
+Tawk_API.onUnreadCountChanged = function (count) {
+    chatBadge.textContent = count > 0 ? count : '';
+};
+
+chatLauncher.addEventListener('click', function () {
+    Tawk_API.showWidget();
+    Tawk_API.maximize();
+});
 (function () {
     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
     s1.async = true;
