@@ -87,7 +87,12 @@ html body.font-lato {
 .tawk-max-container.tawk-direct-chat-modern .tawk-message-view::before,
 .tawk-max-container.tawk-direct-chat-modern-conversation .tawk-footer,
 .tawk-max-container.tawk-direct-chat-modern-conversation #tawk-chatinput-container,
-.tawk-max-container.tawk-direct-chat-modern-empty>.tawk-max-content {
+.tawk-max-container.tawk-direct-chat-modern-empty>.tawk-max-content,
+.tawk-main-panel.tawk-message-view,
+.tawk-message-view .tawk-chat-panel,
+.tawk-main-panel.tawk-chat-view,
+.tawk-chat-view .tawk-chat-panel,
+.tawk-message-bubble span[style*="background"] {
   background-color: var(--washi-card) !important;
 }
 

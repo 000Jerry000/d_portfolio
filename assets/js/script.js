@@ -286,11 +286,31 @@ function squareTawkFrame(frame) {
     }
 }
 
+// the "Powered by tawk.to" badge lives in its own iframe (with randomised ids)
+const hiddenTawkFrames = new WeakSet();
+function hideTawkFrame(frame) {
+    if (frame.style.getPropertyValue('display') !== 'none') {
+        frame.style.setProperty('display', 'none', 'important');
+    }
+}
+
 function themeTawkFrames() {
     document.querySelectorAll('iframe').forEach(frame => {
         let doc;
         try { doc = frame.contentDocument; } catch (e) { return; }
-        if (!doc || !doc.head || !doc.querySelector('.tawk-max-container, .tawk-min-container')) return;
+        if (!doc || !doc.head) return;
+
+        const isWidget = doc.querySelector('.tawk-max-container, .tawk-min-container');
+        if (!isWidget && doc.querySelector('a[href*="tawk.to"], img[src*="Tawky"]')) {
+            if (!hiddenTawkFrames.has(frame)) {
+                hiddenTawkFrames.add(frame);
+                hideTawkFrame(frame);
+                new MutationObserver(() => hideTawkFrame(frame))
+                    .observe(frame, { attributes: true, attributeFilter: ['style'] });
+            }
+            return;
+        }
+        if (!isWidget) return;
 
         if (!doc.getElementById('site-tawk-theme')) {
             addStylesheet(doc, TAWK_FONTS_HREF);
@@ -427,8 +447,38 @@ function swapTawkString(owner, slot, value, lang) {
     return next !== null && next !== value ? next : null;
 }
 
+// show the site owner's nickname and photo instead of the Tawk account profile
+const TAWK_AGENT = {
+    accountName: 'Jigar',
+    name: 'Akira',
+    avatar: new URL('assets/images/chat-avatar.webp', document.baseURI).href,
+};
+const TAWK_AGENT_NAME_RE = new RegExp(`\\b${TAWK_AGENT.accountName}\\b`, 'g');
+
+function applyTawkAgentProfile(doc) {
+    const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+        if (node.nodeValue.includes(TAWK_AGENT.accountName)) {
+            node.nodeValue = node.nodeValue.replace(TAWK_AGENT_NAME_RE, TAWK_AGENT.name);
+        }
+    }
+    doc.body.querySelectorAll('[aria-label], [title], [alt]').forEach(el => {
+        ['aria-label', 'title', 'alt'].forEach(attr => {
+            const value = el.getAttribute(attr);
+            if (value && value.includes(TAWK_AGENT.accountName)) {
+                el.setAttribute(attr, value.replace(TAWK_AGENT_NAME_RE, TAWK_AGENT.name));
+            }
+        });
+    });
+    doc.body.querySelectorAll('.tawk-avatar img, img[alt="Agent profile image"]').forEach(img => {
+        if (img.getAttribute('src') !== TAWK_AGENT.avatar) img.setAttribute('src', TAWK_AGENT.avatar);
+    });
+}
+
 function translateTawkDocument(doc) {
-    if (!doc || !doc.body || !tawkPairs.exact[currentLang]) return;
+    if (!doc || !doc.body) return;
+    applyTawkAgentProfile(doc);
+    if (!tawkPairs.exact[currentLang]) return;
     const lang = currentLang;
     const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
     for (let node = walker.nextNode(); node; node = walker.nextNode()) {
@@ -480,7 +530,7 @@ function watchTawkDocuments() {
             if (queued) return;
             queued = true;
             requestAnimationFrame(() => { queued = false; translateTawkDocument(doc); });
-        }).observe(doc.body, { childList: true, subtree: true, characterData: true });
+        }).observe(doc.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src'] });
         translateTawkDocument(doc);
     });
 }
