@@ -1531,6 +1531,25 @@ ol {
 }
 
 /* label is collapsed to zero width and slides out on hover / keyboard focus */
+/* waiting for Tawk to finish loading after a click */
+#chat-launcher.is-loading {
+  cursor: progress;
+}
+
+#chat-launcher.is-loading .chat-launcher-seal i::before {
+  content: "\f110"; /* fa-spinner */
+}
+
+#chat-launcher.is-loading .chat-launcher-seal i {
+  animation: chat-launcher-spin 1s linear infinite;
+}
+
+@keyframes chat-launcher-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .chat-launcher-text {
   display: grid;
   grid-template-columns: minmax(0, 0fr);

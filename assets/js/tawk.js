@@ -1,5 +1,5 @@
 // Tawk.to live chat, shared by every page: site-styled launcher, theme injected into
-// Tawk's iframes, language following the site's ja/en switch, and the owner's profile.
+// Tawk's iframes, and language following the site's ja/en switch.
 // Pages dispatch "site:langchange" on document when their language changes.
 
 const siteLang = () => (document.documentElement.lang === 'en' ? 'en' : 'ja');
@@ -207,37 +207,8 @@ function swapTawkString(owner, slot, value, lang) {
     return next !== null && next !== value ? next : null;
 }
 
-// show the site owner's nickname and photo instead of the Tawk account profile
-const TAWK_AGENT = {
-    accountName: 'Customer Support',   // name the Tawk account currently shows
-    name: 'Akira',
-    avatar: new URL('/assets/images/chat-avatar.webp', location.origin).href,
-};
-const TAWK_AGENT_NAME_RE = new RegExp(`\\b${TAWK_AGENT.accountName}\\b`, 'g');
-
-function applyTawkAgentProfile(doc) {
-    const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
-    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
-        if (node.nodeValue.includes(TAWK_AGENT.accountName)) {
-            node.nodeValue = node.nodeValue.replace(TAWK_AGENT_NAME_RE, TAWK_AGENT.name);
-        }
-    }
-    doc.body.querySelectorAll('[aria-label], [title], [alt]').forEach(el => {
-        ['aria-label', 'title', 'alt'].forEach(attr => {
-            const value = el.getAttribute(attr);
-            if (value && value.includes(TAWK_AGENT.accountName)) {
-                el.setAttribute(attr, value.replace(TAWK_AGENT_NAME_RE, TAWK_AGENT.name));
-            }
-        });
-    });
-    doc.body.querySelectorAll('.tawk-avatar img, img[alt="Agent profile image"]').forEach(img => {
-        if (img.getAttribute('src') !== TAWK_AGENT.avatar) img.setAttribute('src', TAWK_AGENT.avatar);
-    });
-}
-
 function translateTawkDocument(doc) {
     if (!doc || !doc.body) return;
-    applyTawkAgentProfile(doc);
     if (!tawkPairs.exact[siteLang()]) return;
     const lang = siteLang();
     const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT);
@@ -290,18 +261,59 @@ function watchTawkDocuments() {
             if (queued) return;
             queued = true;
             requestAnimationFrame(() => { queued = false; translateTawkDocument(doc); });
-        }).observe(doc.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src'] });
+        }).observe(doc.body, { childList: true, subtree: true, characterData: true });
         translateTawkDocument(doc);
     });
 }
 
 document.addEventListener('site:langchange', translateTawkFrames);
 
+// The launcher is shown straight away, not only once Tawk has loaded: Tawk starts after the
+// whole page (images included) has loaded, and ad blockers often stop it entirely.
+// A click before Tawk is ready shows a spinner and opens the chat when it arrives; if Tawk
+// fails or takes too long, the visitor is sent to the contact section instead.
+const TAWK_WAIT_MS = 15000;
+let tawkReady = false;
+let tawkFailed = false;
+let tawkPendingOpen = false;
+let tawkWaitTimer = null;
+
+chatLauncher.hidden = false;
+
+function openTawk() {
+    Tawk_API.showWidget();
+    Tawk_API.maximize();
+}
+
+function goToContact() {
+    const contact = document.getElementById('contact');
+    if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+    else location.href = '/#contact';
+}
+
+function setLauncherLoading(loading) {
+    chatLauncher.classList.toggle('is-loading', loading);
+    chatLauncher.setAttribute('aria-busy', String(loading));
+}
+
+function giveUpOnTawk() {
+    clearTimeout(tawkWaitTimer);
+    tawkPendingOpen = false;
+    setLauncherLoading(false);
+    goToContact();
+}
+
 Tawk_API.onLoad = function () {
+    tawkReady = true;
     Tawk_API.hideWidget();
-    chatLauncher.hidden = false;
     themeTawkSoon();
     loadTawkBundles().then(() => { themeTawkSoon(); translateTawkFrames(); });
+    if (tawkPendingOpen) {
+        tawkPendingOpen = false;
+        clearTimeout(tawkWaitTimer);
+        setLauncherLoading(false);
+        openTawk();
+    }
 };
 Tawk_API.onChatMaximized = function () {
     chatLauncher.classList.add('is-open');
@@ -316,15 +328,28 @@ Tawk_API.onUnreadCountChanged = function (count) {
 };
 
 chatLauncher.addEventListener('click', function () {
-    Tawk_API.showWidget();
-    Tawk_API.maximize();
+    if (tawkReady) {
+        openTawk();
+    } else if (tawkFailed) {
+        goToContact();
+    } else if (!tawkPendingOpen) {
+        tawkPendingOpen = true;
+        setLauncherLoading(true);
+        tawkWaitTimer = setTimeout(giveUpOnTawk, TAWK_WAIT_MS);
+    }
 });
+
 (function () {
     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
     s1.async = true;
     s1.src = 'https://embed.tawk.to/6ace3872c3211634c5257af4/1k4qop00k';
     s1.charset = 'UTF-8';
     s1.setAttribute('crossorigin', '*');
+    // blocked by an ad blocker or offline
+    s1.onerror = function () {
+        tawkFailed = true;
+        if (tawkPendingOpen) giveUpOnTawk();
+    };
     s0.parentNode.insertBefore(s1, s0);
 })();
 // End of Tawk.to Live Chat
