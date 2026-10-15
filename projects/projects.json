@@ -1,5 +1,49 @@
 [
   {
+    "name": "Webデータを自動収集・AI分析する業務ダッシュボードを開発",
+    "desc": "Web情報の収集・分析・可視化を一つの管理画面にまとめました",
+    "desc_en": "We've consolidated the collection, analysis, and visualization of web data into a single dashboard.",
+    "image": "841377_1000_0.webp",
+    "category": "ai",
+    "industry": [
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "メーカー向け業務・進捗管理システムを要件整理から設計・開発",
+    "desc": "要件整理から画面設計・開発まで一貫し、現場で使いやすい仕組みを構築",
+    "desc_en": "We provide end-to-end support—from requirements analysis to screen design and development—to build systems that are easy to use in the field.",
+    "image": "841524_1000_0.webp",
+    "category": "webapp",
+    "industry": [
+      "manufacturer",
+      "manufacturing"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Shopifyテーマを全面リニューアルし、SEOを維持したECサイトを構築",
+    "desc": "SEOを維持しながら、Shopifyテーマを全面改修・再構築",
+    "desc_en": "Completely Overhauling and Rebuilding a Shopify Theme While Maintaining SEO",
+    "image": "841594_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
     "name": "Design & Coding",
     "desc": "デザインの作成から、ピクセルパーフェクトなコーディング、WordPressへの変換、さらにはサーバーへのアップロードまで一貫して対応いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しておりました。",
     "desc_en": "Handled everything end to end: creating the design, pixel-perfect coding, converting it to WordPress and uploading it to the server. Built with PHP, HTML, CSS and JavaScript.",
@@ -126,7 +170,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -139,7 +183,7 @@
     ],
     "links": {
       "view": "https://fujigankyo.chu.jp/system_fujigankyo/sale-management/estimation-new-create",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -153,7 +197,36 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
+    }
+  },
+  {
+    "name": "自動車・バイク業界向けiPhone・iPadアプリを開発",
+    "desc": "実運用を意識したモバイルアプリを開発し、継続してご依頼いただきました",
+    "desc_en": "We developed a mobile app designed for real-world use, and the client has continued to place orders with us.",
+    "image": "841635_1000_0.webp",
+    "category": "app",
+    "industry": [
+      "automotive"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "MakeShopをベーシックモードからクリエイターモードへ移行",
+    "desc": "細かな確認とリスク管理を徹底し、予定より早いサイト公開を実現",
+    "desc_en": "By thoroughly conducting detailed checks and implementing rigorous risk management, we were able to launch the site ahead of schedule.",
+    "image": "841637_1000_0.webp",
+    "category": "website ec makeshop",
+    "industry": [
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
     }
   },
   {
@@ -167,7 +240,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -181,7 +254,7 @@
     ],
     "links": {
       "view": "https://tiptap.tokyo/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -194,7 +267,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -207,7 +280,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -220,7 +293,36 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
+    }
+  },
+  {
+    "name": "EC-CUBEの受注・決済処理を業務フローに合わせてカスタマイズ",
+    "desc": "既存ECの運用を崩さず、決済後の受注・取消フローを業務に合わせて改善",
+    "desc_en": "Improve post-payment order and cancellation workflows to better align with your operations, without disrupting your existing e-commerce setup.",
+    "image": "841657_1000_0.webp",
+    "category": "website ec ec-cube",
+    "industry": [
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "生成AI・AIエージェントを活用した業務自動化システムを開発",
+    "desc": "Web情報の収集・整理・可視化を自動化し、専用ダッシュボードまで構築",
+    "desc_en": "Automate the collection, organization, and visualization of web-based information, and build a dedicated dashboard.",
+    "image": "841597_1000_0.webp",
+    "category": "ai",
+    "industry": [
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
     }
   },
   {
@@ -233,7 +335,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -246,7 +348,7 @@
     ],
     "links": {
       "view": "https://www.jalan.net/uw/uwp3200/uww3201init.do?callbackHistFlg=1&stayCount=1&roomCount=1&dateUndecided=1&adultNum=4&rootCd=7701&distCd=01&yadNo=384944&smlCd=010202&roomCrack=400000&stayYear=&stayMonth=&stayDay=&screenId=UWW3101&planCd=03618774&roomTypeCd=0517558&planListNumPlan=3_0_0&groupBookingFlg=&ccnt=planlist_cp_y_500_sale_n_0_pp_n_0",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -260,7 +362,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -273,7 +375,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -286,7 +388,7 @@
     ],
     "links": {
       "view": "https://apocc.co.jp/matsurinow_lp",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -300,7 +402,7 @@
     ],
     "links": {
       "view": "https://apocc.co.jp/uzu_lp",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -313,7 +415,7 @@
     ],
     "links": {
       "view": "https://jpbulk.daisonet.com/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -326,7 +428,7 @@
     ],
     "links": {
       "view": "https://mamastar.jp/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -340,7 +442,7 @@
     ],
     "links": {
       "view": "https://www.nikkeibp.co.jp/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -353,7 +455,7 @@
     ],
     "links": {
       "view": "https://www.uta-net.com/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -367,7 +469,7 @@
     ],
     "links": {
       "view": "https://www.oricon.co.jp/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -380,7 +482,7 @@
     ],
     "links": {
       "view": "https://peegee.masoo.dev/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -393,7 +495,7 @@
     ],
     "links": {
       "view": "",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -406,7 +508,7 @@
     ],
     "links": {
       "view": "http://cocuu.net/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   },
   {
@@ -417,7 +519,7 @@
     "industry": [],
     "links": {
       "view": "http://homepage2.nifty.com/107steps/",
-      "code": "https://github.com/000Jerry000/doctor-s-Info"
+      "code": ""
     }
   }
 ]
