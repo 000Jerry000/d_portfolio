@@ -145,6 +145,37 @@
     }
   },
   {
+    "name": "サブスク機能付きLINEbotを開発",
+    "desc": "ユーザーが不足している栄養素を入力すると、実際のコンビニエンスストアで購入可能な商品を提案するシステムです",
+    "desc_en": "This system suggests products available at actual convenience stores when users enter the nutrients they are lacking.",
+    "image": "line.webp",
+    "category": "ai text-generate bot gas openai dify",
+    "industry": [
+      "it",
+      "food",
+      "medical"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "広告デザインのアドバイスをするSlack botを開発",
+    "desc": "広告デザインの画像をメンション付きで投稿すると、その画像を自動で認識し、構成やデザインの改善案をアドバイスする機能を持っています。特に、OpenAIのAPIをバックボーンとして使用し、自然言語処理と画像解析を組み合わせて高精度なアドバイスを提供しています。以下の技術スタックを活用しています。",
+    "desc_en": "When you post an image of an ad design with a mention, the feature automatically recognizes the image and provides suggestions for improving its composition and design. In particular, it uses OpenAI’s API as its backbone and combines natural language processing with image analysis to deliver highly accurate advice.",
+    "image": "537714_1000_0.webp",
+    "category": "ai text-generate bot slack openai gas",
+    "industry": [
+      "it",
+      "advertising"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
     "name": "ChatGPT & python scraping project",
     "desc": "PythonのSeleniumとChatGPTを活用して、大量のサイトをスクレイピングしました。PythonとChatGPT APIを用いて構築しています。",
     "desc_en": "Scraped a large number of websites using Python's Selenium and ChatGPT. Built with Python and the ChatGPT API.",
@@ -156,6 +187,22 @@
     "links": {
       "view": "https://translate.google.com/?sl=ja&tl=en&text=%E6%9C%AC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%A7%E3%81%AF%E3%80%81ChatGPT%20API%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%80%81%E6%97%A5%E6%9C%AC%E5%85%A8%E5%9B%BD%E3%81%AE%E7%97%85%E9%99%A2%E3%82%92%E6%A4%9C%E7%B4%A2%E3%81%97%E3%81%9F%E3%81%86%E3%81%88%E3%81%A7%E3%80%81%E6%A4%9C%E7%B4%A2%E7%B5%90%E6%9E%9C%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%84%E3%81%A6%E5%90%84%E7%97%85%E9%99%A2%E3%81%AB%E5%8B%A4%E5%8B%99%E3%81%99%E3%82%8B%E5%8C%BB%E5%B8%AB%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E3%83%AA%E3%82%B9%E3%83%88%E5%8C%96%E3%81%99%E3%82%8B%E8%87%AA%E5%8B%95%E3%83%84%E3%83%BC%E3%83%AB%E3%82%92%E9%96%8B%E7%99%BA%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0AChatGPT%E5%8D%98%E4%BD%93%E3%81%A7%E3%81%AF%E3%80%81%E5%90%84%E7%97%85%E9%99%A2%E3%81%AB%E5%8B%A4%E5%8B%99%E3%81%99%E3%82%8B%E5%8C%BB%E5%B8%AB5%E5%90%8D%E4%BB%A5%E4%B8%8A%E3%81%AE%E8%A9%B3%E7%B4%B0%E3%81%AA%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E5%9B%B0%E9%9B%A3%E3%81%A7%E3%81%99%E3%81%8C%E3%80%81%E7%97%85%E9%99%A2%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E3%81%AF%E5%BE%93%E6%A5%AD%E5%93%A1%E6%95%B0%E3%81%8C500%E5%90%8D%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E5%A0%B4%E5%90%88%E3%82%82%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%0A%E3%81%93%E3%81%AE%E8%AA%B2%E9%A1%8C%E3%81%AF%E3%80%81Python%E3%81%AESelenium%E3%81%A8%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0A------------------------%0A%E3%81%AA%E3%81%8A%E3%80%81%E6%9C%AC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AF%E7%A7%98%E5%AF%86%E4%BF%9D%E6%8C%81%E5%A5%91%E7%B4%84%EF%BC%88NDA%EF%BC%89%E3%82%92%E7%B7%A0%E7%B5%90%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%9F%E3%82%81%E3%80%81%E8%A9%B3%E7%B4%B0%E3%81%AA%E5%86%85%E5%AE%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AF%E5%80%8B%E5%88%A5%E3%81%AB%E3%81%94%E7%9B%B8%E8%AB%87%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E5%B9%B8%E3%81%84%E3%81%A7%E3%81%99%E3%80%82&op=translate",
       "code": "https://github.com/000Jerry000/doctor-s-Info"
+    }
+  },
+  {
+    "name": "AI画像生成ジャンルで月に50万円以上獲得したクリエイターがプロンプト相談",
+    "name_en": "Creators Who Earn Over 500,000 Yen a Month in the AI Image Generation Niche Offer Prompt Consultations",
+    "desc": "案件ごとにkindle出版や広告画像利用や副業やサムネイル用途、すべて対応いたします",
+    "desc_en": "I can handle everything on a project-by-project basis, including Kindle publishing, use of advertising images, side hustles, and thumbnails.",
+    "image": "35695284_1000_0.webp",
+    "category": "ai image-generate",
+    "industry": [
+      "it",
+      "arts"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
     }
   },
   {
@@ -223,6 +270,34 @@
     "industry": [
       "retail",
       "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "美容サロン向け 予約・顧客管理システムを開発",
+    "desc": "美容室・ネイルサロン・エステサロン向けの予約管理システムを、スマートフォンアプリと管理画面を連携し、オンライン予約、スタッフシフト管理、顧客カルテ管理、LINE通知、キャンセル待ち機能、決済連携など、店舗運営に必要な機能を最適な形で実装",
+    "image": "792463_1000_0.webp",
+    "category": "webapp app reservation qr",
+    "industry": [
+      "it",
+      "salon"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "",
+    "desc": "",
+    "image": ".webp",
+    "category": "",
+    "industry": [
+      "it",
+      "salon"
     ],
     "links": {
       "view": "",
