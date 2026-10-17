@@ -73,6 +73,153 @@
       "code": "https://github.com/000Jerry000/ASTER-HOUSE2025"
     }
   },
+  
+  {
+    "name": "家具｜Shopify越境ECサイト制作",
+    "desc": "家具を取り扱うShopifyのデモECサイトを制作し、商材やブランドの世界観に合わせた柔軟なデザイン・ストア構築に対応可能です。",
+    "image": "778973_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "furniture",
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "扇子｜Shopify越境ECサイト制作",
+    "desc": "扇子を取り扱うShopifyのデモECサイトを制作し、商材やブランドの世界観に合わせた柔軟なデザイン・ストア構築に対応可能です。",
+    "image": "722337_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "retail",
+      "it",
+      "arts"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ペットショップ｜Shopify越境ECサイト制作",
+    "desc": "ペットショップ向けのShopifyサイトのイメージ画像を制作し、商材やブランドの世界観に合わせたデザイン提案に対応可能です。",
+    "image": "848250_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "pets",
+      "retail"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "コーヒー専門店｜Shopify越境ECサイト制作",
+    "desc": "コーヒー専門店をテーマにしたShopifyのデモECサイトを制作し、商材やブランドの世界観に合わせたデザイン・ストア構築に対応可能です。",
+    "image": "826825_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "food",
+      "retail"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "メンズアパレルブランド｜Shopify越境ECサイト制作",
+    "desc": "メンズアパレルブランド「NOCT」の越境対応Shopify ECサイトを構築し、ディレクションからサイト・バナーデザイン、商品登録まで一貫して担当しました。",
+    "image": "722643_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "fashion",
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "https://noct-official.com/",
+      "code": ""
+    }
+  },
+  {
+    "name": "帯ウォールアート専門店｜Shopify越境ECサイト制作",
+    "desc": "帯を活用したウォールアート専門店のShopify ECサイトを構築し、サイトデザイン、バナーデザイン、多言語翻訳など、サイト制作に関わるすべての工程を一貫して担当しました。",
+    "image": "705374_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "arts",
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "https://sakura-art.jp",
+      "code": ""
+    }
+  },
+  {
+    "name": "Shopifyを利用したMilleFee_ECサイト構築",
+    "desc": "Shopifyを活用し、MilleFeeのECサイトを構築しました。",
+    "image": "792138_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "it",
+      "retail",
+      "salon"
+    ],
+    "links": {
+      "view": "https://www.millefee.jp/",
+      "code": ""
+    }
+  },
+  {
+    "name": "ヴィンテージブランドバッグ｜Shopify越境ECサイト制作",
+    "desc": "ヴィンテージブランドバッグを取り扱うShopifyサイトのイメージ画像を制作し、商材やブランドの世界観に合わせたデザイン提案に対応可能です。",
+    "image": "722342_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "fashion",
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "shopifyを利用したショッピングサイト開発",
+    "desc": "UI/UX改善とフロントエンド実装を担当し、トップページのファーストビュー設計、商品導線の最適化、ブランドコンテンツの表示設計、レスポンシブ対応を行いました。",
+    "image": "846718_1000_0.webp",
+    "category": "website ec shopify design",
+    "industry": [
+      "it",
+      "retail"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ShopifyデザインをFigmaで制作",
+    "desc": "Shopify構築者養成講座において、受講者向けのデザインカンプ制作を担当しています。",
+    "image": "440797_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "it",
+      "lessons"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
   {
     "name": "Female sports",
     "desc": "コーディングおよびアニメーションの実装を、WordPress用に変換いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しております。",
@@ -291,13 +438,129 @@
     }
   },
   {
-    "name": "",
-    "desc": "",
-    "image": ".webp",
-    "category": "",
+    "name": "Beauty",
+    "desc": "CMS機能を備え、LINEへの誘導を重視したデザインで、サイト内から予約も可能な美容サロン向けウェブサイトを制作しました。",
+    "image": "790015_1000_0.webp",
+    "category": "website reservation",
     "industry": [
       "it",
       "salon"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "外資系企業専門の転職エージェントさんの制作",
+    "desc": "キャリアスカウトジャパン株式会社(本社:東京都)は外資系企業の経理・財務、サプライチェーン・物流、人事分野に特化した転職エージェントです。グローバルに活躍したい転職者と企業をサポートしています。",
+    "image": "790017_1000_0.webp",
+    "category": "website hp design",
+    "industry": [
+      "staffing",
+      "consulting"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "リワードアプリ LP／キャンペーンランディングページ制作",
+    "desc": "大分銀行のリワードアプリ（キャンペーン用 LP）を構築しました。クロスデバイス対応のレスポンシブ設計、アニメーション演出・スクロール連動制御、フォームバリデーション機能、SEO 最適化、画像・リソース最適化を実装。銀行という信頼性が問われる業界において、安心感と訴求力を両立した UI／UX 設計を目指しました。",
+    "image": "790016_1000_0.webp",
+    "category": "website lp design seo animation",
+    "industry": [
+      "finance",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "デザイン制作",
+    "desc": "痩身エステダイエット",
+    "image": "795580_1000_0.webp",
+    "category": "website lp design ",
+    "industry": [
+      "medical",
+      "salon",
+      "sports"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Flutterを活用したヘルスケア・健康管理アプリを開発",
+    "desc": "Flutterを活用し、健康データの記録・分析、通知、クラウド連携、管理画面、予約・申請対応まで一貫して対応可能なiOS・Android両対応のヘルスケアアプリを企画・設計・開発します。",
+    "image": "792462_1000_0.webp",
+    "category": "app ios android design",
+    "industry": [
+      "it",
+      "medical"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ビューティーサロンLP制作",
+    "desc": "ターゲットの悩みに寄り添い、痩身マシンの専門性と安心感を伝えながら、共感を生むコピーと導線設計で予約につなげるエステサロン向けLPを制作しました。",
+    "image": "790020_1000_0.webp",
+    "category": "website lp design",
+    "industry": [
+      "advertising",
+      "salon"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "美容ブランド Misshelly の Shopify サイト制作",
+    "desc": "Shopifyを活用し、ブランドの世界観を表現したデザインと商品管理、キャンペーン告知、カート機能、法的表記などを備えたヘアケアブランドの公式サイト兼ECサイトを構築しました。",
+    "image": "798508_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "retail",
+      "it",
+      "salon"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ヘアケアのShopifyストアを、悩み診断つきで作りました",
+    "desc": "Shopifyを活用したヘッドスパブランドの公式ECサイトを約1.5か月で構築し、Liquidによるテーマカスタマイズ、メタフィールドを活用した商品管理、JavaScriptによる商品診断機能、決済・Instagram連携、レスポンシブ対応まで一貫して担当しました。",
+    "image": "868169_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "fashion",
+      "salon",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "越境ECウェブサイト (Shopify)",
+    "desc": "アメリカ市場向けにゲームやおもちゃなどを販売するサイト",
+    "image": "25418438_1000_0.webp",
+    "category": "website ec shopify",
+    "industry": [
+      "games",
+      "retail",
+      "it"
     ],
     "links": {
       "view": "",
