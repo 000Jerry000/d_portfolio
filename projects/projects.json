@@ -470,6 +470,222 @@
     }
   },
   {
+    "name": "Android・iPhoneアプリ開発実績",
+    "desc": "Android・iOS向けに、スポーツ解析、業務管理、ログイン認証、AI画像処理、3Dビジュアライゼーションなど多様なモバイルアプリを開発し、使いやすいUIと拡張性を重視した企画・設計・実装・改善まで一貫して対応しています。",
+    "desc_en": "We develop a wide range of mobile apps for Android and iOS—including sports analytics, business management, login authentication, AI image processing, and 3D visualization—and provide end-to-end support from planning and design through implementation and improvement, with a focus on user-friendly UIs and scalability.",
+    "image": "861065_1000_0.webp",
+    "category": "app android ai 3d-visualization ui-ux",
+    "industry": [
+      "it",
+      "sports",
+      "games"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Androidアプリ開発（個人開発・学習中）",
+    "desc": "Android StudioとKotlinを用いて、人物写真を顔の見えないシルエット調に加工できる画像編集アプリ「PALUETTE」を個人開発し、UI設計、画像処理、動作検証からGoogle Playでの公開準備まで一貫して対応しています。",
+    "desc_en": "Using Android Studio and Kotlin, I independently developed “PALUETTE,” an image-editing app that transforms portraits into silhouette-style images where the face is obscured. I handled the entire process—from UI design, image processing, and functional testing to preparing the app for release on Google Play.",
+    "image": "846303_1000_0.webp",
+    "category": "app andoid image-processing privacy ui-ux",
+    "industry": [
+      "it",
+      "mass-media"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Flutterアプリ開発｜ランニング・ウォーキング・サイクリングを記録する運動管理アプリを制作",
+    "desc": "Flutterを活用し、GPSによる運動記録、ルートの地図表示、アクティビティ履歴、運動データのグラフ分析、フォロー・コメント・いいねなどのコミュニティ機能を備えたランニング・ウォーキング・サイクリング向けモバイルアプリを開発しました。",
+    "desc_en": "Using Flutter, we developed a mobile app for running, walking, and cycling that features GPS-based exercise tracking, route mapping, activity history, graphical analysis of exercise data, and community features such as following, commenting, and liking.",
+    "image": "842888_1000_0.webp",
+    "category": "app google-map fitness social ai",
+    "industry": [
+      "sports",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "柏原市の地域情報を身近に楽しめるスマートフォンアプリ「KashiMo」を開発",
+    "desc": "地域のお店・イベント・クーポン情報や公式YouTubeなどの地域コンテンツを集約し、地域の魅力発信と店舗・事業者の情報発信を支援する、柏原市に密着した地域情報アプリです。",
+    "desc_en": "This is a local information app deeply rooted in Kashiwara City that aggregates local content—such as information on local shops, events, and coupons, as well as the city’s official YouTube channel—to promote the area’s appeal and support local businesses and merchants in sharing their information.",
+    "image": "828784_1000_0.webp",
+    "category": "app map coupon event video",
+    "industry": [
+      "it",
+      "advertising",
+      "travel"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Flutter旅行アプリ開発｜観光地・ホテルを探せるモバイルアプリUIを構築",
+    "desc": "Flutterを活用し、観光地や宿泊施設の検索・比較、お気に入り、メッセージ、通知などの機能を備え、ライト・ダークテーマに対応した旅行・観光向けモバイルアプリのUIを構築しました。",
+    "desc_en": "Using Flutter, we built the UI for a travel and tourism mobile app that features search and comparison of tourist attractions and accommodations, favorites, messaging, notifications, and other functions, and supports both light and dark themes.",
+    "image": "836421_1000_0.webp",
+    "category": "app travel hotel design ui-ux",
+    "industry": [
+      "travel",
+      "hotels"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "【Androidアプリ制作｜思い出の写真を表示できるメトロノームアプリ】を制作",
+    "desc": "KotlinとAndroid Studioを使用し、BPM・拍数・音声切替・再生／停止操作に対応した、思い出の写真を表示できるAndroid向けメトロノームアプリを開発しました。",
+    "desc_en": "Using Kotlin and Android Studio, I developed an Android metronome app that allows users to display photos of special memories and supports BPM, tempo, audio switching, and play/pause controls.",
+    "image": "828203_1000_0.webp",
+    "category": "app andorid music audio ui-ux",
+    "industry": [
+      "sports",
+      "arts"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "SkinSense AIというアプリを開発",
+    "desc": "AIによる顔写真の解析で乾燥・皮脂・毛穴・くすみ・ニキビ傾向などの肌状態を可視化し、日々の変化の記録と、一人ひとりに合わせたスキンケアルーティンの提案を行う美容アプリです。",
+    "desc_en": "This beauty app uses AI to analyze facial photos and visualize skin conditions such as dryness, excess oil, enlarged pores, dullness, and acne-prone skin. It tracks daily changes and recommends personalized skincare routines for each user.",
+    "image": "824724_1000_0.webp",
+    "category": "ai image-processing data-analysis personalization healthcare",
+    "industry": [
+      "salon",
+      "medical",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ThumbFlareのAIサムネイル生成アプリ開発",
+    "desc": "React Native（Expo）とTypeScriptを活用し、AI画像生成・API連携によってサムネイルを自動生成するアプリ「ThumbFlare」を開発し、企画・設計からUI/UX、実装、検証、App Store公開準備まで一貫して担当しています。",
+    "desc_en": "Using React Native (Expo) and TypeScript, I developed “ThumbFlare,” an app that automatically generates thumbnails using AI image generation and API integration. I was responsible for the entire process, from planning and design to UI/UX, implementation, testing, and preparation for release on the App Store.",
+    "image": "822520_1000_0.webp",
+    "category": "app ai image-generate ui-ux api",
+    "industry": [
+      "it",
+      "advertising",
+      "mass-media"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "FlutterFlowで男女・グループマッチングアプリを開発",
+    "desc": "FlutterFlow・Firebase・Ruby on Railsを活用し、個人・グループ間のマッチング、チャット、通知、グループ管理、管理画面を備えたモバイルアプリの開発を担当し、バックエンドAPIの設計・開発から継続的な機能改善まで対応しています。",
+    "desc_en": "Using FlutterFlow, Firebase, and Ruby on Rails, I am responsible for developing a mobile app that features individual and group matching, chat, notifications, group management, and an admin dashboard. My role encompasses everything from the design and development of backend APIs to ongoing feature improvements.",
+    "image": "798665_1000_0.webp",
+    "category": "app matching chat firebase api",
+    "industry": [
+      "dating",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "オークション付きライブ配信アプリ",
+    "desc": "漠然とした要件から企画提案・仕様設計・デザイン・開発・テスト・納品まで一貫して担当し、売上向上につながる施策提案と迅速かつ高品質な開発を通じて、会員数4万人を突破したEC型ライブ配信サービスの成長に貢献しました。",
+    "desc_en": "Starting with vague requirements, I was responsible for the entire process—from planning proposals and specification design to design, development, testing, and delivery. By proposing initiatives that drove sales growth and delivering rapid, high-quality development, I contributed to the growth of an e-commerce-based live streaming service that surpassed 40,000 members.",
+    "image": "30866674_1000_0.webp",
+    "category": "webapp ec requirement-definition ui-ux business-strategy system",
+    "industry": [
+      "it",
+      "advertising",
+      "retail"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "ゲームアプリの統計を提供するiOS、Androidアプリ",
+    "desc": "ゲームアプリの統計情報を提供するiOS・Android向けアプリを開発し、SNS共有用の画像付きリンク生成、画像ダウンロード、タブレット対応、多言語対応を実装しました。",
+    "desc_en": "We developed an iOS and Android app that provides statistics on gaming apps, and implemented features such as generating image-based links for sharing on social media, image downloads, tablet support, and multilingual support.",
+    "image": "26747122_1000_0.webp",
+    "category": "webapp ec requirement-definition business-strategy system",
+    "industry": [
+      "it",
+      "advertising",
+      "retail"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "決済・チャット・顧客管理・営業アプリ「くるん」(androidアプリ、iosアプリ)",
+    "desc": "特定業界向けに、顧客管理・営業チャット・店舗決済を一元化したアプリのサービス設計から機能選定、UI/UX改善、アプリ開発、Web管理画面の構築まで担当し、電話番号認証、チャット、プッシュ通知、クレジットカード決済、顧客・勤怠・スタッフ管理、サブスクリプション課金などの機能を実装しました。",
+    "desc_en": "For a specific industry, I was responsible for everything from service design and feature selection to UI/UX improvements, app development, and the construction of a web-based admin dashboard for an app that centralizes customer management, sales chat, and in-store payments. I implemented features such as phone number verification, chat, push notifications, credit card payments, customer, time and attendance, and staff management, as well as subscription billing.",
+    "image": "32566693_1000_0.webp",
+    "category": "app chat payment crm admin-dashboard",
+    "industry": [
+      "it",
+      "finance"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "（React Native）シンプルなマッチングアプリを開発",
+    "desc": "React Nativeを用いて、プロフィール作成・スワイプ式マッチング・チャット・プッシュ通知機能を備えた、iOS／Android対応のクロスプラットフォーム型マッチングアプリを開発しました。",
+    "desc_en": "Using React Native, we developed a cross-platform dating app compatible with iOS and Android that features profile creation, swipe-based matching, chat, and push notifications.",
+    "image": "680344_1000_0.webp",
+    "category": "app matching profile chat push-notification",
+    "industry": [
+      "dating",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "React Native（TypeScript）で筋トレ記録iOSアプリを開発",
+    "desc": "React Native（TypeScript）とExpoを活用し、パーソナルジム向けにトレーニング種目・重量・回数・セット数の記録、日別・種目別の履歴確認、前回記録の自動表示機能を備えたモバイルアプリを開発し、直感的なUIによる記録継続率と会員満足度の向上に貢献しました。",
+    "desc_en": "Using React Native (TypeScript) and Expo, we developed a mobile app for a personal training gym that allows users to log exercise types, weights, repetitions, and sets; view their history by day or exercise; and automatically display their previous records. The app’s intuitive UI helped improve the rate of consistent log-keeping and member satisfaction.",
+    "image": "742584_1000_0.webp",
+    "category": "app fitness data-analysis ui-ux cross-platform",
+    "industry": [
+      "sports",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
     "name": "Dental clinic project",
     "desc": "デザインとコーディング実装、WordPress への移行。PHP、HTML、CSS、JS を使用して構築。",
     "desc_en": "Design and coding, followed by migration to WordPress. Built with PHP, HTML, CSS and JS.",
