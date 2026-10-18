@@ -250,7 +250,7 @@
     "name": "営業支援AI SaaSダッシュボードを開発",
     "desc": "Next.js・React・TypeScript・Supabaseを活用し、中小企業向け営業支援SaaSを開発しました。リード管理、AIによる自動スコアリング・提案文生成、商談パイプラインの可視化、レポート自動出力などの機能を実装しました。",
     "desc_en": "Using Next.js, React, TypeScript, and Supabase, we developed a sales support SaaS platform for small and medium-sized businesses. We implemented features such as lead management, AI-powered automated scoring and proposal generation, sales pipeline visualization, and automated report generation.",
-    "image": ".webp",
+    "image": "748783_1000_0.webp",
     "category": "ai webapp text-generate crm report-generation",
     "industry": [
       "it",
