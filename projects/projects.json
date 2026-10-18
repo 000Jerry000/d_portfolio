@@ -44,6 +44,241 @@
     }
   },
   {
+    "name": "AI駆動型カスタマーエンゲージメントポータルサイトを開発",
+    "desc": "マーケティングエージェンシー向けのSaaSプラットフォーム開発のご依頼をいただき、営業メールの追跡・キャンペーン管理・顧客ポータルの統合を提案いたしました。",
+    "desc_en": "We received a request to develop a SaaS platform for a marketing agency and proposed integrating sales email tracking, campaign management, and a customer portal.",
+    "image": "774530_1000_0.webp",
+    "category": "webapp marketing saas crm integration automation api",
+    "industry": [
+      "it",
+      "advertising"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AI連携型Android業務支援アプリ開発",
+    "desc": "中小企業向け業務支援アプリの設計・開発を担当し、要件定義からUI設計、実装、テストまで一貫して対応するとともに、KotlinとPythonを用いたAIデータ分析、自動分類、プッシュ通知、管理画面とのリアルタイム同期機能を実装しました。",
+    "desc_en": "I was responsible for the design and development of a business support app for small and medium-sized enterprises, handling the entire process from requirements definition to UI design, implementation, and testing. I also implemented AI data analysis, automatic classification, push notifications, and real-time synchronization with the admin panel using Kotlin and Python.",
+    "image": "745013_1000_0.webp",
+    "category": "app android ai python system",
+    "industry": [
+      "it",
+      "consulting"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AI・生成AIを活用した業務効率化システム（RAG・AIチャット・業務自動化）を開発",
+    "desc": "生成AIを活用した社内業務支援システムを設計・開発し、ChatGPT・Claude・Geminiとの連携、RAGによる社内文書検索、文書生成・要約・翻訳、ユーザー管理などの機能を実装し、AWS環境へのデプロイまで一貫して対応しました。",
+    "desc_en": "We designed and developed an in-house business support system utilizing generative AI. We implemented features such as integration with ChatGPT, Claude, and Gemini; internal document search using RAG; document generation, summarization, and translation; and user management, and handled the entire process through to deployment in an AWS environment.",
+    "image": "798886_1000_0.webp",
+    "category": "ai python text-generate webapp rag",
+    "industry": [
+      "it",
+      "consulting"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "FlutterFlow×Firebase SNSアプリ開発（AIマッチング）",
+    "desc": "FlutterFlowとFirebaseを活用し、AIマッチング、SNS、サブスクリプション課金、高速検索、プッシュ通知などを備えたiOS・Android対応アプリ「Ribbon」を開発し、App StoreおよびGoogle Playへの公開まで一貫して担当しました。",
+    "desc_en": "Using FlutterFlow and Firebase, I developed “Ribbon,” an iOS and Android app featuring AI matching, social networking, subscription billing, high-speed search, and push notifications, and was responsible for the entire process from development through to its release on the App Store and Google Play.",
+    "image": "753768_1000_0.webp",
+    "category": "app ai payment firebase no-code",
+    "industry": [
+      "it",
+      "dating",
+      "entertainment"
+    ],
+    "links": {
+      "view": "https://play.google.com/store/apps/details?id=jp.highcreation.ribbon&hl=ja",
+      "code": "https://apps.apple.com/jp/app/ribbon-%E8%B6%A3%E5%91%B3-%E4%BE%A1%E5%80%A4%E8%A6%B3%E3%81%A7%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8Bsns%E3%82%A2%E3%83%97%E3%83%AA/id6744205379"
+    }
+  },
+  {
+    "name": "AI顔診断と髪型・メイクシミュレーションアプリを開発",
+    "desc": "AIを活用した顔診断・メイク・髪型シミュレーションアプリの開発に参画し、顔特徴点の検出、画像処理の最適化、髪型・メイクのバーチャル試着、肌・顔タイプ診断などの機能実装とUI/UX設計を担当しました。",
+    "desc_en": "I participated in the development of an AI-powered facial analysis, makeup, and hairstyle simulation app, where I was responsible for implementing features such as facial landmark detection, image processing optimization, virtual try-on of hairstyles and makeup, and skin and facial type analysis, as well as UI/UX design.",
+    "image": "834201_1000_0.webp",
+    "category": "app ai image-generate image-processing ui-ux",
+    "industry": [
+      "salon",
+      "fashion",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AI統合ハブ型SaaSプラットフォームを開発",
+    "desc": "React・Node.js・Pythonを用いて、OpenAI APIとSlack・LINE・Chatwork・Teams・メールなどを連携したSaaS型業務自動化システムをスクラッチ開発し、AIによる要約・自動返信・ナレッジ検索、外部サービス連携、バックエンドAPI設計からデプロイまで一貫して担当しました。",
+    "desc_en": "Using React, Node.js, and Python, I developed a SaaS-based business automation system from scratch that integrates the OpenAI API with Slack, LINE, Chatwork, Teams, email, and other services. I was responsible for the entire process—from AI-powered summarization, automated replies, and knowledge search to integration with external services, as well as backend API design and deployment.",
+    "image": "701477_1000_0.webp",
+    "category": "ai text-generate webapp api system",
+    "industry": [
+      "it",
+      "advertising"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "高齢者・業務支援向けAIチャットボット開発",
+    "desc": "DifyとGPTsを活用し、高齢者・一般ユーザー・企業向けに計42体のAIチャットボットを構築し、構成設計からプロンプト最適化まで一貫して担当しました。",
+    "desc_en": "Using Dify and GPTs, I built a total of 42 AI chatbots for seniors, general users, and businesses, and was responsible for the entire process—from architectural design to prompt optimization.",
+    "image": "654211_1000_0.webp",
+    "category": "ai chatbot prompt-engineering dify gpts",
+    "industry": [
+      "it",
+      "care"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "中小企業向けに決算書PDFを読み取って財務分析するAIエージェントを開発",
+    "desc": "Claude APIとClaude Visionを活用し、決算書PDFの数値抽出、不足情報のヒアリング、必要運転資金の算出、業種別ベンチマーク比較、資金繰り表・経営提言書ドラフトの自動生成までを行うAIエージェントを開発しました。",
+    "desc_en": "Using the Claude API and Claude Vision, we developed an AI agent capable of extracting numerical data from financial statement PDFs, identifying missing information through interviews, calculating required working capital, performing industry-specific benchmark comparisons, and automatically generating drafts of cash flow statements and management proposals.",
+    "image": ".webp",
+    "category": "ai python document-processing text-generate claude-api",
+    "industry": [
+      "it",
+      "finance",
+      "consulting"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AI・機械学習を活用した高精度競馬予測システム（JRA対応）を開発",
+    "desc": "機械学習とAIを活用し、馬や騎手の状態、天候などのデータを分析してレース順位を予測する競馬予測システムを開発し、予測精度86％を達成しました。",
+    "desc_en": "Using machine learning and AI, we developed a horse racing prediction system that analyzes data such as the condition of horses and jockeys, as well as weather conditions, to predict race results, achieving an 86% prediction accuracy rate.",
+    "image": "758459_1000_0.webp",
+    "category": "ai machine-learning python data-analysis prediction",
+    "industry": [
+      "games",
+      "sports",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AIでマンガを自動生成するWebツール「おまかせマンガスタジオ」を開発",
+    "desc": "Gemini APIを活用し、キャラクターの一貫性を保ちながらマンガを自動生成できるブラウザベースのWebツールを開発し、ネーム生成、コマ割り・台詞編集、吹き出し編集、PNG・PDF出力、プロジェクト保存・読込まで実装しました。",
+    "desc_en": "Using the Gemini API, I developed a browser-based web tool capable of automatically generating manga while maintaining character consistency. The tool includes features such as storyboard generation, panel layout and dialogue editing, speech bubble editing, PNG and PDF export, and the ability to save and load projects.",
+    "image": "839028_1000_0.webp",
+    "category": "ai image-generate text-generate webapp gemini-api",
+    "industry": [
+      "it",
+      "games",
+      "publishing"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AIアイドルライブ配信アプリを開発",
+    "desc": "Flutterを用いてAIアイドルの24時間ライブ配信アプリを開発し、ChatGPT APIによるAI会話、リアルタイムチャット、ギフト・ポイント課金、3Dキャラクター演出、通知、ユーザー管理などの機能を実装し、バックエンドからインフラ構築まで対応しました。",
+    "desc_en": "Using Flutter, I developed a 24-hour live streaming app featuring AI idols. I implemented features such as AI conversation powered by the ChatGPT API, real-time chat, gift and point purchases, 3D character animations, notifications, and user management, handling everything from the backend to infrastructure setup.",
+    "image": "770818_1000_0.webp",
+    "category": "app ai voice-generate payment realtime-chat",
+    "industry": [
+      "entertainment",
+      "games",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AIを活用したメディテーションアプリの開発",
+    "desc": "OpenAI APIを活用したAIメディテーションアプリの開発に携わり、音声による瞑想コンテンツやリラクゼーション機能の実装から、設計、リリース後の運用サポートまで対応しました。",
+    "desc_en": "I was involved in the development of an AI meditation app using the OpenAI API, handling everything from the implementation of audio meditation content and relaxation features to the design and post-release operational support.",
+    "image": "710518_1000_0.webp",
+    "category": "app ai voice-generate openai-api maintenance",
+    "industry": [
+      "sports",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "個人開発：AI搭載の恋愛占いWebアプリ",
+    "desc": "AI相性占いや個人運命鑑定のWebアプリを企画・開発し、AI連携、UI/UX設計、フロントエンド・バックエンド実装から、TikTok・Instagram向けのプロモーション画像制作まで一貫して担当しました。",
+    "desc_en": "I planned and developed a web app for AI compatibility readings and personalized destiny analyses, handling the entire process—from AI integration, UI/UX design, and front-end and back-end implementation to the creation of promotional images for TikTok and Instagram.",
+    "image": "808292_1000_0.webp",
+    "category": "ai webapp text-generate ui-ux social-media",
+    "industry": [
+      "dating",
+      "it",
+      "advertising",
+      "mass-media"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "営業支援AI SaaSダッシュボードを開発",
+    "desc": "Next.js・React・TypeScript・Supabaseを活用し、中小企業向け営業支援SaaSを開発しました。リード管理、AIによる自動スコアリング・提案文生成、商談パイプラインの可視化、レポート自動出力などの機能を実装しました。",
+    "desc_en": "Using Next.js, React, TypeScript, and Supabase, we developed a sales support SaaS platform for small and medium-sized businesses. We implemented features such as lead management, AI-powered automated scoring and proposal generation, sales pipeline visualization, and automated report generation.",
+    "image": ".webp",
+    "category": "ai webapp text-generate crm report-generation",
+    "industry": [
+      "it",
+      "staffing",
+      "advertising"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "AI姿勢分析システム｜UX設計・UI・プロトタイプ開発",
+    "desc": "美容・健康分野のAI姿勢分析システムのプロトタイプ開発において、競合調査からUX/UI・情報設計、HTML/CSS/JavaScriptによる実装まで一貫して担当し、利用者が分析結果を理解し、適切に判断できる操作フローを設計しました。",
+    "desc_en": "During the development of a prototype for an AI posture analysis system in the beauty and health sector, I was responsible for the entire process—from competitor research to UX/UI and information architecture, through to implementation using HTML, CSS, and JavaScript—and designed a user flow that enables users to understand the analysis results and make appropriate decisions.",
+    "image": "845889_1000_0.webp",
+    "category": "webapp ia prototype design ui-ux",
+    "industry": [
+      "salon",
+      "sports",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
     "name": "Design & Coding",
     "desc": "デザインの作成から、ピクセルパーフェクトなコーディング、WordPressへの変換、さらにはサーバーへのアップロードまで一貫して対応いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しておりました。",
     "desc_en": "Handled everything end to end: creating the design, pixel-perfect coding, converting it to WordPress and uploading it to the server. Built with PHP, HTML, CSS and JavaScript.",

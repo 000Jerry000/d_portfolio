@@ -4,10 +4,10 @@
 // Client-facing categories follow the order of the top page's services; each one
 // gathers the technical tags stored in projects.json ("category": "design wordpress").
 const CATEGORIES = [
-    { id: 'ai', ja: 'AI活用・業務自動化', en: 'AI & Automation', tags: ['ai', 'chatgpt', 'python', 'gas', 'image-generate', 'text-generate'] },
-    { id: 'webapp', ja: 'Webアプリ・システム', en: 'Web Apps & Systems', tags: ['webapp', 'system', 'security', 'reservation', 'payment'] },
-    { id: 'app', ja: 'アプリ開発', en: 'App Development', tags: ['app', 'android', 'google-map'] },
-    { id: 'website', ja: 'Webサイト制作', en: 'Websites', tags: ['website', 'wordpress', 'design', 'no-code', 'sass', 'hp', 'lp'] },
+    { id: 'ai', ja: 'AI活用・業務自動化', en: 'AI & Automation', tags: ['ai', 'chatgpt', 'python', 'gas', 'image-generate', 'text-generate', 'voice-generate', 'report-generation', 'rag', 'image-processing', 'prompt-engineering', 'bot', 'chatbot', 'dify', 'gpts', 'machine-learning', 'data-analysis', 'prediction', 'openai-api', 'maintenance'] },
+    { id: 'webapp', ja: 'Webアプリ・システム', en: 'Web Apps & Systems', tags: ['webapp', 'system', 'saas', 'security', 'reservation', 'payment', 'marketing', 'crm', 'integration', 'automation', 'api', 'gemini-api', 'realtime-chat'] },
+    { id: 'app', ja: 'アプリ開発', en: 'App Development', tags: ['app', 'android', 'ios', 'flutter', 'firebase', 'google-map'] },
+    { id: 'website', ja: 'Webサイト制作', en: 'Websites', tags: ['website', 'wordpress', 'design', 'no-code', 'sass', 'hp', 'lp', 'ui-ux', 'social-media'] },
 ];
 
 const TAGS = {
