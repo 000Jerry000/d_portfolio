@@ -154,7 +154,7 @@
     "name": "中小企業向けに決算書PDFを読み取って財務分析するAIエージェントを開発",
     "desc": "Claude APIとClaude Visionを活用し、決算書PDFの数値抽出、不足情報のヒアリング、必要運転資金の算出、業種別ベンチマーク比較、資金繰り表・経営提言書ドラフトの自動生成までを行うAIエージェントを開発しました。",
     "desc_en": "Using the Claude API and Claude Vision, we developed an AI agent capable of extracting numerical data from financial statement PDFs, identifying missing information through interviews, calculating required working capital, performing industry-specific benchmark comparisons, and automatically generating drafts of cash flow statements and management proposals.",
-    "image": ".webp",
+    "image": "835178_1000_0.webp",
     "category": "ai python document-processing text-generate claude-api",
     "industry": [
       "it",
