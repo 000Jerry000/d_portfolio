@@ -267,7 +267,7 @@
     "desc": "美容・健康分野のAI姿勢分析システムのプロトタイプ開発において、競合調査からUX/UI・情報設計、HTML/CSS/JavaScriptによる実装まで一貫して担当し、利用者が分析結果を理解し、適切に判断できる操作フローを設計しました。",
     "desc_en": "During the development of a prototype for an AI posture analysis system in the beauty and health sector, I was responsible for the entire process—from competitor research to UX/UI and information architecture, through to implementation using HTML, CSS, and JavaScript—and designed a user flow that enables users to understand the analysis results and make appropriate decisions.",
     "image": "845889_1000_0.webp",
-    "category": "webapp ia prototype design ui-ux",
+    "category": "webapp ai prototype design ui-ux",
     "industry": [
       "salon",
       "sports",
@@ -490,7 +490,7 @@
     "desc": "Android StudioとKotlinを用いて、人物写真を顔の見えないシルエット調に加工できる画像編集アプリ「PALUETTE」を個人開発し、UI設計、画像処理、動作検証からGoogle Playでの公開準備まで一貫して対応しています。",
     "desc_en": "Using Android Studio and Kotlin, I independently developed “PALUETTE,” an image-editing app that transforms portraits into silhouette-style images where the face is obscured. I handled the entire process—from UI design, image processing, and functional testing to preparing the app for release on Google Play.",
     "image": "846303_1000_0.webp",
-    "category": "app andoid image-processing privacy ui-ux",
+    "category": "app android image-processing privacy ui-ux",
     "industry": [
       "it",
       "mass-media"
@@ -551,7 +551,7 @@
     "desc": "KotlinとAndroid Studioを使用し、BPM・拍数・音声切替・再生／停止操作に対応した、思い出の写真を表示できるAndroid向けメトロノームアプリを開発しました。",
     "desc_en": "Using Kotlin and Android Studio, I developed an Android metronome app that allows users to display photos of special memories and supports BPM, tempo, audio switching, and play/pause controls.",
     "image": "828203_1000_0.webp",
-    "category": "app andorid music audio ui-ux",
+    "category": "app android music audio ui-ux",
     "industry": [
       "sports",
       "arts"
@@ -1305,7 +1305,9 @@
     "desc": "jekyllというコンテンツ管理システムを用いて作成しました。プロバイダのホームページでも設置可能なツールとなっております。",
     "image": "profile_ipad.webp",
     "category": "design wordpress system",
-    "industry": [],
+    "industry": [
+      "it"
+    ],
     "links": {
       "view": "http://homepage2.nifty.com/107steps/",
       "code": ""
