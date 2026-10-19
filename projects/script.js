@@ -429,9 +429,29 @@ industryList.addEventListener('click', e => {
 });
 
 // phones: the sidebar collapses into a toggle above the results
-industryToggle.addEventListener('click', () => {
-    const open = industryPanel.classList.toggle('is-open');
+// Below 1080px the sidebar becomes a slide-in panel, opened from the results bar
+const industryClose = document.getElementById('industry-close');
+const industryBackdrop = document.getElementById('industry-backdrop');
+const drawerQuery = window.matchMedia('(max-width: 1079px)');
+
+function setIndustryDrawer(open, { restoreFocus = true } = {}) {
+    industryPanel.classList.toggle('is-open', open);
+    industryBackdrop.hidden = !open;
     industryToggle.setAttribute('aria-expanded', String(open));
+    document.documentElement.classList.toggle('drawer-open', open);
+    if (open) industryClose.focus();
+    else if (restoreFocus) industryToggle.focus();
+}
+
+industryToggle.addEventListener('click', () => setIndustryDrawer(true));
+industryClose.addEventListener('click', () => setIndustryDrawer(false));
+industryBackdrop.addEventListener('click', () => setIndustryDrawer(false));
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && industryPanel.classList.contains('is-open')) setIndustryDrawer(false);
+});
+// widening the window back to the sidebar layout closes the panel
+drawerQuery.addEventListener('change', e => {
+    if (!e.matches && industryPanel.classList.contains('is-open')) setIndustryDrawer(false, { restoreFocus: false });
 });
 
 const resetAll = () => update({ category: 'all', query: '', industries: [] });
