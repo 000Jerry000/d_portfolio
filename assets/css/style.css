@@ -921,30 +921,27 @@ ol {
   margin-bottom: clamp(44px, 6vw, 72px);
 }
 
-/* one card per category (Frontend, Backend, …) */
+/* one full-width row per category: heading on top, skills in a line underneath */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: clamp(16px, 2vw, 24px);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-group {
-  padding: clamp(20px, 2.4vw, 28px);
-  background: var(--washi-card);
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--sumi);
+  padding: clamp(22px, 2.6vw, 30px) 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.skill-group:last-child {
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .skill-group-title {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 12px;
-  row-gap: 2px;
-  margin-bottom: 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
+  gap: 4px 14px;
+  margin-bottom: 16px;
   font-family: var(--f-mincho);
   font-weight: 800;
   font-size: 18px;
@@ -963,17 +960,13 @@ ol {
   letter-spacing: 0;
 }
 
-/* translated name on its own line, aligned under the title */
 .skill-group-title small {
-  flex-basis: 100%;
-  padding-left: 42px;
   font-family: var(--f-latin);
   font-style: italic;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.12em;
   color: var(--usuzumi);
-  white-space: nowrap;
 }
 
 .skill-list {
@@ -1945,9 +1938,6 @@ html[lang="en"] .about-text {
     margin: 0;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
 
   .footer-inner {
     grid-template-columns: 1fr;
