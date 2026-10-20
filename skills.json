@@ -1,122 +1,319 @@
 [
-    {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.webp"
-    },
-    {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.webp"
-    },
-    {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.webp"
-    },
-    {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.webp"
-    },
-    {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.webp"
-    },
-    {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.webp"
-    },
-    {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.webp"
-    },
-    {
-        "name": "ChakraUI",
-        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.webp"
-    },
-    {
-        "name": "TailwindCSS",
-        "icon": "./assets/images/skills/TailwindCSS.webp"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.webp"
-    },
-    {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.webp"
-    },
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.webp"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.webp"
-    },
-    {
+  {
+    "id": "frontend",
+    "ja": "フロントエンド",
+    "en": "Frontend",
+    "skills": [
+      {
+        "name": "Next.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "React",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg"
+      },
+      {
+        "name": "Vite",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vitejs/vitejs-original.svg"
+      },
+      {
         "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.webp"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.webp"
-    },
-    {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.webp"
-    },
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.webp"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.webp"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.webp"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.webp"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.webp"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.webp"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.webp"
-    },
-    {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.webp"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.webp"
-    },
-    {
-        "name": "DigitalOcean",
-        "icon": "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.webp"
-    },
-    {
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "Vue.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg"
+      },
+      {
+        "name": "HTML5",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+      },
+      {
+        "name": "CSS3",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+      },
+      {
+        "name": "Sass",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/sass/sass-original.svg"
+      },
+      {
+        "name": "Redux",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg"
+      },
+      {
+        "name": "MUI",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/materialui/materialui-original.svg"
+      },
+      {
+        "name": "Chakra UI",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/chakraui.svg"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bootstrap/bootstrap-original.svg"
+      },
+      {
         "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.webp"
-    },
-    {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.webp"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/000000/github.webp"
-    },
-    {
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jquery/jquery-original.svg"
+      },
+      {
         "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.webp"
-    }    
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/wordpress/wordpress-plain.svg"
+      },
+      {
+        "name": "Shopify",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/shopify.svg"
+      }
+    ]
+  },
+  {
+    "id": "backend",
+    "ja": "バックエンド",
+    "en": "Backend",
+    "skills": [
+      {
+        "name": "Python",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "FastAPI",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg"
+      },
+      {
+        "name": "Go",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/go/go-original-wordmark.svg"
+      },
+      {
+        "name": "Ruby on Rails",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/rails/rails-plain.svg"
+      },
+      {
+        "name": "PHP",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg"
+      },
+      {
+        "name": "Laravel",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/laravel/laravel-original.svg"
+      },
+      {
+        "name": "Django",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/django/django-plain.svg"
+      },
+      {
+        "name": "Express",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "ai",
+    "ja": "AI・機械学習",
+    "en": "AI / Machine Learning",
+    "skills": [
+      {
+        "name": "Claude",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/claude.svg"
+      },
+      {
+        "name": "OpenAI",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/openai.svg"
+      },
+      {
+        "name": "Gemini",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlegemini.svg"
+      },
+      {
+        "name": "PyTorch",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg"
+      },
+      {
+        "name": "LangChain",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/langchain.svg"
+      },
+      {
+        "name": "Dify",
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "id": "mobile",
+    "ja": "モバイル・デスクトップ",
+    "en": "Mobile / Desktop",
+    "skills": [
+      {
+        "name": "Swift",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/swift/swift-original.svg"
+      },
+      {
+        "name": "iOS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/apple/apple-original.svg"
+      },
+      {
+        "name": "macOS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/apple/apple-original.svg"
+      },
+      {
+        "name": "Electron",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/electron/electron-original.svg"
+      },
+      {
+        "name": "Kotlin",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/kotlin/kotlin-original.svg"
+      },
+      {
+        "name": "Android",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/android/android-original.svg"
+      },
+      {
+        "name": "Java",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+      },
+      {
+        "name": "Dart",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/dart/dart-original.svg"
+      },
+      {
+        "name": "Flutter",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/flutter/flutter-original.svg"
+      },
+      {
+        "name": "React Native",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+      },
+      {
+        "name": "C++",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "database",
+    "ja": "データベース",
+    "en": "Database",
+    "skills": [
+      {
+        "name": "PostgreSQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "MySQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg"
+      },
+      {
+        "name": "Redis",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redis/redis-original.svg"
+      },
+      {
+        "name": "Supabase",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/supabase/supabase-original.svg"
+      },
+      {
+        "name": "Firebase",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/firebase/firebase-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "cloud",
+    "ja": "クラウド・インフラ",
+    "en": "Cloud",
+    "skills": [
+      {
+        "name": "AWS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+      },
+      {
+        "name": "Google Cloud",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/googlecloud/googlecloud-original.svg"
+      },
+      {
+        "name": "Vercel",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vercel/vercel-original.svg"
+      },
+      {
+        "name": "Cloudflare",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cloudflare/cloudflare-original.svg"
+      },
+      {
+        "name": "Docker",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg"
+      },
+      {
+        "name": "Netlify",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/netlify/netlify-original.svg"
+      },
+      {
+        "name": "Heroku",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/heroku/heroku-original.svg"
+      },
+      {
+        "name": "DigitalOcean",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/digitalocean/digitalocean-original.svg"
+      },
+      {
+        "name": "GitHub",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg"
+      },
+      {
+        "name": "Git",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "business",
+    "ja": "業務ツール連携",
+    "en": "Business Integration",
+    "skills": [
+      {
+        "name": "Salesforce",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/salesforce/salesforce-original.svg"
+      },
+      {
+        "name": "Slack",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/slack/slack-original.svg"
+      },
+      {
+        "name": "Microsoft 365",
+        "icon": "/assets/images/skills/microsoft365.svg"
+      },
+      {
+        "name": "Notion",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/notion/notion-original.svg"
+      },
+      {
+        "name": "Jira",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jira/jira-original.svg"
+      },
+      {
+        "name": "LINE",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/line.svg"
+      },
+      {
+        "name": "Chatwork",
+        "icon": "/assets/images/chatwork.webp"
+      },
+      {
+        "name": "Google Apps Script",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googleappsscript.svg"
+      }
+    ]
+  }
 ]

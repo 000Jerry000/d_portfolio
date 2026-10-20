@@ -921,18 +921,76 @@ ol {
   margin-bottom: clamp(44px, 6vw, 72px);
 }
 
+/* one card per category (Frontend, Backend, …) */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  align-items: start;
+}
+
+.skill-group {
+  padding: clamp(20px, 2.4vw, 28px);
+  background: var(--washi-card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--sumi);
+}
+
+.skill-group-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 2px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--f-mincho);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+}
+
+.skill-group-num {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--shu);
+  color: var(--shu);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+/* translated name on its own line, aligned under the title */
+.skill-group-title small {
+  flex-basis: 100%;
+  padding-left: 42px;
+  font-family: var(--f-latin);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--usuzumi);
+  white-space: nowrap;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .skill {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  background: var(--washi-card);
+  gap: 8px;
+  padding: 7px 12px 7px 9px;
+  background: var(--washi);
   border: 1px solid var(--line);
   transition: border-color .3s var(--ease), transform .3s var(--ease);
 }
@@ -942,20 +1000,29 @@ ol {
   transform: translateY(-2px);
 }
 
-.skill img {
-  width: 30px;
-  height: 30px;
+.skill img,
+.skill-initial {
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
+/* skills without a logo get a lettered square */
+.skill-initial {
+  display: grid;
+  place-items: center;
+  background: var(--sumi);
+  color: var(--washi);
+  font-family: var(--f-latin);
+  font-size: 13px;
+  line-height: 1;
+}
+
 .skill span {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -1879,7 +1946,7 @@ html[lang="en"] .about-text {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
