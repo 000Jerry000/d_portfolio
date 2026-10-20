@@ -60,7 +60,7 @@ const I18N = {
     ja: {
         title: "Portfolio | 土井　健広 | Doi Takehiro",
         awayTitle: "Come Back To Portfolio",
-        roles: ["フロントエンドエンジニア", "バックエンドエンジニア", "AIエンジニア", "Androidアプリ開発者", "Webエンジニア"],
+        roles: ["フロントエンドエンジニア", "バックエンドエンジニア", "AIエンジニア", "アプリ開発者", "Webエンジニア"],
         viewSite: "サイトを見る",
         code: "コード",
         sending: "送信中です…",
