@@ -4,24 +4,108 @@
 // Client-facing categories follow the order of the top page's services; each one
 // gathers the technical tags stored in projects.json ("category": "design wordpress").
 const CATEGORIES = [
-    { id: 'ai', ja: 'AI活用・業務自動化', en: 'AI & Automation', tags: ['ai', 'chatgpt', 'python', 'gas', 'image-generate', 'text-generate', 'voice-generate', 'report-generation', 'rag', 'image-processing', 'prompt-engineering', 'bot', 'chatbot', 'dify', 'gpts', 'machine-learning', 'data-analysis', 'prediction', 'maintenance', 'personalization', 'healthcare'] },
-    { id: 'webapp', ja: 'Webアプリ・システム', en: 'Web Apps & Systems', tags: ['webapp', 'system', 'saas', 'security', 'reservation', 'payment', 'marketing', 'crm', 'integration', 'automation', 'api', 'gemini-api', 'openai-api', 'realtime-chat'] },
-    { id: 'app', ja: 'アプリ開発', en: 'App Development', tags: ['app', 'android', 'ios', 'flutter', 'firebase', 'google-map', '3d-visualization'] },
-    { id: 'website', ja: 'Webサイト制作', en: 'Websites', tags: ['website', 'wordpress', 'design', 'no-code', 'sass', 'hp', 'lp', 'ui-ux', 'social-media'] },
+    { id: 'ai', ja: 'AI活用・業務自動化', en: 'AI & Automation', tags: ['ai', 'chatgpt', 'python', 'gas', 'image-generate', 'text-generate', 'voice-generate', 'report-generation', 'rag', 'image-processing', 'prompt-engineering', 'bot', 'chatbot', 'dify', 'gpts', 'machine-learning', 'prediction', 'scraping', 'document-processing', 'claude-api', 'maintenance', 'personalization', 'healthcare'] },
+    { id: 'webapp', ja: 'Webアプリ・システム', en: 'Web Apps & Systems', tags: ['webapp', 'system', 'saas', 'security', 'reservation', 'payment', 'marketing', 'crm', 'integration', 'automation', 'api', 'gemini-api', 'openai-api', 'realtime-chat', 'admin-dashboard', 'requirement-definition', 'business-strategy', 'prototype'] },
+    { id: 'app', ja: 'アプリ開発', en: 'App Development', tags: ['app', 'android', 'ios', 'flutter', 'firebase', 'google-map', '3d-visualization', 'cross-platform', 'push-notification', 'matching', 'profile', 'qr', 'coupon'] },
+    { id: 'website', ja: 'Webサイト制作', en: 'Websites', tags: ['website', 'wordpress', 'design', 'no-code', 'sass', 'hp', 'lp', 'ui-ux', 'social-media', 'corporate', 'responsive-design', 'responsive', 'seo', 'animation', 'contact-form', 'ec', 'ecommerce', 'shopify', 'makeshop', 'ec-cube', 'booking', 'membership', 'job-search', 'property-search', 'hospitality'] },
 ];
 
+// labels for the keyword tags in projects.json ("category": "website wordpress …").
+// Every tag is shown on its card; tags sharing a label (responsive / responsive-design) appear once,
+// and a tag missing here still shows, spelled from its id.
 const TAGS = {
-    wordpress: { ja: 'WordPress', en: 'WordPress' },
+    website: { ja: 'ホームページ制作', en: 'Website' },
+    hp: { ja: 'ホームページ制作', en: 'Website' },
+    corporate: { ja: 'コーポレートサイト', en: 'Corporate Site' },
+    lp: { ja: 'LP制作', en: 'Landing Page' },
     design: { ja: 'デザイン', en: 'Design' },
-    'no-code': { ja: 'ノーコード', en: 'No-code' },
+    'ui-ux': { ja: 'UI/UX', en: 'UI/UX' },
+    'responsive-design': { ja: 'レスポンシブ', en: 'Responsive' },
+    responsive: { ja: 'レスポンシブ', en: 'Responsive' },
+    seo: { ja: 'SEO', en: 'SEO' },
+    animation: { ja: 'アニメーション', en: 'Animation' },
+    wordpress: { ja: 'WordPress', en: 'WordPress' },
     sass: { ja: 'Sass', en: 'Sass' },
-    python: { ja: 'Python', en: 'Python' },
-    chatgpt: { ja: 'ChatGPT', en: 'ChatGPT' },
-    gas: { ja: 'GAS', en: 'GAS' },
+    'no-code': { ja: 'ノーコード', en: 'No-code' },
+    'contact-form': { ja: 'お問い合わせフォーム', en: 'Contact Form' },
+    ec: { ja: 'ECサイト', en: 'E-commerce' },
+    ecommerce: { ja: 'ECサイト', en: 'E-commerce' },
+    shopify: { ja: 'Shopify', en: 'Shopify' },
+    makeshop: { ja: 'MakeShop', en: 'MakeShop' },
+    'ec-cube': { ja: 'EC-CUBE', en: 'EC-CUBE' },
+    payment: { ja: '決済', en: 'Payments' },
+    reservation: { ja: '予約システム', en: 'Booking System' },
+    booking: { ja: '予約システム', en: 'Booking System' },
+    membership: { ja: '会員機能', en: 'Membership' },
+    'job-search': { ja: '求人検索', en: 'Job Search' },
+    'property-search': { ja: '物件検索', en: 'Property Search' },
+    hospitality: { ja: 'ホテル・宿泊', en: 'Hospitality' },
+    hotel: { ja: 'ホテル・宿泊', en: 'Hospitality' },
+    travel: { ja: '旅行', en: 'Travel' },
+    webapp: { ja: 'Webアプリ', en: 'Web App' },
     system: { ja: 'システム開発', en: 'Systems' },
+    saas: { ja: 'SaaS', en: 'SaaS' },
+    api: { ja: 'API連携', en: 'API' },
+    integration: { ja: 'システム連携', en: 'Integration' },
+    automation: { ja: '業務自動化', en: 'Automation' },
+    crm: { ja: '顧客管理（CRM）', en: 'CRM' },
+    'admin-dashboard': { ja: '管理画面', en: 'Admin Dashboard' },
+    'data-analysis': { ja: 'データ分析', en: 'Data Analysis' },
+    'report-generation': { ja: 'レポート自動生成', en: 'Report Generation' },
+    marketing: { ja: 'マーケティング', en: 'Marketing' },
+    'business-strategy': { ja: '事業戦略', en: 'Business Strategy' },
+    'requirement-definition': { ja: '要件定義', en: 'Requirements' },
+    prototype: { ja: 'プロトタイプ', en: 'Prototype' },
+    maintenance: { ja: '保守運用', en: 'Maintenance' },
     security: { ja: 'セキュリティ', en: 'Security' },
+    privacy: { ja: 'プライバシー', en: 'Privacy' },
+    scraping: { ja: 'スクレイピング', en: 'Scraping' },
+    ai: { ja: 'AI', en: 'AI' },
+    'text-generate': { ja: '文章生成AI', en: 'Text Generation' },
+    'image-generate': { ja: '画像生成AI', en: 'Image Generation' },
+    'voice-generate': { ja: '音声生成AI', en: 'Voice Generation' },
+    'image-processing': { ja: '画像処理', en: 'Image Processing' },
+    'machine-learning': { ja: '機械学習', en: 'Machine Learning' },
+    prediction: { ja: '予測', en: 'Prediction' },
+    rag: { ja: 'RAG', en: 'RAG' },
+    chatbot: { ja: 'チャットボット', en: 'Chatbot' },
+    bot: { ja: 'Bot', en: 'Bot' },
+    'prompt-engineering': { ja: 'プロンプト設計', en: 'Prompt Engineering' },
+    'document-processing': { ja: '書類読み取り', en: 'Document Processing' },
+    personalization: { ja: 'パーソナライズ', en: 'Personalization' },
+    chatgpt: { ja: 'ChatGPT', en: 'ChatGPT' },
+    openai: { ja: 'OpenAI', en: 'OpenAI' },
+    'openai-api': { ja: 'OpenAI', en: 'OpenAI' },
+    'claude-api': { ja: 'Claude API', en: 'Claude API' },
+    'gemini-api': { ja: 'Gemini API', en: 'Gemini API' },
+    gpts: { ja: 'GPTs', en: 'GPTs' },
+    dify: { ja: 'Dify', en: 'Dify' },
+    python: { ja: 'Python', en: 'Python' },
+    gas: { ja: 'GAS', en: 'GAS' },
+    slack: { ja: 'Slack', en: 'Slack' },
+    app: { ja: 'アプリ開発', en: 'App' },
     android: { ja: 'Android', en: 'Android' },
+    ios: { ja: 'iOS', en: 'iOS' },
+    'cross-platform': { ja: 'クロスプラットフォーム', en: 'Cross-platform' },
+    firebase: { ja: 'Firebase', en: 'Firebase' },
+    'push-notification': { ja: 'プッシュ通知', en: 'Push Notifications' },
+    chat: { ja: 'チャット', en: 'Chat' },
+    'realtime-chat': { ja: 'リアルタイムチャット', en: 'Real-time Chat' },
+    matching: { ja: 'マッチング', en: 'Matching' },
+    profile: { ja: 'プロフィール', en: 'Profiles' },
+    'social-media': { ja: 'SNS', en: 'Social Media' },
+    social: { ja: 'SNS', en: 'Social Media' },
     'google-map': { ja: 'Google マップ', en: 'Google Maps' },
+    map: { ja: '地図', en: 'Maps' },
+    qr: { ja: 'QRコード', en: 'QR Codes' },
+    coupon: { ja: 'クーポン', en: 'Coupons' },
+    event: { ja: 'イベント', en: 'Events' },
+    video: { ja: '動画', en: 'Video' },
+    music: { ja: '音楽', en: 'Music' },
+    audio: { ja: '音声', en: 'Audio' },
+    fitness: { ja: 'フィットネス', en: 'Fitness' },
+    healthcare: { ja: 'ヘルスケア', en: 'Healthcare' },
+    '3d-visualization': { ja: '3D表示', en: '3D Visualization' },
 };
 
 // client industries, stored per project as "industry": ["medical", …] in projects.json.
@@ -81,8 +165,8 @@ const INDUSTRIES = [
 
 // quick searches clients commonly start from
 const SUGGESTIONS = {
-    ja: ['WordPress', 'ChatGPT', 'ECサイト', 'マッチング', '自動化', 'スクレイピング', 'セキュリティ'],
-    en: ['WordPress', 'ChatGPT', 'E-commerce', 'Matching', 'Automation', 'Scraping', 'Security'],
+    ja: ['ホームページ制作', 'WordPress', 'Shopify', 'ECサイト', 'AI', '生成AI', 'アプリ開発', 'Android', 'SEO', '予約システム', 'マッチング', '業務自動化'],
+    en: ['Website', 'WordPress', 'Shopify', 'E-commerce', 'AI', 'Generative AI', 'App', 'Android', 'SEO', 'Booking System', 'Matching', 'Automation'],
 };
 
 // search expansions: typing any word in the first list also matches the words in both lists,
@@ -91,6 +175,7 @@ const SUGGESTIONS = {
 const SYNONYMS = [
     [['ec', 'ecサイト', 'e-commerce', 'ecommerce', '通販', 'ネットショップ', 'ショップ'], ['shopify']],
     [['ai', '人工知能'], ['chatgpt', 'gpt', 'openai']],
+    [['生成ai', 'generative'], ['生成', 'generation', 'generate']],
     [['自動化', 'automation', 'automate'], ['自動', 'gas', 'スクレイピング', 'scraping']],
     [['スクレイピング', 'scraping', 'データ収集'], []],
     [['マッチング', 'matching'], []],
@@ -135,6 +220,7 @@ const I18N = {
 
 const t = key => I18N[siteLanguage()][key];
 const label = item => item[siteLanguage()] || item.ja;
+const tagLabel = tag => (TAGS[tag] ? label(TAGS[tag]) : tag.replace(/-/g, ' '));
 
 document.addEventListener('site:langchange', () => {
     if (!projects) return;
@@ -317,8 +403,7 @@ function cardHTML(project, i, terms) {
     const industries = INDUSTRIES.filter(i => project.industries.includes(i.id)).map(label);
     const view = project.links && project.links.view;
     const code = project.links && project.links.code;
-    const tags = project.tags.filter(tag => TAGS[tag]).map(tag => {
-        const text = label(TAGS[tag]);
+    const tags = [...new Set(project.tags.map(tagLabel))].map(text => {
         return `<li><button type="button" class="work-tag" data-query="${escapeHTML(text)}"
             aria-label="${escapeHTML(t('tagSearch')(text))}">${escapeHTML(text)}</button></li>`;
     }).join('');

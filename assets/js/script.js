@@ -122,7 +122,8 @@ function setLang(lang, { save = true } = {}) {
 
     roleEl.textContent = t('roles')[roleIndex];
     if (projectsData) showProjects(projectsData);
-    formStatus.textContent = '';
+    if (skillsData) showSkills(skillsData);
+    if (formStatus) formStatus.textContent = '';
 
     if (save) {
         try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* storage unavailable */ }
@@ -164,13 +165,31 @@ async function fetchData(type = "skills") {
     return response.json();
 }
 
-function showSkills(skills) {
+// skills.json: [{ id, ja, en, skills: [{ name, icon }] }] — one block per category
+const KANJI_NUMS = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+let skillsData = null;
+
+function showSkills(groups) {
+    skillsData = groups;
+    const en = currentLang === 'en';
     const skillsContainer = document.getElementById("skillsContainer");
-    skillsContainer.innerHTML = skills.map(skill => `
-        <div class="skill reveal">
-            <img src="${skill.icon}" alt="" loading="lazy" />
-            <span>${skill.name}</span>
-        </div>`).join("");
+    skillsContainer.innerHTML = groups.map((group, i) => `
+        <section class="skill-group reveal" aria-label="${en ? group.en : group.ja}">
+            <h3 class="skill-group-title">
+                <span class="skill-group-num" aria-hidden="true">${KANJI_NUMS[i] || i + 1}</span>
+                <span>${en ? group.en : group.ja}</span>
+                <small>${en ? group.ja : group.en}</small>
+            </h3>
+            <ul class="skill-list">
+                ${group.skills.map(skill => `
+                <li class="skill">
+                    ${skill.icon
+                        ? `<img src="${skill.icon}" alt="" loading="lazy" />`
+                        : `<span class="skill-initial" aria-hidden="true">${skill.name.charAt(0)}</span>`}
+                    <span>${skill.name}</span>
+                </li>`).join("")}
+            </ul>
+        </section>`).join("");
     observeReveal(skillsContainer);
 }
 
@@ -209,29 +228,32 @@ fetchData("projects").then(projects => {
 });
 
 // ===== contact form (emailjs) =====
+// the form may be removed from the page; everything below must still run without it
 const form = document.getElementById('contact-form');
-const formStatus = form.querySelector('.form-status');
-const submitBtn = form.querySelector('button[type="submit"]');
+const formStatus = form ? form.querySelector('.form-status') : null;
+const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    submitBtn.disabled = true;
-    formStatus.classList.remove('error');
-    formStatus.textContent = t('sending');
+if (form) {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        submitBtn.disabled = true;
+        formStatus.classList.remove('error');
+        formStatus.textContent = t('sending');
 
-    emailjs.sendForm('default_service', 'template_tqr125r', this)
-        .then(() => {
-            formStatus.textContent = t('sent');
-            form.reset();
-        }, (err) => {
-            formStatus.classList.add('error');
-            formStatus.textContent = t('failed');
-            console.error(err);
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-        });
-});
+        emailjs.sendForm('default_service', 'template_tqr125r', this)
+            .then(() => {
+                formStatus.textContent = t('sent');
+                form.reset();
+            }, (err) => {
+                formStatus.classList.add('error');
+                formStatus.textContent = t('failed');
+                console.error(err);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+            });
+    });
+}
 
 // ?lang=en|ja in the URL wins (shareable links), then the visitor's last choice, then Japanese
 const urlLang = new URLSearchParams(location.search).get('lang');

@@ -4,7 +4,7 @@
     "desc": "Web情報の収集・分析・可視化を一つの管理画面にまとめました",
     "desc_en": "We've consolidated the collection, analysis, and visualization of web data into a single dashboard.",
     "image": "841377_1000_0.webp",
-    "category": "ai",
+    "category": "ai data-analysis automation",
     "industry": [
       "it"
     ],
@@ -18,7 +18,7 @@
     "desc": "要件整理から画面設計・開発まで一貫し、現場で使いやすい仕組みを構築",
     "desc_en": "We provide end-to-end support—from requirements analysis to screen design and development—to build systems that are easy to use in the field.",
     "image": "841524_1000_0.webp",
-    "category": "webapp",
+    "category": "webapp system requirement-definition",
     "industry": [
       "manufacturer",
       "manufacturing"
@@ -35,8 +35,7 @@
     "image": "841594_1000_0.webp",
     "category": "website ec shopify",
     "industry": [
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -142,7 +141,6 @@
     "image": "867558_1000_0.webp",
     "category": "website wordpress responsive design ui-ux contact-form",
     "industry": [
-      "it",
       "construction",
       "realestate"
     ],
@@ -159,8 +157,7 @@
     "category": "website job-search ui-ux responsive-design membership",
     "industry": [
       "medical",
-      "staffing",
-      "it"
+      "staffing"
     ],
     "links": {
       "view": "https://web-prepa.com/medirise/",
@@ -174,8 +171,7 @@
     "image": "867600_1000_0.webp",
     "category": "website wordpress property-search responsive-design ui-ux",
     "industry": [
-      "realestate",
-      "it"
+      "realestate"
     ],
     "links": {
       "view": "https://web-prepa.com/share-demo/",
@@ -204,8 +200,7 @@
     "image": "867606_1000_0.webp",
     "category": "website booking responsive-design ui-ux hospitality",
     "industry": [
-      "hotels",
-      "it"
+      "hotels"
     ],
     "links": {
       "view": "https://web-prepa.com/hotel2/",
@@ -344,9 +339,7 @@
     "category": "ai webapp text-generate ui-ux social-media",
     "industry": [
       "dating",
-      "it",
-      "advertising",
-      "mass-media"
+      "it"
     ],
     "links": {
       "view": "",
@@ -390,7 +383,7 @@
     "desc": "デザインの作成から、ピクセルパーフェクトなコーディング、WordPressへの変換、さらにはサーバーへのアップロードまで一貫して対応いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しておりました。",
     "desc_en": "Handled everything end to end: creating the design, pixel-perfect coding, converting it to WordPress and uploading it to the server. Built with PHP, HTML, CSS and JavaScript.",
     "image": "en-Taku.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress animation",
     "industry": [
       "entertainment",
       "advertising"
@@ -405,7 +398,7 @@
     "desc": "コーディングおよびアニメーションの実装を、WordPress用に変換いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しております。",
     "desc_en": "Implemented the coding and animations and converted them for WordPress. Built with PHP, HTML, CSS and JavaScript.",
     "image": "Aster-house.webp",
-    "category": "wordpress",
+    "category": "website wordpress animation",
     "industry": [
       "realestate",
       "construction"
@@ -415,7 +408,6 @@
       "code": "https://github.com/000Jerry000/ASTER-HOUSE2025"
     }
   },
-  
   {
     "name": "家具｜Shopify越境ECサイト制作",
     "desc": "家具を取り扱うShopifyのデモECサイトを制作し、商材やブランドの世界観に合わせた柔軟なデザイン・ストア構築に対応可能です。",
@@ -423,8 +415,7 @@
     "category": "website ec shopify",
     "industry": [
       "furniture",
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -438,7 +429,6 @@
     "category": "website ec shopify design",
     "industry": [
       "retail",
-      "it",
       "arts"
     ],
     "links": {
@@ -481,8 +471,7 @@
     "category": "website ec shopify design",
     "industry": [
       "fashion",
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "https://noct-official.com/",
@@ -496,8 +485,7 @@
     "category": "website ec shopify design",
     "industry": [
       "arts",
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "https://sakura-art.jp",
@@ -541,8 +529,7 @@
     "image": "867593_1000_0.webp",
     "category": "website wordpress responsive-design seo ui-ux",
     "industry": [
-      "medical",
-      "it"
+      "medical"
     ],
     "links": {
       "view": "",
@@ -556,8 +543,7 @@
     "image": "867592_1000_0.webp",
     "category": "website wordpress responsive-design seo ui-ux",
     "industry": [
-      "medical",
-      "it"
+      "medical"
     ],
     "links": {
       "view": "https://web-prepa.com/hospital2/",
@@ -571,8 +557,7 @@
     "image": "867591_1000_0.webp",
     "category": "website wordpress responsive-design seo ui-ux",
     "industry": [
-      "consulting",
-      "it"
+      "consulting"
     ],
     "links": {
       "view": "https://web-prepa.com/career2/",
@@ -586,8 +571,7 @@
     "image": "867590_1000_0.webp",
     "category": "website wordpress responsive-design design ecommerce",
     "industry": [
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "https://web-prepa.com/gift1/",
@@ -616,8 +600,7 @@
     "image": "867586_1000_0.webp",
     "category": "website wordpress responsive-design seo ui-ux",
     "industry": [
-      "automotive",
-      "it"
+      "automotive"
     ],
     "links": {
       "view": "https://web-prepa.com/car1/",
@@ -630,7 +613,6 @@
     "image": "792138_1000_0.webp",
     "category": "website ec shopify",
     "industry": [
-      "it",
       "retail",
       "salon"
     ],
@@ -646,8 +628,7 @@
     "category": "website ec shopify design",
     "industry": [
       "fashion",
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -660,7 +641,6 @@
     "image": "846718_1000_0.webp",
     "category": "website ec shopify design",
     "industry": [
-      "it",
       "retail"
     ],
     "links": {
@@ -674,8 +654,7 @@
     "image": "440797_1000_0.webp",
     "category": "website ec shopify",
     "industry": [
-      "it",
-      "lessons"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -687,7 +666,7 @@
     "desc": "コーディングおよびアニメーションの実装を、WordPress用に変換いたしました。PHP、HTML、CSS、JavaScriptを用いて構築しております。",
     "desc_en": "Implemented the coding and animations and converted them for WordPress. Built with PHP, HTML, CSS and JavaScript.",
     "image": "unico.webp",
-    "category": "wordpress",
+    "category": "website wordpress animation",
     "industry": [
       "sports"
     ],
@@ -719,8 +698,7 @@
     "image": "846303_1000_0.webp",
     "category": "app android image-processing privacy ui-ux",
     "industry": [
-      "it",
-      "mass-media"
+      "it"
     ],
     "links": {
       "view": "",
@@ -780,7 +758,6 @@
     "image": "828203_1000_0.webp",
     "category": "app android music audio ui-ux",
     "industry": [
-      "sports",
       "arts"
     ],
     "links": {
@@ -856,11 +833,10 @@
     "desc": "ゲームアプリの統計情報を提供するiOS・Android向けアプリを開発し、SNS共有用の画像付きリンク生成、画像ダウンロード、タブレット対応、多言語対応を実装しました。",
     "desc_en": "We developed an iOS and Android app that provides statistics on gaming apps, and implemented features such as generating image-based links for sharing on social media, image downloads, tablet support, and multilingual support.",
     "image": "26747122_1000_0.webp",
-    "category": "webapp ec requirement-definition business-strategy system",
+    "category": "app ios android data-analysis",
     "industry": [
-      "it",
-      "advertising",
-      "retail"
+      "games",
+      "it"
     ],
     "links": {
       "view": "",
@@ -917,7 +893,7 @@
     "desc": "デザインとコーディング実装、WordPress への移行。PHP、HTML、CSS、JS を使用して構築。",
     "desc_en": "Design and coding, followed by migration to WordPress. Built with PHP, HTML, CSS and JS.",
     "image": "showa_dental.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "medical"
     ],
@@ -931,7 +907,7 @@
     "desc": "ビジネスの改善に役立つデザインとノーコードでの実装を組み合わせて制作しました。構築にはSquarespaceを使用しています。",
     "desc_en": "Combined design and no-code implementation to help improve the client's business. Built with Squarespace.",
     "image": "squarespace.webp",
-    "category": "design no-code",
+    "category": "website design no-code",
     "industry": [
       "advertising"
     ],
@@ -945,7 +921,7 @@
     "desc": "ノーコードおよびローコードの実装を取り入れ、ビジネスの改善に寄与するデザインを構築しました。Shopifyを用いて開発しました。",
     "desc_en": "Built a design that helps improve the business using no-code and low-code implementation. Developed with Shopify.",
     "image": "shopify.webp",
-    "category": "design no-code",
+    "category": "website design no-code ec shopify",
     "industry": [
       "retail"
     ],
@@ -959,7 +935,7 @@
     "desc": "デザインからサイト構築、アニメーションの実装まで対応いたします。SassとJavaScriptを用いて制作いたします。",
     "desc_en": "Covered everything from design and site building to animation. Created with Sass and JavaScript.",
     "image": "nihonriko.webp",
-    "category": "design sass",
+    "category": "website design sass animation",
     "industry": [
       "manufacturer",
       "medical"
@@ -1005,7 +981,7 @@
     "desc": "PythonのSeleniumとChatGPTを活用して、大量のサイトをスクレイピングしました。PythonとChatGPT APIを用いて構築しています。",
     "desc_en": "Scraped a large number of websites using Python's Selenium and ChatGPT. Built with Python and the ChatGPT API.",
     "image": "scraping.webp",
-    "category": "python chatgpt",
+    "category": "ai python chatgpt scraping automation",
     "industry": [
       "medical"
     ],
@@ -1036,7 +1012,7 @@
     "desc": "・日本人の女性と韓国人の女性をマッチングする \n ・プロフィール登録、本人確認、多言語、翻訳機能\n ・MAP上で検索 、チャット、いいね、\n ・チケット購入",
     "desc_en": "・Matches Japanese and Korean women \n ・Profile registration, identity verification, multilingual support, translation\n ・Map-based search, chat, likes\n ・Ticket purchases",
     "image": "マッチングアプリ.webp",
-    "category": "android google-map",
+    "category": "app android matching chat google-map",
     "industry": [
       "dating"
     ],
@@ -1049,7 +1025,7 @@
     "name": "在庫管理システム - ZAIKO",
     "desc": "Ruby on Railsで開発した在庫管理システム。仕入・在庫・販売の一元管理が可能。仕入・支払伝票作成、在庫更新、税計算、ユーザー権限管理を搭載。直感的なUIで業務効率を向上。開発費150万円。",
     "image": "ZAIKO.webp",
-    "category": "system",
+    "category": "webapp system",
     "industry": [
       "retail"
     ],
@@ -1062,7 +1038,7 @@
     "name": "アフィリエイト分析サイト",
     "desc": "アフィリエイトマーケター向けの分析サイトを、Vue.jsとPHP Laravelを用いて開発しました。",
     "image": "アフィリエイト分析サイト.webp",
-    "category": "system",
+    "category": "webapp system data-analysis marketing",
     "industry": [
       "advertising",
       "it"
@@ -1077,7 +1053,7 @@
     "desc": "実運用を意識したモバイルアプリを開発し、継続してご依頼いただきました",
     "desc_en": "We developed a mobile app designed for real-world use, and the client has continued to place orders with us.",
     "image": "841635_1000_0.webp",
-    "category": "app",
+    "category": "app ios",
     "industry": [
       "automotive"
     ],
@@ -1093,8 +1069,7 @@
     "image": "841637_1000_0.webp",
     "category": "website ec makeshop",
     "industry": [
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -1207,7 +1182,6 @@
     "category": "website ec shopify",
     "industry": [
       "retail",
-      "it",
       "salon"
     ],
     "links": {
@@ -1222,8 +1196,7 @@
     "category": "website ec shopify",
     "industry": [
       "fashion",
-      "salon",
-      "it"
+      "salon"
     ],
     "links": {
       "view": "",
@@ -1237,8 +1210,7 @@
     "category": "website ec shopify",
     "industry": [
       "games",
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -1249,7 +1221,7 @@
     "name": "自動販売機のアプリの開発",
     "desc": "Uber Eatsや出前館（Demaecan）と連携し、顧客がこれらのプラットフォームを通じて自動販売機での商品を注文する機能を開発しました。このプロジェクトにより、より多くの顧客にフレッシュな食品を提供し、利便性を高めることを目指しました。",
     "image": "自動販売機.webp",
-    "category": "system",
+    "category": "app system api",
     "industry": [
       "food",
       "retail"
@@ -1263,7 +1235,7 @@
     "name": "投げ銭サイト",
     "desc": "「TipTap」は、PythonとDjangoを用いて開発された投げ銭サイトになります。",
     "image": "投げ銭サイト.webp",
-    "category": "python",
+    "category": "webapp python payment",
     "industry": [
       "it",
       "entertainment"
@@ -1277,7 +1249,7 @@
     "name": "AIの占い師アプリ",
     "desc": "アプリをダウンロードしてカメラロールにある写真を分析を行います。分析結果をchatgptへ投げてユーザーの性格、特徴、将来のことを占っています。",
     "image": "AIの占い師アプリ.webp",
-    "category": "python chatgpt",
+    "category": "app ai python chatgpt",
     "industry": [
       "dating"
     ],
@@ -1290,7 +1262,7 @@
     "name": "えのすぱLOVERS公式サイトを制作しました",
     "desc": "えのすぱLOVERS -巡って、食べて、癒されて。私たちのスキを集めに行こう。",
     "image": "LOVERS.webp",
-    "category": "wordpress",
+    "category": "website wordpress",
     "industry": [
       "travel"
     ],
@@ -1303,7 +1275,7 @@
     "name": "シンデレラスリープ",
     "desc": "シンデレラスリープ | Contents",
     "image": "シンデレラスリープ.webp",
-    "category": "wordpress",
+    "category": "website wordpress",
     "industry": [
       "retail"
     ],
@@ -1319,8 +1291,7 @@
     "image": "841657_1000_0.webp",
     "category": "website ec ec-cube",
     "industry": [
-      "retail",
-      "it"
+      "retail"
     ],
     "links": {
       "view": "",
@@ -1332,7 +1303,7 @@
     "desc": "Web情報の収集・整理・可視化を自動化し、専用ダッシュボードまで構築",
     "desc_en": "Automate the collection, organization, and visualization of web-based information, and build a dedicated dashboard.",
     "image": "841597_1000_0.webp",
-    "category": "ai",
+    "category": "ai automation data-analysis",
     "industry": [
       "it"
     ],
@@ -1345,7 +1316,7 @@
     "name": "フェイスリフトサロンCLARITY様",
     "desc": "フェイスリフトサロンCLARITY様 ホームページ制作",
     "image": "フェイスリフトサロン.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "salon"
     ],
@@ -1358,7 +1329,7 @@
     "name": "OTA・公式サイト対応 ホテル宿泊データ自動収集システム開発",
     "desc": "宿泊人数別料金・空室状況・公開月数を正確に取得する高精度スクレイピングプラットフォーム",
     "image": "ホテル宿泊.webp",
-    "category": "gas chatgpt",
+    "category": "ai gas chatgpt scraping automation",
     "industry": [
       "hotels"
     ],
@@ -1371,7 +1342,7 @@
     "name": "GSCデータを自動でスプレッドシートに出力",
     "desc": "GASを使用してGoogle Search Console（GSC）から検索パフォーマンスデータを自動的に検索し、スプレッドシートに出力するGoogle Apps Script（GAS）を構築しました。",
     "image": "GSCデータを自動.webp",
-    "category": "gas",
+    "category": "gas automation seo",
     "industry": [
       "advertising",
       "it"
@@ -1385,7 +1356,7 @@
     "name": "Flutterflowマッチングアプリ",
     "desc": "理想の異性と出会えるマッチングアプリを開発しました。",
     "image": "Flutterflowマッチングアプリ.webp",
-    "category": "android",
+    "category": "app android matching no-code",
     "industry": [
       "dating"
     ],
@@ -1398,7 +1369,7 @@
     "name": "まつりNOW",
     "desc": "お祭りで山車が今どこにいるかリアルタイムで分かるWebサービス！",
     "image": "まつりNOW.webp",
-    "category": "android",
+    "category": "app android map event",
     "industry": [
       "travel"
     ],
@@ -1411,7 +1382,7 @@
     "name": "外国人インフルエンサーマッチングサービス『UZU』",
     "desc": "外国人インフルエンサーと店舗のマッチングサービス「UZU」の開発を担当。",
     "image": "uzu_.webp",
-    "category": "android",
+    "category": "app android matching",
     "industry": [
       "advertising",
       "restaurants"
@@ -1425,7 +1396,7 @@
     "name": "ダイソー公式 まとめ買い通販",
     "desc": "ダイソー公式のまとめ買いオンラインショップ。収納用品・日用品・雑貨などをセット販売し、業務用・大量購入ニーズに対応するネットストアです。",
     "image": "ダイソー公式.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress ec",
     "industry": [
       "retail"
     ],
@@ -1438,7 +1409,7 @@
     "name": "ママスタ（ママ向け情報プラットフォーム）",
     "desc": "子育て・生活情報を発信する日本最大級ママ向けメディア。ニュース・コラム・コミュニティ・保活情報など、ママの日常を支援するコンテンツと交流基盤を提供します。([プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES][1])",
     "image": "ママスタ.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "mass-media"
     ],
@@ -1451,7 +1422,7 @@
     "name": "日経BP（ビジネス情報ポータル）",
     "desc": "日経BP公式サイト。ビジネス・テクノロジー・ライフスタイルなど幅広い分野の専門情報、ニュース、専門誌連動コンテンツを提供する総合情報ポータルです。",
     "image": "日経BP.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "publishing",
       "mass-media"
@@ -1465,7 +1436,7 @@
     "name": "Uta-Net（歌詞検索サービス）",
     "desc": "国内最大級の歌詞検索サービス「Uta-Net」。曲名・アーティスト・歌詞の一部から無料で歌詞を検索・閲覧でき、音楽情報やランキング等のコンテンツも提供するサイトです。",
     "image": "Uta-Net.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "arts"
     ],
@@ -1478,7 +1449,7 @@
     "name": "オリコン公式サイト（ニュース・ランキング）",
     "desc": "音楽・エンタメ情報・ランキングを提供する総合メディア。最新ニュースや音楽チャート、顧客満足度ランキングなどを発信し、トレンド情報のプラットフォームとして日本の大衆文化に貢献しています。",
     "image": "オリコン公式サイト.webp",
-    "category": "design wordpress",
+    "category": "website design wordpress",
     "industry": [
       "mass-media",
       "entertainment"
@@ -1492,7 +1463,7 @@
     "name": "パスワード生成Webアプリ",
     "desc": "安全で複雑なパスワードを簡単に生成できるWebアプリです。本アプリは Peegee として公開しており、MCP（Model Context Protocol）サーバーにも対応。",
     "image": "パスワード生成Webアプリ.webp",
-    "category": "system security",
+    "category": "webapp system security",
     "industry": [
       "it"
     ],
@@ -1505,7 +1476,7 @@
     "name": "パスワード受け取りシステム",
     "desc": "メールで添付ファイルを送付した後、２つ目のメールでパスワードを送信する事を防ぎたいために作成しました。",
     "image": "passend.webp",
-    "category": "security",
+    "category": "system security",
     "industry": [
       "it"
     ],
@@ -1518,7 +1489,7 @@
     "name": "電子書籍 epub3 作成",
     "desc": "電子書籍 epub3 作成・発表プラットフォームです。",
     "image": "cocuu.webp",
-    "category": "security",
+    "category": "webapp",
     "industry": [
       "publishing"
     ],
@@ -1531,7 +1502,7 @@
     "name": "個人サイト",
     "desc": "jekyllというコンテンツ管理システムを用いて作成しました。プロバイダのホームページでも設置可能なツールとなっております。",
     "image": "profile_ipad.webp",
-    "category": "design wordpress system",
+    "category": "website design",
     "industry": [
       "it"
     ],
