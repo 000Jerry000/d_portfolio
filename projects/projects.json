@@ -136,6 +136,113 @@
     }
   },
   {
+    "name": "ATRIUM｜写真で家の魅力が伝わる工務店のホームページを制作",
+    "desc": "WordPressを活用し、施工事例の写真を大きく見せるデザインと事例の絞り込み機能を備えた工務店向けWebサイトを制作し、事業紹介・会社案内・ブログから資料請求・見学会予約・お問い合わせまで、検討段階に応じた導線設計とレスポンシブ対応、更新マニュアルの作成まで一貫して対応しました。",
+    "desc_en": "Using WordPress, we created a website for a construction company featuring a design that prominently displays photos of past projects and a project filter function. We provided end-to-end support—from designing user flows tailored to each stage of the customer’s decision-making process (including business overviews, company profiles, blogs, requests for materials, open house reservations, and inquiries) to ensuring responsive design and creating an update manual.",
+    "image": "867558_1000_0.webp",
+    "category": "website wordpress responsive design ui-ux contact-form",
+    "industry": [
+      "it",
+      "construction",
+      "realestate"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/demo-atrium/?view=1",
+      "code": ""
+    }
+  },
+  {
+    "name": "MEDIRISE｜求人検索と会員ページを備えた医療人材マッチングサイトを制作",
+    "desc": "医療機関と医療従事者をつなぐ人材マッチングサービス「MEDIRISE」のデザインサンプルを制作し、職種・エリア・働き方による求人検索、会員登録・ログイン、気になる求人の保存機能を実装するとともに、利用者別の配色設計とスマートフォン対応により、求人検索から応募・登録までスムーズに進められるサイトを構築しました。",
+    "desc_en": "We created design mockups for “MEDIRISE,” a talent matching service that connects healthcare facilities with medical professionals. We implemented features such as job searches by job type, location, and work style; user registration and login; and the ability to save jobs of interest. By designing a color scheme tailored to each user group and optimizing the site for smartphones, we built a website that allows users to move seamlessly from job searches to applications and registration.",
+    "image": "867597_1000_0.webp",
+    "category": "website job-search ui-ux responsive-design membership",
+    "industry": [
+      "medical",
+      "staffing",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/medirise/",
+      "code": ""
+    }
+  },
+  {
+    "name": "ひとまど｜物件を比べて探せるシェアハウス運営会社のサイトを制作",
+    "desc": "WordPressを活用し、大阪・京都・神戸・奈良で展開するシェアハウス運営会社「株式会社ひとまど」のデザインサンプルサイトを制作し、地図によるエリア検索、物件ごとの空室・家賃表示、3ブランドの識別しやすいデザインを実装するとともに、入居までの流れやFAQを整理し、物件比較から見学・入居の問い合わせまでスムーズに進められるサイトを構築しました。",
+    "desc_en": "Using WordPress, we created a sample design website for “Hitomado Co., Ltd.,” a shared housing management company operating in Osaka, Kyoto, Kobe, and Nara. We implemented features such as area search via map, displays of vacancy status and rent for each property, and a design that clearly distinguishes the company’s three brands. We also organized the move-in process and FAQs to build a website that allows users to move seamlessly from comparing properties to scheduling viewings and making inquiries about moving in.",
+    "image": "867600_1000_0.webp",
+    "category": "website wordpress property-search responsive-design ui-ux",
+    "industry": [
+      "realestate",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/share-demo/",
+      "code": ""
+    }
+  },
+  {
+    "name": "ユイマド｜14の事業を迷わず探せるコーポレートサイトを制作",
+    "desc": "埼玉県川越市で14の事業を展開する企業「株式会社ユイマド」のコーポレートサイトを制作し、多岐にわたる事業を一覧で分かりやすく整理した構成と落ち着いたデザインにより、目的のサービスへスムーズにアクセスできる導線を設計するとともに、レスポンシブ対応・お知らせ機能・SEO内部対策を実装しました。",
+    "desc_en": "We developed the corporate website for “Yuimado Co., Ltd.,” a company operating 14 businesses in Kawagoe City, Saitama Prefecture. Through a structure that clearly organizes its diverse business operations in an at-a-glance format and a sleek design, we designed a user flow that allows visitors to smoothly access their desired services. We also implemented responsive design, a news feed feature, and on-page SEO optimization.",
+    "image": "867603_1000_0.webp",
+    "category": "website corporate responsive-design seo ui-ux",
+    "industry": [
+      "it",
+      "consulting"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/career3/",
+      "code": ""
+    }
+  },
+  {
+    "name": "TIDEWELL HOTEL｜予約と会員ページを備えた海辺のホテルのサイトを制作",
+    "desc": "福岡・百道浜の海辺のホテル「TIDEWELL HOTEL」のデザインサンプルサイトを制作し、海を望む客室の魅力を写真で訴求するデザインと、客室紹介・館内施設・予約フォーム・会員ページを備えた構成により、宿泊への期待感を高めながら公式サイトからの予約までスムーズに進められる導線を設計しました。",
+    "desc_en": "We created a design sample site for “TIDEWELL HOTEL,” a seaside hotel in Momochihama, Fukuoka. Featuring a design that showcases the appeal of the ocean-view guest rooms through photographs, along with sections highlighting the guest rooms, on-site facilities, a reservation form, and a members-only page, we designed a user flow that builds anticipation for the stay while ensuring a smooth path from the official website to making a reservation.",
+    "image": "867606_1000_0.webp",
+    "category": "website booking responsive-design ui-ux hospitality",
+    "industry": [
+      "hotels",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/hotel2/",
+      "code": ""
+    }
+  },
+  {
+    "name": "EAVES｜シンプルで心地いい家づくりが伝わる工務店のサイトを制作",
+    "desc": "久留米市の工務店「株式会社EAVES」のデザインサンプルサイトを制作し、ブロンズと黒を基調とした落ち着いたデザイン、全幅の写真スライダー、固定式のサイドメニュー、滑らかなスクロール演出を取り入れ、家づくりの理念や施工事例の魅力を伝えながら、資料請求・見学会予約・お問い合わせへ自然につながる導線を設計しました。",
+    "desc_en": "We created a design showcase website for “EAVES Co., Ltd.,” a construction company based in Kurume City. Featuring a calm design centered on bronze and black tones, a full-width photo slider, a fixed side menu, and smooth scrolling effects, the site conveys the company’s philosophy on homebuilding and the appeal of its project examples, while guiding visitors naturally toward requesting brochures, booking open house tours, and submitting inquiries.",
+    "image": "867609_1000_0.webp",
+    "category": "website responsive-design ui-ux animation design",
+    "industry": [
+      "construction",
+      "realestate"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/demo-eaves/?view=1",
+      "code": ""
+    }
+  },
+  {
+    "name": "結 -yui-｜作品の世界観が伝わる設計事務所のホームページを制作",
+    "desc": "WordPressを活用し、建築設計事務所「結 -yui-」のデザインサンプルサイトを制作し、余白を活かした洗練されたデザインと大判の建築写真を中心に、作品ごとの背景や設計思想が伝わる構成を実現するとともに、レスポンシブ対応、SEO内部対策、SSL・セキュリティ対策、表示速度の最適化、お問い合わせフォームの設置まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample design website for the architectural design firm “Yui.” Focusing on a sophisticated design that makes effective use of white space and features large-format architectural photographs, we developed a layout that effectively conveys the background and design philosophy behind each project. We also implemented responsive design, on-page SEO, SSL and security measures, page speed optimization, and the installation of a contact form.",
+    "image": "867596_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "realestate",
+      "construction"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
     "name": "高齢者・業務支援向けAIチャットボット開発",
     "desc": "DifyとGPTsを活用し、高齢者・一般ユーザー・企業向けに計42体のAIチャットボットを構築し、構成設計からプロンプト最適化まで一貫して担当しました。",
     "desc_en": "Using Dify and GPTs, I built a total of 42 AI chatbots for seniors, general users, and businesses, and was responsible for the entire process—from architectural design to prompt optimization.",
@@ -394,6 +501,126 @@
     ],
     "links": {
       "view": "https://sakura-art.jp",
+      "code": ""
+    }
+  },
+  {
+    "name": "桜紅葉｜世界観で“選ばれる”注文住宅・工務店のホームページを制作",
+    "desc": "WordPressを活用し、注文住宅ブランド「桜紅葉」のデザインサンプルサイトを制作し、余白を活かした和モダンなデザインと大判の施工写真で住まいの世界観や温かみを表現するとともに、コンセプト・施工事例・家づくりの流れを通じて共感を促し、資料請求・来場予約につなげる導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a design showcase website for the custom home brand “Sakura Momiji.” The site features a modern Japanese design that makes effective use of white space and large-format construction photos to convey the homes’ unique atmosphere and warmth. We also designed the user journey to foster engagement through the brand’s concept, project examples, and the home-building process, driving users to request brochures and schedule site visits. Additionally, we implemented responsive design, on-page SEO, security measures, and page speed optimization.",
+    "image": "867595_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "realestate",
+      "construction"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "Re:Craft｜施工事例で“選ばれる”リフォーム会社のホームページを制作",
+    "desc": "WordPressを活用し、地域密着型リフォーム会社「Re:Craft」のデザインサンプルサイトを制作し、施工実績や顧客満足度などの数値による信頼性の可視化と写真中心の施工事例ギャラリーを実現するとともに、無料見積もり・現地調査への導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a design showcase website for “Re:Craft,” a community-focused remodeling company. We visualized the company’s credibility through metrics such as past projects and customer satisfaction ratings, and built a photo-centric gallery of project examples. Additionally, we designed the site to guide visitors toward free estimates and on-site inspections, and implemented responsive design, on-page SEO, security measures, and page speed optimization.",
+    "image": "867594_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "realestate",
+      "construction"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "あおぞらクリニック｜予約・アクセスがすぐ分かる、通いたくなるクリニックのサイトを制作",
+    "desc": "WordPressを活用し、内科・小児科などに対応する「あおぞらクリニック」のデザインサンプルサイトを制作し、清潔感のある配色と安心感を与えるコピーで初診の不安を和らげるとともに、診療案内・診療時間・アクセス・電話／Web予約への導線を最適化し、レスポンシブ対応、地域SEO対策、セキュリティ対策、表示速度の最適化、医療広告ガイドラインに配慮したコンテンツ設計まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample design website for “Aozora Clinic,” which provides internal medicine and pediatrics services. We used a clean color scheme and reassuring copy to alleviate anxiety among first-time patients, while also optimizing navigation to clinic information, hours of operation, directions, and phone/online appointment booking. Additionally, we implemented responsive design, local SEO strategies, security measures, page speed optimization, and content design that complies with medical advertising guidelines.",
+    "image": "867593_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "medical",
+      "it"
+    ],
+    "links": {
+      "view": "",
+      "code": ""
+    }
+  },
+  {
+    "name": "コモレビ歯科｜「削らない・抜かない」が伝わる、通いたくなる歯科医院のサイトを制作",
+    "desc": "WordPressを活用し、歯科医院「コモレビ歯科」のデザインサンプルサイトを制作し、「削らない、抜かない」という治療方針を軸に清潔感と信頼感のあるデザインを実現するとともに、診療案内・院内紹介・アクセス・Web予約への導線を最適化し、レスポンシブ対応、地域SEO対策、セキュリティ対策、表示速度の最適化、医療広告ガイドラインに配慮したコンテンツ設計まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample website for the dental clinic “Komorebi Dental.” Centered on their treatment philosophy of “no drilling, no extractions,” we developed a design that conveys a sense of cleanliness and trust. We also optimized navigation to treatment information, clinic introductions, directions, and online appointments, and implemented responsive design, local SEO strategies, security measures, page speed optimization, and content design that complies with medical advertising guidelines.",
+    "image": "867592_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "medical",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/hospital2/",
+      "code": ""
+    }
+  },
+  {
+    "name": "Compass Consulting｜信頼と専門性が伝わるコンサル会社のサイトを制作",
+    "desc": "WordPressを活用し、コンサルティング会社「Compass Consulting」のデザインサンプルサイトを制作し、英字見出しを取り入れた洗練されたデザインと、データ・戦略に基づく専門性や実績を伝えるコンテンツ構成により信頼感を高めるとともに、問い合わせへの導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample design website for the consulting firm “Compass Consulting.” We enhanced the site’s credibility through a sophisticated design featuring English-language headlines and a content structure that highlights the company’s expertise and track record based on data and strategy. Additionally, we implemented a user journey designed to drive inquiries, ensured responsive design, implemented on-page SEO, strengthened security measures, and optimized page load speed.",
+    "image": "867591_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "consulting",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/career2/",
+      "code": ""
+    }
+  },
+  {
+    "name": "Lien｜商品の魅力が引き立つギフトブランドのホームページを制作",
+    "desc": "WordPressを活用し、ギフトブランド「Lien」のデザインサンプルサイトを制作し、上品なブランドコピーと商品写真を引き立てるレイアウトでブランドの世界観を表現するとともに、商品ラインナップ・ブランドストーリー・利用ガイドを整理し、購入・問い合わせにつながる導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a design showcase site for the gift brand “Lien.” We expressed the brand’s unique aesthetic through a layout that highlights its elegant brand copy and product photos. We also organized the product lineup, brand story, and user guide, and implemented a user flow designed to drive purchases and inquiries. Additionally, we ensured the site was responsive, implemented on-page SEO, security measures, and optimized page load speed.",
+    "image": "867590_1000_0.webp",
+    "category": "website wordpress responsive-design design ecommerce",
+    "industry": [
+      "retail",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/gift1/",
+      "code": ""
+    }
+  },
+  {
+    "name": "Career Bridge｜無料相談につながるキャリアコンサルのコーポレートサイトを制作",
+    "desc": "WordPressを活用し、キャリアコンサルティング会社「Career Bridge」のデザインサンプルサイトを制作し、寄り添う姿勢を伝えるコピーと相談実績・満足度・資格などを通じて信頼性と専門性を可視化するとともに、個人向け相談・企業研修のサービス紹介から無料相談予約・お問い合わせへの導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample website for the career consulting firm “Career Bridge.” We crafted copy that conveys the company’s supportive approach and highlighted its credibility and expertise through its track record of consultations, client satisfaction rates, and professional certifications. Additionally, we handled everything from introducing services—including individual consultations and corporate training—to designing conversion paths leading to free consultation bookings and inquiries, as well as implementing responsive design, on-page SEO, security measures, and page speed optimization.",
+    "image": "867589_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "consulting",
+      "staffing"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/career1/",
+      "code": ""
+    }
+  },
+  {
+    "name": "CROSS CRAFT GARAGE｜専門性が伝わる自動車カスタム・整備工場のサイトを制作",
+    "desc": "WordPressを活用し、自動車カスタム・整備工場「CROSS CRAFT GARAGE」のデザインサンプルサイトを制作し、黒を基調としたクールなデザインと力強いコピーで技術力・専門性を訴求するとともに、施工事例やサービス・料金メニューを分かりやすく整理し、問い合わせ・見積依頼への導線設計、レスポンシブ対応、SEO内部対策、セキュリティ対策、表示速度の最適化まで対応しました。",
+    "desc_en": "Using WordPress, we created a sample design website for “CROSS CRAFT GARAGE,” a custom auto and maintenance shop. With a cool, black-themed design and powerful copy, we highlighted the company’s technical expertise and professionalism. We also organized project examples, services, and pricing menus in an easy-to-understand manner, designed a user flow to encourage inquiries and quote requests, and implemented responsive design, on-page SEO, security measures, and page speed optimization.",
+    "image": "867586_1000_0.webp",
+    "category": "website wordpress responsive-design seo ui-ux",
+    "industry": [
+      "automotive",
+      "it"
+    ],
+    "links": {
+      "view": "https://web-prepa.com/car1/",
       "code": ""
     }
   },
