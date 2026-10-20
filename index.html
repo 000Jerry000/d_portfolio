@@ -62,7 +62,7 @@
         <li><a href="#skills"><span data-en="Skills">技術一覧</span><small data-en="技術一覧">Skills</small></a></li>
         <li><a href="#work"><span data-en="Works">制作実績</span><small data-en="制作実績">Works</small></a></li>
         <li><a href="#experience"><span data-en="Career">経歴</span><small data-en="経歴">Career</small></a></li>
-        <!-- <li><a href="#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li> -->
+        <li><a href="#contact" class="nav-cta"><span data-en="Contact">お問い合わせ</span><small data-en="お問い合わせ">Contact</small></a></li>
       </ul>
     </nav>
 
@@ -366,7 +366,46 @@
 
     <!-- contact section starts -->
     <section class="section contact" id="contact">
+      <div class="sec-head reveal">
+        <span class="sec-num">漆</span>
+        <h2 class="sec-title" data-en="Contact">お問い合わせ</h2>
+        <span class="sec-en" data-en="お問い合わせ">Contact</span>
+      </div>
 
+      <div class="contact-row">
+        <div class="contact-info reveal">
+          <p class="contact-lead"
+            data-en="If there's anything I can help with<br>on your website or application,<br>please feel free to get in touch.">Webサイトやアプリケーション開発に関して、<br>お力になれることがございましたら、<br>ぜひお気軽にご相談ください。</p>
+          <ul class="contact-list">
+            <li><i class="fas fa-map-marker-alt"></i><span data-en="1-61 Shinsei, Hakusan, Ishikawa, Japan">石川県白山市新成一丁目61番地</span></li>
+            <li><i class="fas fa-comments"></i><span data-en="Live chat is also available">ライブチャットでもご相談いただけます</span></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal">
+          <label class="field">
+            <span><span data-en="Name">お名前</span><em data-en="Required">必須</em></span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span><span data-en="Email">メールアドレス</span><em data-en="Required">必須</em></span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span><span data-en="Phone">電話番号</span></span>
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <label class="field">
+            <span><span data-en="Message">ご相談内容</span><em data-en="Required">必須</em></span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><span data-en="Send">送信する</span><i
+                class="fa fa-paper-plane"></i></button>
+            <p class="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
     </section>
     <!-- contact section ends -->
   </main>
@@ -391,7 +430,7 @@
         <a href="#skills" data-en="Skills">技術一覧</a>
         <a href="#work" data-en="Works">制作実績</a>
         <a href="#experience" data-en="Career">経歴</a>
-        <!-- <a href="#contact" data-en="Contact">お問い合わせ</a> -->
+        <a href="#contact" data-en="Contact">お問い合わせ</a>
       </nav>
 
       <div class="footer-contact">
